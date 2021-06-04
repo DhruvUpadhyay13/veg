@@ -1,0 +1,12 @@
+ <div class="deliver"> 
+    <input type="text" id="idinput">
+    <button (click)="deliverorder()">Deliverd</button>
+    <p *ngIf="status!=''">{{status}}</p>
+    
+</div>
+
+<div class="cancel">
+    <input type="text" id="id1input">
+    <button (click)="cancelorder()">cancel</button>
+    <p *ngIf="status1!=''">{{status1}}</p>
+</div>

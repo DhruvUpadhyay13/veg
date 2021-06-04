@@ -1,0 +1,737 @@
+{
+    "extends": "../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "app",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "app",
+            "kebab-case"
+        ]
+    }
+}
+
+{
+    "name":"VegNGro Vegetables",
+    "vegetables":[ { "name" :"Torai-11111Fruit@",
+
+"price":"20",
+
+"ourprice":"18",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/1b4x0Tr/tori.jpg"},
+ { "name" :"Coconut (Malai Vaala)-11111Fruit@",
+
+"price":"50",
+
+"ourprice":"45",
+
+"quantity":"1",
+
+"img":"https://i.ibb.co/R2MW9C7/coconut-water-feat.jpg"},
+
+{ "name" :"Tomato hybrid-11111Fruit@",
+
+"price":"70",
+
+"ourprice":"65",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/Byz95KH/Tamato-hybrid.jpg"},
+
+{ "name" :"Tomato desi-tamatar11111Fruit@",
+
+"price":"80",
+
+"ourprice":"69",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/JKzjWTy/Tamato-Desi.png"},
+
+{ "name" :"kaddu- pumpkin11111Fruit@",
+
+"price":"30",
+
+"ourprice":"27",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/4Ykvxr9/Pumpkin.jpg"},
+
+{ "name" :"kaddu small (cutpiece)- pumpkin11111Fruit@",
+
+"price":"15",
+
+"ourprice":"14",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/4Ykvxr9/Pumpkin.jpg"},
+
+{ "name" :"aalu (Chipsona)-potato11111Fruit@",
+
+"price":"40",
+
+"ourprice":"33",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/m4K77B0/Potato.jpg"},
+
+{ "name" :"pyaz- onion11111Fruit@",
+
+"price":"40",
+
+"ourprice":"32",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/R3RcxVt/onion.jpg"},
+
+{ "name" :"Matar-peas11111Fruit@",
+
+"price":"80",
+
+"ourprice":"out of season",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/GThkZCF/peas.jpg"},
+
+{ "name" :"Lauki-11111Fruit@",
+
+"price":"25",
+
+"ourprice":"18",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/9vWwzqT/lauki.jpg"},
+
+{ "name" :"adrak- ginger11111Fruit@",
+
+"price":"100",
+
+"ourprice":"95",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/GcVcCBP/ginger.jpg"},
+
+{ "name" :"adrakk- ginger11111Fruit@",
+
+"price":"50",
+
+"ourprice":"48",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/GcVcCBP/ginger.jpg"},
+
+{ "name" :"Shimla mirch- capsicum11111Fruit@",
+
+"price":"80",
+
+"ourprice":"70",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/GdghMTr/green-capsicum.jpg"},
+
+{ "name" :"Shimla mirchh- capsicum11111Fruit@",
+
+"price":"40",
+
+"ourprice":"35",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/GdghMTr/green-capsicum.jpg"},
+{ "name" :"Shimla mirchh- capsicum11111Fruit@",
+
+"price":"22",
+
+"ourprice":"22",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/GdghMTr/green-capsicum.jpg"},
+
+{ "name" :"Lesun - garlic11111Fruit@",
+
+"price":"45",
+
+"ourprice":"40",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/hZdhhbt/garlic.jpg"},
+
+{ "name" :"fool gobhi- Cauliflower11111Fruit@",
+
+"price":"120",
+
+"ourprice":"115",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/mXCw3pb/fresh-cauliflower-gobhi.png"},
+
+{ "name" :"fool gobhi- Cauliflower11111Fruit@",
+
+"price":"60",
+
+"ourprice":"58",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/mXCw3pb/fresh-cauliflower-gobhi.png"},
+{ "name" :"Lemon- Neebu11111Fruit@",
+
+"price":"25",
+
+"ourprice":"23",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/pWTykbn/lemon.jpg"},
+
+
+{ "name" :"Hari mirch- green chilli11111Fruit@",
+
+"price":"25",
+
+"ourprice":"24",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/RcV99Xb/fresh-green-chilli.jpg"},
+
+{ "name" :"begun- Brinjal11111Fruit@",
+
+"price":"35",
+
+"ourprice":"33",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/d2bsnwv/fresh-brinjal.jpg"},
+
+{ "name" :"Banana (Big) (12 pc) - Kela11111Fruit@",
+
+"price":"60",
+
+"ourprice":"55",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/7VGGypY/banana.jpg"},
+
+{ "name" :"Banana (Big) (6 pc) - Kela11111Fruit@",
+
+"price":"30",
+
+"ourprice":"27.5",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/7VGGypY/banana.jpg"},
+
+{ "name" :"Tindaa -11111Fruit@",
+
+"price":"120",
+
+"ourprice":"115",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/ncjtmLD/tinda.jpg"}, 
+{ "name" :"Tinda -11111Fruit@",
+
+"price":"60",
+
+"ourprice":"56",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/ncjtmLD/tinda.jpg"},
+{ "name" :"Bhindi- Lady finger11111Fruit@",
+
+"price":"50",
+
+"ourprice":"45",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/X8qxpqh/fresh-bhindi.jpg"},
+{ "name" :"Bhindi- Lady finger11111Fruit@",
+
+"price":"25",
+
+"ourprice":"23",
+
+"quantity":"500g",
+
+"img":"https://i.ibb.co/X8qxpqh/fresh-bhindi.jpg"},
+{ "name" :"Bhindi- Lady finger11111Fruit@",
+
+"price":"12.5",
+
+"ourprice":"11",
+
+"quantity":"250g",
+
+"img":"https://i.ibb.co/X8qxpqh/fresh-bhindi.jpg"},
+
+
+{ "name" :"Dhania-11111Fruit@",
+
+"price":"30",
+
+"ourprice":"23",
+
+"quantity":"100 gm",
+
+"img":"https://i.ibb.co/BtZLcjj/dhania.jpg"},
+
+{ "name" :"Kheera (Hybrid)- cucumber11111Fruit@",
+
+"price":"35",
+
+"ourprice":"33",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/9v1DVkz/cucumber.jpg"},
+{ "name" :"Kheera (Hybrid)- cucumber11111Fruit@",
+
+"price":"17",
+
+"ourprice":"16",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/9v1DVkz/cucumber.jpg"},
+
+{ "name" :"Kheera (Desi)- cucumber11111Fruit@",
+
+"price":"35",
+
+"ourprice":"33",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/9v1DVkz/cucumber.jpg"},
+{ "name" :"Kheera (Desi)- cucumber11111Fruit@",
+
+"price":"17",
+
+"ourprice":"16",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/9v1DVkz/cucumber.jpg"},
+
+{ "name" :"Chukander- beetroot11111Fruit@",
+
+"price":"20",
+
+"ourprice":"18",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/rGBFV9H/beet-root.jpg"},
+
+{ "name" :"Arbi- 11111Fruit@",
+
+"price":"60",
+
+"ourprice":"55",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/QcRdF75/download.jpg"},
+{ "name" :"Arbii- 11111Fruit@",
+
+"price":"30",
+
+"ourprice":"28",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/QcRdF75/download.jpg"},
+
+{ "name" :"Band gobhi- Cabbage11111Fruit@",
+
+"price":"40",
+
+"ourprice":"35",
+
+"quantity":"1pc",
+
+"img":"https://i.ibb.co/rQ7g33N/cabbage.jpg"},
+
+{ "name" :"litchi",
+
+"price":"88",
+
+"ourprice":"out of season",
+
+"quantity":"400g",
+
+"img":"https://i.ibb.co/r64chrX/stawberry.jpg"},
+{ "name" :"Anar(high quality)- pomegranate11111Fruit@",
+
+"price":"150",
+
+"ourprice":"110",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/b7hKCy0/anar-red.jpg"},
+
+{ "name" :"Anar(high quality)- pomegranate11111Fruit@",
+"price":"75",
+
+"ourprice":"55",
+
+"quantity":".5kg",
+
+"img":"https://i.ibb.co/b7hKCy0/anar-red.jpg"},
+
+{ "name" :"Anar pink- pomegranate11111Fruit@",
+"price":"120",
+
+"ourprice":"90",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/s1TvHVY/pomegranate-pink.jpg"},
+{ "name" :"Anar pink- pomegranate11111Fruit@",
+
+"price":"60",
+
+"ourprice":"45",
+
+"quantity":".5kg",
+
+"img":"https://i.ibb.co/s1TvHVY/pomegranate-pink.jpg"},
+
+{ "name" :"Papita - papaya11111Fruit@",
+
+"price":"60",
+
+"ourprice":"58",
+
+"quantity":"1-1.5kg",
+
+"img":"https://i.ibb.co/YZbsCpH/papaya.jpg"},
+
+{ "name" :"Kharbuja - Melon11111Fruit@",
+
+"price":"40",
+
+"ourprice":"out of stock",
+
+"quantity":"1 kg",
+
+"img":"https://i.ibb.co/ZH5fpyx/melon.jpg"},
+
+{ "name" :"parwal -palwal 11111Fruit@",
+
+"price":"60",
+
+"ourprice":"55",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/3pcGrjk/parwal.png"}, 
+{ "name" :"parwal -palwal 11111Fruit@",
+
+"price":"30",
+
+"ourprice":"28",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/3pcGrjk/parwal.png"}, 
+{ "name" :"Naashpaati -NaashPaati11111Fruit@",
+
+"price":"120",
+
+"ourprice":"out of season",
+
+"quantity":"1Kg",
+
+"img":"https://i.ibb.co/9NhGV9b/nashpati.jpg"}, 
+{ "name" :"Naashpaati -NaashPaati11111Fruit@",
+
+"price":"75",
+
+"ourprice":"out of season",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/9NhGV9b/nashpati.jpg"}, 
+
+{ "name" :"Pear -BaabuKosha11111Fruit@",
+
+"price":"100",
+
+"ourprice":"96",
+
+"quantity":"1Kg",
+
+"img":"https://i.ibb.co/9NhGV9b/nashpati.jpg"}, 
+{ "name" :"Kundru - 11111Fruit@",
+
+"price":"30",
+
+"ourprice":"30",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/ykp9Skp/kundru.jpg"},
+{ "name" :"Kundru - 11111Fruit@",
+
+"price":"60",
+
+"ourprice":"58",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/ykp9Skp/kundru.jpg"},
+{ "name" :"Kiwi-11111Fruit@",
+
+"price":"35",
+
+"ourprice":"33",
+
+"quantity":"1pc",
+
+"img":"https://i.ibb.co/28qDkdx/kiwi.jpg"},
+
+{ "name" :"Mango - dasheri11111Fruit@",
+
+"price":"50",
+
+"ourprice":"out of season",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/W5kmh7k/Mango-dusheri.jpg"},
+
+
+{ "name" :"WaterMelon - dasheri11111Fruit@",
+
+"price":"100",
+
+"ourprice":"95",
+
+"quantity":"2.5kg",
+
+"img":"https://i.ibb.co/Q6PSN53/water-melon.jpg"},
+
+{ "name" :"Mosambi - SweatLemon11111Fruit@",
+
+"price":"60",
+
+"ourprice":"55",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/t2tRCCJ/mosambi-625x300-1529576140484.jpg"},
+
+{ "name" :"Kale Angoor- Black grapes11111Fruit@",
+
+"price":"100",
+
+"ourprice":"out of season",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/NsKJR8w/grapes.jpg"},
+
+{ "name" :"Angoor- grapes11111Fruit@",
+
+"price":"90",
+
+"ourprice":"out of season",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/gzWwx6T/grapes.jpg"},
+{ "name" :"Apple - seb11111Fruit@",
+
+"price":"140",
+
+"ourprice":"130",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/MgP6XB8/apple.jpg"},
+{ "name" :"Baby Apple Shimla  - seb11111Fruit@",
+
+"price":"110",
+
+"ourprice":"80",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/dBrTTC8/small-apples.jpg"},
+{ "name" :"Apple Kinnaur  - seb11111Fruit@",
+
+"price":"250",
+
+"ourprice":"180",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/SJtRYv5/apple-kinnaur-premium.png"},
+{ "name" :"Apple Washington  - seb11111Fruit@",
+
+"price":"250",
+
+"ourprice":"170",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/ZLKPK0s/washington-apple-500x500.jpg"},
+
+{ "name" :"Aam - Mango11111Fruit@",
+
+"price":"50",
+
+"ourprice":"Out of season",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/HFBmPSW/fresh-mango.jpg"},
+
+{ "name" :"Aam - Mango11111Fruit@",
+
+"price":"60",
+
+"ourprice":"Out of season",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/HFBmPSW/fresh-mango.jpg"},
+
+{ "name" :"Mooli (High Quality)- Reddish11111Fruit@",
+
+"price":"40",
+
+"ourprice":"38",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/87vxpVH/Reddish-Mooli.jpg"},
+{ "name" :"Mooli (Medium Quality) - Reddish11111Fruit@",
+
+"price":"20",
+
+"ourprice":"18",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/87vxpVH/Reddish-Mooli.jpg"},
+
+{ "name" :"Zespari kiwi - Zespari Kiwi11111Fruit@",
+
+"price":"50",
+
+"ourprice":"48",
+
+"quantity":"1pc",
+
+"img":"https://i.ibb.co/SP74pvC/zespari-kiwi.png"},
+
+{ "name" :"Kacha kela - Raw banana11111Fruit@",
+
+"price":"45",
+
+"ourprice":"40",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/KDKZSHp/Raw-banana-kacha-kela.jpg"},
+
+{ "name" :"Kacha Papita - Raw Papita11111Fruit@",
+
+"price":"50",
+
+"ourprice":"40",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/VjTrztY/raw-papita-kacha-papita.jpg"},
+
+{ "name" :"Aaalu Bukhara - Plum11111Fruit@",
+
+"price":"90",
+
+"ourprice":"70",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/F594mvB/aalu-bukhara-plum.png"},
+
+{ "name" :"Chicoo - chicoo11111Fruit@",
+
+"price":"55",
+
+"ourprice":"50",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/ZYkH6y4/chicoo.jpg"},
+
+{ "name" :"Soft Adrak - Soft ginger11111Fruit@",
+
+"price":"70",
+
+"ourprice":"66",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/WVmQr3q/soft-ginger.jpg"},
+{ "name" :"Soft Adrak - Soft ginger11111Fruit@",
+
+"price":"35",
+
+"ourprice":"33",
+
+"quantity":"0.25kg",
+
+"img":"https://i.ibb.co/WVmQr3q/soft-ginger.jpg"},
+{ "name" :"Carrot - gaajar11111Fruit@",
+
+"price":"20",
+
+"ourprice":"18",
+
+"quantity":"0.5kg",
+
+"img":"https://i.ibb.co/TrcdbBY/carrot.jpg"},
+{ "name" :"Carrot - gaajar11111Fruit@",
+
+"price":"40",
+
+"ourprice":"38",
+
+"quantity":"1kg",
+
+"img":"https://i.ibb.co/TrcdbBY/carrot.jpg"},
+  ]
+  
+}

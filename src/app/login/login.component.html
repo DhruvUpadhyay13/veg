@@ -1,0 +1,1000 @@
+<div class="load" fxLayoutAlign="center" fxLayout="column" *ngIf="!userloaded">
+  <img src="https://i.ibb.co/rxvGNCn/circle-cropped-2.png">
+  <loader></loader>
+</div>
+<div fxLayoutAlign="center" *ngIf="starterror" class="anyerror" fxLayout="column">
+  <img *ngIf="appimages" src={{appimages[8].img}}>
+  <p>
+    Unable to proceed please check your Internet Connection or try Again
+  </p>
+  <!-- <a (click)="reload()">Try Again</a> -->
+</div>
+<!-- <div class="refer" fxLayoutAlign="center" fxLayout="column" *ngIf="newuser1 && refer && userloaded && !starterror">
+  <div class="text">
+    <p>Refer this App to someone in Noida or Ghaziabad and get 100Rs which you can use at the time of
+      checkout</p>
+
+  </div>
+  <div class="input" fxLayout="column">
+    <div>
+      <p>Enter contact number of the person who refer you this app</p>
+    </div>
+    <div class="field" fxLayout="row">
+      <div fxFlex="60">
+        <input id="refer" type="text" placeholder="10 Digit Refer No">
+      </div>
+      <div fxFlex="40">
+        <button (click)="refersave()">Shop</button>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="continue" fxLayout="column">
+    <p>OR</p>
+    <button (click)="continue()">Continue</button>
+  </div>
+  <p class="wait" *ngIf="pleasewait">Please Wait..</p>
+  <p class="error-text" *ngIf="refererror">User not found</p>
+</div> -->
+
+<div [hidden]="!userloaded || starterror || refer">
+
+  <!-- <div fxShow.lt-sm="false">
+  <input [ngStyle]="{
+    'position': productview ? 'static' : 'fixed',
+    'margin-left': productview ? '45%' : '45%',
+    'height': productview ? '30px' : '30px'
+  }" class="search" id="search" placeholder="what web need!">
+</div> -->
+
+  <div [hidden]="!barshow" id="searchbar" fxShow.gt-sm="false" fxLayoutAlign="center" fxLayout="column">
+    <div [hidden]="!barshow" fxLayout="row">
+      <!-- <div *ngIf="!refer">
+
+        <ngx-skeleton-loader count="1" [animation]="progress" [theme]="{
+          
+          height: '30px',
+          width:'40px'
+          
+          
+       
+        }">
+        </ngx-skeleton-loader>
+      </div> -->
+      <div [hidden]="!barshow" class="order-icon" fxLayout="column">
+        <!-- <img [hidden]="!barshow" (click)="session()" *ngIf="appimages" src={{appimages[10].img}}> -->
+        <img [hidden]="!barshow" (click)="session()" src="https://i.ibb.co/C6DnjQ3/2.png">
+        <p [hidden]="!barshow" (click)="session()" class="myorders">orders</p>
+      </div>
+
+      <input [hidden]="!barshow" [ngStyle]="{
+    'position': productview ? 'static' : 'static',
+    
+    'width': productview ? '90%' : '95%',
+    'margin-left': productview ? '2%' : '2%',
+    'margin-right': productview ? '3%' : '3%',
+    'height': productview ? '30px' : '30px'
+  }" class="search" id="searchmob" placeholder="what You need!">
+
+
+      <div class="cart-icon" [hidden]="!barshow" *ngIf="!cartview && !ordercomplete" fxLayout="column">
+        <div *ngIf="skeletonscreen">
+
+          <ngx-skeleton-loader count="1" [animation]="progress" [theme]="{
+            
+            height: '30px',
+            width:'40px'
+            
+            
+         
+          }">
+          </ngx-skeleton-loader>
+        </div>
+        <div *ngIf="!skeletonscreen" fxLayout="row">
+          <img (click)="gotocart()" src="https://i.ibb.co/q75ZjV6/1.png">
+          <!-- <img (click)="gotocart()" *ngIf="appimages" src="{{appimages[0].img}}"> -->
+          <!-- <div *ngIf="appimages" class="count">
+            <a (click)="gotocart()">{{numberoforders}}</a>
+          </div> -->
+          <div class="count">
+            <a (click)="gotocart()">{{numberoforders}}</a>
+          </div>
+
+        </div>
+
+        <p (click)="gotocart()" *ngIf="(!skeletonscreen && appimages!=undefined)" class="checkout">Checkout</p>
+        <p class="carterror" *ngIf="carterror">Empty!</p>
+      </div>
+    </div>
+
+
+    <p class="or" [hidden]="!barshow || productview">Or</p>
+    <a class="prescription" (click)="uploaddisplay()" [hidden]="!barshow || productview">Upload your List of
+      Items(Parcha)</a>
+    <div fxLayoutAlign="end" fxFlex="100" fxLayout="row">
+
+      <div fxFlex="50">
+        <div *ngIf="!yorder && upload && option1">
+          <div [hidden]="!barshow" fxLayoutAlign="center" class="vseller-list">
+
+            <select [hidden]="!barshow" id="sellers" (change)="catsearch('Fruits')" name="veg-sellers">
+
+              <option value="VegNGro" selected disabled hidden>
+                {{currentseller ? vegetabledata[currentseller].name :'Vegetable Seller'}}</option>
+
+              <option *ngFor="let seller of vegetabledata let i=index" value="{{i}}">{{seller.name}}</option>
+              <!-- <option value="audi">Audi</option>
+              <option value="audi">No Vegetables Included</option> -->
+            </select>
+
+          </div>
+
+        </div>
+        <div *ngIf="!yorder && upload && option2">
+          <div [hidden]="!barshow" fxLayoutAlign="center" class="vseller-list">
+
+            <select [hidden]="!barshow" id="sellers" (change)="catsearch('Fruits')" name="veg-sellers">
+
+              <option value="VegNGro" selected disabled hidden>{{vegetabledata[currentseller].name}}</option>
+
+              <option *ngFor="let seller of vegetabledata let i=index" value="{{i}}">{{seller.name}}</option>
+              <!-- <option value///="audi">Audi</option>
+              <option value="audi">No Vegetables Included</option> -->
+            </select>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- <div *ngIf="appimages==undefined && !refer">
+
+      <div fxLayout="column">
+        <div fxLayout="row">
+          <ngx-skeleton-loader count="5" [animation]="progress" [theme]="{
+        
+        height: '100px',
+        width:'100px',
+        'margin-bottom':'10%'
+        
+     
+      }">
+          </ngx-skeleton-loader/>
+          <ngx-skeleton-loader count="5" [animation]="progress" [theme]="{
+      
+        height: '100px',
+        width:'250px',
+        'margin-bottom':'4%',
+        'margin-left':'4%'
+      }">
+          </ngx-skeleton-loader>
+        </div>
+
+      </div>
+
+    </div> -->
+
+    <div class="front" *ngIf="front">
+      <div *ngIf="!refer">
+
+
+        <!-- <ngx-skeleton-loader count="1" [animation]="progress" [theme]="{
+          
+          height: '100px',
+          width:'100px',
+          'margin-bottom':'10%'
+          
+       
+        }">
+            </ngx-skeleton-loader> -->
+      </div>
+      <!-- <div>
+        <owl-carousel [options]="mySlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']">
+          <div class="item">
+            <div>
+              <img src="https://i.ibb.co/L8MC7s1/4.png">
+            </div>
+
+          </div>
+          <div class="item">
+            <div>
+              <img src="https://i.ibb.co/L8MC7s1/4.png">
+            </div>
+
+          </div>
+          <div class="item">
+            <div>
+              <img src="https://i.ibb.co/L8MC7s1/4.png">
+            </div>
+
+          </div>
+        </owl-carousel>
+      </div> -->
+      <div (click)="catsearch('Fruits & Vegetables')" class="banner">
+
+        <img src="https://i.ibb.co/KFpzBZz/imgonline-com-ua-compressed-4-AAFQe-XV1sa.jpg">
+      </div>
+      <div class="footer">
+        <img (click)="catsearch('Fruits & Vegetables')"
+          src="https://i.ibb.co/MZDqPJr/imgonline-com-ua-compressed-zif-Qtglzh-Io-S0l.jpg">
+      </div>
+      <!-- <div class="catloader" fxLayoutAlign="center" *ngIf="cat==undefined && !refer">
+        <loader></loader>
+         
+        <div fxLayout="column">
+          <ngx-skeleton-loader count="2" [theme]="{
+      
+            height: '100px',
+            width:'340px',
+                      'margin-top':'5%'
+            
+         
+          }">
+          </ngx-skeleton-loader>
+
+        </div> 
+      </div> -->
+      <div class="cat-container" fxLayout="row wrap">
+        <div fxFlex="50" *ngFor="let product of cats let i=index">
+          <img [ngStyle]="{
+          'max-width': i==0 || i==3 ? '95%' : '90%',
+          'height': i==0 || i==3 || i==2 ? 'auto' : 'auto',
+          
+          'text-align': i==0 || i==3 ? 'center' : 'center'
+        }" src="{{product.img}}" (click)="catsearch(product.name)">
+        </div>
+
+      </div>
+
+      <div class="text" fxLayout="column">
+        <div fxLayout="row">
+
+          <div fxLayoutAlign="start" fxFlex="50" fxLayout="row">
+            <img *ngIf="appimages" src={{appimages[7].img}}>
+            <p>No Minimum Order </p>
+          </div>
+          <div fxLayoutAlign="start" fxFlex="50" fxLayout="row">
+            <img *ngIf="appimages" src={{appimages[13].img}}>
+            <p>Items Are sanitized before Delivery</p>
+          </div>
+
+        </div>
+
+
+        <div fxLayout="row">
+          <div fxLayoutAlign="start" fxFlex="50" fxLayout="row">
+            <img *ngIf="appimages" src={{appimages[5].img}}>
+            <p>See & Buy (Return at a time)</p>
+          </div>
+          <div fxLayoutAlign="start" fxFlex="50" fxLayout="row">
+            <img *ngIf="appimages" src={{appimages[11].img}}>
+            <p>Guranteed Orignal products</p>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <div [hidden]="upload" class="upload">
+      <mat-icon [hidden]="!barshow" (click)="gotofront()">keyboard_backspace</mat-icon>
+      <div fxLayout="column">
+        <div *ngIf="!verified1" fxLayout="column">
+          <div class="input1">
+            <input type="text" #phonevalue2 id="session1" placeholder="Phone number" style="height:20px; width:100px">
+
+            <button> <a (click)="input2(phonevalue2)">Send OTP</a></button>
+            <p class="error-text" *ngIf="phoneerror2">phone number is reqiuired</p>
+            <p class="error-text" *ngIf="invalidphone2">Please enter valid phone number</p>
+
+          </div>
+          <div *ngIf="otp2" class="input2">
+            <input type="number" #otpvalue id="otp" placeholder="Enter OTP" style="height:20px; width:100px">
+
+
+            <button> <a (click)="verifyotp(otpvalue,null,'upload')">Verify OTP</a></button>
+
+          </div>
+          <p class="wait" *ngIf="pleasewait">Please Wait..</p>
+          <p class="error-text" *ngIf="invalidotp2">OOPS wrong OTP! You will be rediect</p>
+
+          <!-- <div class="phone">
+          <label fxFlex="30">Mobile-no</label>
+          <input type="text" #phonevalue2 (blur)="input2(phonevalue2)" id="session" placeholder="Phone number">
+
+          <button> <a (click)="session1('register',false)">Send OTP</a></button>
+
+        </div>
+        <p class="error-text" *ngIf="phoneerror2">phone number is reqiuired</p>
+        <p class="error-text" *ngIf="invalidphone2">Please enter valid phone number</p>
+        <div *ngIf="otp2" class="input2">
+          <input type="number" #otpvalue id="otp" placeholder="Enter OTP" style="height:20px; width:100px">
+
+
+          <button> <a (click)="verifyotp(otpvalue)">Verify OTP</a></button>
+
+        </div> -->
+
+        </div>
+        <div *ngIf="verified || login" class="address">
+          <label fxFlex="30">Delivery Address</label>
+          <textarea id="p-address" type="textarea"></textarea>
+
+        </div>
+        <p class="error-text" *ngIf="addresserror">Please enter your address</p>
+      </div>
+      <div *ngIf="verified || login">
+        <p class="note">Try to write Cleanly in prescription</p>
+
+        <div class="slots" fxLayout="column">
+          <div *ngIf="slot1" fxLayout="row">
+            <div style="margin-right:7%; margin-left: 1%;">
+              <p>Noida</p>
+            </div>
+            <div *ngFor="let slot of slots let i=index" class="slot-container">
+              <div *ngIf="Checked1 && slotindex1==i || slotindex1==null && !Checked1" fxFlex="100" fxLayout="row"
+                class="slot">
+                <div>
+                  <input (click)="slotcheck1(i,slot)" type="checkbox">
+
+                </div>
+                <div>
+                  <label>{{slot}}</label>
+
+                </div>
+                <!-- <div>
+               
+              </div>
+              <div>
+                
+              </div> -->
+
+
+              </div>
+              <!-- <div class="slot">
+              <input type="checkbox">
+              <label>11-12 pm</label>
+
+            </div>
+            <div class="slot">
+              <input type="checkbox">
+              <label>3-4 pm</label>
+
+            </div>
+            <div class="slot">
+              <input type="checkbox">
+              <label>6-7 am</label>
+
+            </div> -->
+
+            </div>
+
+          </div>
+          <div *ngIf="slot && slot1" class="or">
+            <p>OR</p>
+          </div>
+          <div *ngIf="slot" fxLayout="row">
+            <div style="margin-left: 1%;">
+              <p>Ghaziabad.</p>
+            </div>
+            <div *ngFor="let slot of rajslots let i=index" fxLayout="row" class="slot-container">
+              <div *ngIf="Checked && slotindex==i || slotindex==null && !Checked" fxLayout="row" class="slot">
+                <div>
+                  <input (click)="slotcheck(i,slot)" type="checkbox">
+
+                </div>
+                <div>
+                  <label>{{slot}}</label>
+
+
+                </div>
+              </div>
+              <!-- <div class="slot">
+              <input type="checkbox">
+              <label>1-2 pm</label>
+
+            </div>
+
+            <div class="slot">
+              <input type="checkbox">
+              <label>5-6 pm</label>
+
+            </div> -->
+
+            </div>
+
+          </div>
+
+          <!-- (slotvalue=='6-7 am' || slotvalue=='7-8 am') -->
+        </div>
+        <!-- <p class="error-text" *ngIf="slotvalue=='6-8 am' || slotvalue=='7-9 am'">* Order : veggies & milk : before
+          10:00 pm & Grocery : before 8:00pm</p> -->
+
+        <p class="error-text" *ngIf="sloterror">Please select your delivery time</p>
+
+        <input type="file" id="file1" multiple (change)="sendimage($event,'null')" id="file" />
+
+
+
+        <label for="file" class="btn-2">upload</label>
+
+        <!-- <div class="cam-button">
+          <button class="btn btn-primary" (click)="startCamera()">Upload</button>
+        </div> -->
+        <p class="waitu" *ngIf="pleasewait">Please Wait it can take upto 1 minute</p>
+
+        <p class="note" style="color: red; margin-left: 1%;">*Please mention flavour and Quantity clearly Otherwise
+          items may differ</p>
+        <!-- <div *ngIf="camerastart" class="cam">
+          <div class="cam-button">
+            <button class="btn btn-primary" (click)="capture()">Done</button>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <div class="p-1">
+              <video #video class="vid" autoplay></video>
+            </div>
+
+            <div hidden class="p-1">
+              <canvas #canvas id="canvas" class="vid"></canvas>
+            </div>
+          </div>
+
+
+        </div> -->
+
+
+      </div>
+
+    </div>
+  </div>
+  <div fxLayoutAlign="center" *ngIf="anyerror" class="anyerror" fxLayout="column">
+    <img *ngIf="appimages" src={{appimages[8].img}}>
+    <p>
+      Unable to proceed please check your Internet Connection or try Again
+    </p>
+
+  </div>
+
+  <div *ngIf="yorder && !cartview" class="customer-order">
+    <mat-icon [hidden]="!barshow" (click)="gotofront()">keyboard_backspace</mat-icon>
+
+    <div fxLayout="column" *ngIf="newuser">
+      <div class="description">
+        <p>Enter Your Mobile number to see your Orders</p>
+      </div>
+
+
+      <div class="input1">
+        <input type="text" #phonevalue1 id="session" placeholder="Phone number" style="height:20px; width:100px">
+
+        <button> <a (click)="input1(phonevalue1)">Send OTP</a></button>
+        <p class="error-text" *ngIf="phoneerror1">phone number is reqiuired</p>
+        <p class="error-text" *ngIf="invalidphone1">Please enter valid phone number</p>
+
+      </div>
+      <div *ngIf="otp1" class="input2">
+        <input type="number" #otpvalue1 id="otp" placeholder="Enter OTP" style="height:20px; width:100px">
+
+
+        <button> <a (click)="verifyotp(otpvalue1,'session')">Verify OTP</a></button>
+
+      </div>
+      <p class="wait" *ngIf="pleasewait">Please Wait..</p>
+      <p class="error-text" *ngIf="invalidotp1">Oops Wrong Otp ! You will be redirect</p>
+
+
+
+
+
+    </div>
+    <!-- <div *ngIf="noorder">
+    <p>You have no order</p>
+  </div> -->
+    <!-- <div class="welcomepage" *ngIf="orderpage && userorder && userorder.length==0">
+      <p>Thanks! It will be a pleasure to serve you ! Just Shop</p>
+      <img src="../../assets/mobile-shopping-app-modern-online-260nw-1732852769.jpg">
+       this block is giving error correct later
+    </div> -->
+    <div class="emptycart" *ngIf="orderpage && userorder!=null">
+      <div *ngIf="userorder[0].orders.length==0">
+        <p>OOPS! Your Cart is Empty</p>
+        <img *ngIf="appimages" src={{appimages[1].img}}>
+      </div>
+      <div *ngIf="userorder[0].orders.length>0" class="userorder">
+        <div fxLayoutAlign="start" class="refer">
+          <p>Referbalance :</p><span>₹ {{userorder[0].referbalance}}</span>
+        </div>
+
+        <img *ngIf="appimages" src={{appimages[14].img}}>
+        <p style="font-size: 10px; margin-left: -40%; margin-top: 0%;">*Prescription Orders are not visible there
+        </p>
+        <div fxLayout="column" *ngFor="let orderno of userorder[0].orders let i=index ">
+          <div class="options" fxLayout="row" fxFlex="100">
+            <!-- <button *ngIf="orderno.status!='Delivered'"
+            (click)="cancelorder(userorder[0].orders[i].order,orderno.orderid,i,orderno.deliveryaddress)">{{userorder[0].orders[i].status!='Canceled' ? 'Cancel this Order' : 'Order Canceled' }}</button> -->
+            <div fxFlex="25">
+              <p>Order No {{userorder[0].orders.length - i}}</p>
+            </div>
+            <div fxLayout="row" fxFlex="25">
+              <a (click)=displayorders(i)>{{showorders && orderindex==i ? 'Hide' : 'Show'}}</a>
+              <mat-icon (click)=displayorders(i)>keyboard_arrow_down</mat-icon>
+            </div>
+            <div fxFlex="30">
+              <p class="wait" *ngIf="pleasewait && cancelindex==i">Please Wait..</p>
+              <button *ngIf="orderno.status!='Delivered'"
+                (click)="cancelorder(userorder[0].orders[i].order,orderno.orderid,i,orderno.deliveryaddress)">{{userorder[0].orders[i].status!='Canceled' ? 'Cancel Order' : 'Order Canceled' }}</button>
+              <img *ngIf="appimages && orderno.status=='Delivered'" src={{appimages[9].img}}>
+
+            </div>
+            <div class="status">
+              <p>{{orderno.status}}</p>
+            </div>
+          </div>
+
+          <div *ngIf="showorders && orderindex==i" class="order-container">
+            <div *ngFor="let order of userorder[0].orders[i].order let i1=index">
+              <mat-card fxLayout="row" fxLayoutAlign="start">
+                <div fxLayoutAlign="center" fxFlex="30">
+                  <img src={{order.img}}>
+                </div>
+                <div fxFlex="70" fxLayoutAlign="start" fxLayout="column">
+                  <div fxLayoutAlign="start" class="ordername">
+                    <p>{{order.name}}</p>
+                  </div>
+                  <div fxLayoutAlign="start" class="orderquantity">
+                    {{order.quantity}} x {{order.volume}}
+                  </div>
+                  <!-- <div fxLayoutAlign="start" class="orderprice">
+                    <span>Rs {{order.ourprice}}</span>
+                  </div> -->
+                  <div fxFlex="10" fxLayout="column" fxLayoutAlign="start" class="orderprice">
+
+                    <s>₹ {{ order.price}}</s>
+
+                    <p>₹ {{ order.ourprice }}</p>
+
+
+
+                  </div>
+
+                </div>
+                <div *ngIf="i1==userorder[0].orders[i].order.length -1" fxLayout="column" class="usertotal">
+                  <!-- <span>Savings: ₹ {{orderno.savings}}</span> -->
+                  <span> {{orderno.total}}</span>
+                </div>
+
+
+              </mat-card>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="productview" fxLayout="column" *ngIf="productview && !anyerror && !cartview && !yorder">
+    <!-- <div fxLayoutAlign="center" *ngIf="anyerror" class="anyerror" fxLayout="column">
+    <img src="../../assets/networkerror.png">
+    <p>
+      Unable to proceed please check your Internet Connection or try Again
+    </p>
+    
+  </div> -->
+    <mat-icon *ngIf="!skeletonscreen" (click)="gotofront()">keyboard_backspace</mat-icon>
+    <div fxLayoutAlign="center" class="notfound" *ngIf="productdata!=null && productdata.length==0 && searchcomplete">
+
+      <p>OOPS! we dont find your search!!
+      </p>
+    </div>
+    <div *ngIf="skeletonscreen">
+
+      <div fxLayout="column">
+        <div fxLayout="row">
+          <ngx-skeleton-loader count="5" [animation]="progress" [theme]="{
+        
+        height: '100px',
+        width:'100px',
+        'margin-bottom':'10%'
+        
+     
+      }">
+          </ngx-skeleton-loader>
+          <ngx-skeleton-loader count="5" [animation]="progress" [theme]="{
+      
+        height: '100px',
+        width:'250px',
+        'margin-bottom':'4%',
+        'margin-left':'4%'
+      }">
+          </ngx-skeleton-loader>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="product">
+
+      <div class="product" *ngFor="let product of productdata let i=index">
+
+        <mat-card *ngIf="i>=minindex && i<maxindex " fxLayout="row">
+          <div class="image-container" fxLayoutAlign="start" fxFlex="20">
+            <ngui-in-view currentproduct={{i}} [productdata]="productdata">
+              <img *ngIf src={{product.img}}>
+            </ngui-in-view>
+          </div>
+          <div class="name-container" fxLayout="column" fxLayoutAlign="start" fxFlex="50">
+            <div class="name">
+              {{product.name}}
+            </div>
+            <div class="quantity">
+              {{product.quantity}}
+            </div>
+            <div fxLayout="row" class="price">
+              <div style="margin-right: 3px;">
+                <s>₹ {{ product.price}}</s>
+              </div>
+              <div fxFlex="50">
+                <p>₹ {{ product.ourprice }}</p>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div fxLayout="column" class="add-container" fxLayoutAlign="end" fxFlex="30">
+            <img *ngIf="i==0"
+              src="https://i.ibb.co/4RMH5nM/images-q-tbn-ANd9-Gc-T-y-Xs-o6b-Wojwp-Kb-HFK0u7yj-Pu0-Oq5-Eu-EZQ-usqp-CAU.jpg">
+            <!-- <star-rating value="1" totalstars="1" checkedcolor="gold" uncheckedcolor="gold" size="24px" readonly="false"
+            (rate)="onRate($event)"></star-rating> -->
+
+            <!-- <a *ngIf="!cartclick" (click)="cartinitiate(product,i)">+ Add</a> -->
+            <!-- <a *ngIf="cartclick" (click)="addtobag(product,i)"> {{ i==currentindex && !added   ? '+ Add' : (i==currentindex && added ? 'X' : (!cartproducts.includes(product) ? '+ Add' :'X'))}}</a> -->
+            <a (click)="addtobag(product,i)"> {{productcheck(product) ? 'X' :'+Add'}}
+            </a>
+            <!-- <div class="quantity">
+              <a href="#" (click)="volumedecrease(product,i,quan)" class="quantity__minus"><span>-</span></a>
+              <input #quan name="quantity" type="number" id="cartnum" class="quantity__input"
+                value="{{product.volume}}">
+              <a href="#" (click)="volumeincrease(product,i,quan)" class="quantity__plus"><span>+</span></a>
+            </div> -->
+
+            <!-- <div class="cart-quantity" fxLayoutAlign="center" fxFlex="20" fxLayout="row">
+              <div class="quantity">
+                <a (click)="decreasequantity1(i,quan)" class="quantity__minus"><span>-</span></a>
+                <input #quan name="quantity" type="number" id="cartnum" class="quantity__input"
+                  value="{{product.volume}}">
+                <a (click)="increasequantity1(i,quan)" class="quantity__plus"><span>+</span></a>
+              </div>
+             <div class="increase-quantity">
+              <mat-icon (click)="increasequantity(i)">add</mat-icon>
+            </div>
+  
+            <div fxLayoutAlign="center">
+              <input id="quantity" type="number"  value="{{cartview && i==cartitemindex ? quantity : '1'}}">
+            </div>
+            <div class="decrease-quantity">
+              <mat-icon (click)="decreasequantity(i)" >remove</mat-icon>
+            </div> 
+            </div> -->
+          </div>
+
+        </mat-card>
+
+
+      </div>
+      <div class="changebutton">
+
+        <mat-icon *ngIf="minindex>0 " (click)="changeproducts('prev')">keyboard_arrow_left
+        </mat-icon>
+        <a *ngIf="minindex>0" (click)="changeproducts('prev')">prev</a>
+        <a *ngIf="maxindex <=productdata.length" (click)="changeproducts('next')">next</a>
+        <mat-icon *ngIf="maxindex <=productdata.length" (click)="changeproducts('next')">keyboard_arrow_right
+        </mat-icon>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="cart" *ngIf="cartview && !productview" class="cart">
+    <div fxLayout="column">
+
+    </div>
+    <mat-card class="emptycart" *ngIf="cartproducts.length==0">
+      <div class="goback">
+        <mat-icon (click)="gotoproduct()">keyboard_backspace</mat-icon>
+        <p (click)="gotoproduct()">Back</p>
+      </div>
+
+      <p>OOPS! Please Go back and shop something</p>
+      <img *ngIf="appimages" src={{appimages[1].img}}>
+    </mat-card>
+    <div class="cartbox" *ngIf="cartproducts.length>0">
+      <div class="goback">
+        <mat-icon (click)="gotoproduct()">keyboard_backspace</mat-icon>
+        <!-- <p (click)="gotoproduct()">Back</p> -->
+      </div>
+
+
+      <div class="cartimage" fxLayoutAlign="center" fxLayout="row">
+        <img *ngIf="appimages" src={{appimages[0].img}}>
+        <h1>Your Items</h1>
+
+      </div>
+
+      <div class="cart-product" fxLayout="column" *ngFor="let product of cartproducts let i=index">
+        <div fxLayout="row">
+          <div class="cart-name" fxLayout="row" fxFlex="100" fxLayoutAlign="start">
+            <div fxFlex="20">
+              <img src={{product.img}}>
+
+            </div>
+            <div fxFlex="80" fxLayout="row" fxLayoutAlign="start">
+              <div fxFlex="100" fxLayout="column">
+                <p>{{product.name }} ( {{product.quantity}} x {{product.volume}})</p>
+                <s>₹ {{ product.price}}</s>
+
+                <p>₹ {{product.ourprice}}</p>
+              </div>
+              <div>
+                <div class="cart-quantity" fxLayoutAlign="center" fxFlex="20" fxLayout="row">
+                  <div class="quantity">
+                    <a (click)="decreasequantity(i,quan)" class="quantity__minus"><span>-</span></a>
+                    <input #quan name="quantity" type="number" id="cartnum" class="quantity__input"
+                      value="{{product.volume}}">
+                    <a (click)="increasequantity(i,quan)" class="quantity__plus"><span>+</span></a>
+                  </div>
+                  <!-- <div class="increase-quantity">
+                  <mat-icon (click)="increasequantity(i)">add</mat-icon>
+                </div>
+      
+                <div fxLayoutAlign="center">
+                  <input id="quantity" type="number"  value="{{cartview && i==cartitemindex ? quantity : '1'}}">
+                </div>
+                <div class="decrease-quantity">
+                  <mat-icon (click)="decreasequantity(i)" >remove</mat-icon>
+                </div> -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- <div fxFlex="25" class="cart-price" fxLayout="row" fxLayoutAlign="end">
+          
+            <mat-icon (click)="removefromcart(product)">delete</mat-icon>
+          </div> -->
+
+
+        </div>
+      </div>
+
+      <div *ngIf="!login && !verified" class="address" fxLayoutAlign="start">
+        <input type="text" #phonevalue id="phone" placeholder="Phone number" style="height:20px; width:100px">
+        <button> <a (click)="input(phonevalue)">Send OTP</a></button>
+
+      </div>
+      <p class="error-text" *ngIf="phoneerror">phone number is reqiuired</p>
+      <p class="error-text" *ngIf="invalidphone">Please enter valid phone number</p>
+      <div *ngIf="otp" class="address" fxLayoutAlign="start">
+        <input type="number" #otpvalue id="otp" placeholder="Enter OTP" style="height:20px; width:100px">
+        <button> <a (click)="verifyotp(otpvalue)">Verify OTP</a></button>
+
+      </div>
+      <p class="error-text" *ngIf="anyerror2">Please check your internet or try again</p>
+      <div *ngIf="pleasewait">
+        <loader>
+        </loader>
+      </div>
+      <!-- <p class="wait" *ngIf="pleasewait">Please Wait..</p> -->
+      <p class="error-text" *ngIf="invalidotp">Wrong Otp ! You will be redirect</p>
+      <div class="delivery" fxLayout="column">
+        <div *ngIf="verified && dataready " fxLayoutAlign="start" fxLayout="column">
+          <p>Deliver to:</p>
+          <textarea id="address"  value="{{useraddress}}"
+            placeholder="{{!exist ? 'Type your address' :'Type your address'}}"></textarea>
+          <p class="error-text" *ngIf="addresserror1">Please enter your address</p>
+          <div class="slots" fxLayout="column">
+            <div *ngIf="slot1" fxLayout="row">
+              <div style="margin-right: 7%;">
+                <p>Noida & Gr. Noida</p>
+              </div>
+              <div *ngFor="let slot of slots let i=index" class="slot-container">
+                <div *ngIf="Checked1 && slotindex1==i || slotindex1==null && !Checked1" fxFlex="100" fxLayout="row"
+                  class="slot">
+                  <div>
+                    <input (click)="slotcheck1(i,slot)" type="checkbox">
+
+                  </div>
+                  <div>
+                    <label>{{slot}}</label>
+
+                  </div>
+                  <!-- <div>
+                 
+                </div>
+                <div>
+                  
+                </div> -->
+
+
+                </div>
+                <!-- <div class="slot">
+                <input type="checkbox">
+                <label>11-12 pm</label>
+
+              </div>
+              <div class="slot">
+                <input type="checkbox">
+                <label>3-4 pm</label>
+
+              </div>
+              <div class="slot">
+                <input type="checkbox">
+                <label>6-7 am</label>
+
+              </div> -->
+
+              </div>
+
+            </div>
+            <div *ngIf="slot && slot1" class="or">
+              <p>OR</p>
+            </div>
+            <div *ngIf="slot" fxLayout="row">
+              <div style="margin-right: 10%;">
+                <p>Ghaziabad</p>
+              </div>
+              <div *ngFor="let slot of rajslots let i=index" fxLayout="row" class="slot-container">
+                <div *ngIf="Checked && slotindex==i || slotindex==null && !Checked" fxLayout="row" class="slot">
+                  <div>
+                    <input (click)="slotcheck(i,slot)" type="checkbox">
+
+                  </div>
+                  <div>
+                    <label>{{slot}}</label>
+
+
+                  </div>
+                </div>
+                <!-- <div class="slot">
+                <input type="checkbox">
+                <label>1-2 pm</label>
+
+              </div>
+
+              <div class="slot">
+                <input type="checkbox">
+                <label>5-6 pm</label>
+
+              </div> -->
+
+              </div>
+
+            </div>
+            <!-- <p class="error-text" *ngIf="slotvalue=='6-11 am' || slotvalue=='7-11 am'">*Order Before 10:00 pm for next
+              day delivery</p> -->
+            <!-- (slotvalue=='6-7 am' || slotvalue=='7-8 am') -->
+          </div>
+          <p class="error-text" *ngIf="sloterror">Please select your delivery time</p>
+          <div fxLayout="row" class="refer">
+            <input checked disabled type="checkbox">
+            <p>Refer balance :</p>
+            <span>₹ {{userorder[0].referbalance}}</span>
+          </div>
+          <div class="delivery" fxLayout="row">
+            <div *ngIf="carttotal>=0" fxFlex="65" class="deliverybutton" fxLayout="column">
+              <button> <a (click)="order()">Pay on delivery</a> </button>
+              <p class="orderwait" *ngIf="pleasewait1">
+                <loader></loader>
+              </p>
+              <span>Free Delivery</span>
+              <!-- <span *ngIf="(copycarttotal>100 || (slotvalue=='6-7 am' || slotvalue=='7-8 am'))">Free Delivery</span> -->
+              <!-- <span *ngIf="((copycarttotal<100 && !(slotvalue=='6-7 am' || slotvalue=='7-8 am')))">Delivery
+                Charge 30Rs</span>
+              <span *ngIf="((copycarttotal<100 && !(slotvalue=='6-7 am' || slotvalue=='7-8 am')) )">Min Order:
+                100 Rs For Free
+                Delivery</span> -->
+            </div>
+
+            <div fxLayout="column" class="total" fxFlex="35">
+              <span>Total-{{carttotal}}</span>
+              <span class="final-total" *ngIf="userorder[0].referbalance <= carttotal && carttotal>0 ">Payable:₹
+                {{carttotal-userorder[0].referbalance}}</span>
+              <span>Savings:₹ {{savingstotal}}</span>
+              <span class="final-total" *ngIf="(userorder[0].referbalance > carttotal)">Payable :₹ 0</span>
+              <!-- <span *ngIf="carttotal>=100">Total-{{carttotal}}</span>
+              <span class="final-total"
+                *ngIf="userorder[0].referbalance <= carttotal && carttotal>100 && carttotal>0 ">Payable:₹
+                {{carttotal-userorder[0].referbalance}}</span>
+
+              <span
+                *ngIf="(carttotal<100 && (slotvalue=='6-7 am' || slotvalue=='7-8 am')) || copycarttotal<=100">Amount-{{carttotal}}</span>
+              <span
+                *ngIf="carttotal<100 && carttotal>0 && !(slotvalue=='6-7 am' || slotvalue=='7-8 am')">Total-{{carttotal+30}}</span>
+
+              <span class="final-total"
+                *ngIf="(userorder[0].referbalance > carttotal && carttotal<100 && (slotvalue=='6-7 am' || slotvalue=='7-8 am'))">Payable
+                :₹ 0</span>
+              <span class="final-total"
+                *ngIf="userorder[0].referbalance > (carttotal+30) && carttotal<100 && carttotal>0 && !(slotvalue=='6-7 am' || slotvalue=='7-8 am')">Payable:₹
+                0</span>
+
+              <span class="final-total"
+                *ngIf="(userorder[0].referbalance <= carttotal && carttotal<100 && (slotvalue=='6-7 am' || slotvalue=='7-8 am'))">Payable:₹
+                {{carttotal-userorder[0].referbalance}}</span>
+              <span class="final-total"
+                *ngIf="userorder[0].referbalance <= (carttotal+30) && carttotal<100 && carttotal>0 && !(slotvalue=='6-7 am' || slotvalue=='7-8 am')">Payable:₹
+                {{(carttotal+30)-userorder[0].referbalance}}</span> -->
+
+            </div>
+
+
+          </div>
+
+          <!-- <div *ngIf="userorder[0].referbalance > carttotal" fxLayout="column" class="refer-subtraction">
+            <div>
+              <span *ngIf="carttotal>=100">{{userorder[0].referbalance}} - {{carttotal}} heelo</span>
+
+               {{userorder[0].referbalance}} - {{carttotal}} 
+            </div>
+            <div>
+              {{userorder[0].referbalance-carttotal}}
+            </div> 
+
+
+          </div> -->
+          <!-- <div *ngIf="userorder[0].referbalance < carttotal" fxLayout="column" class="refer-subtraction">
+            <div>
+              {{carttotal}} - {{userorder[0].referbalance}}
+            </div>
+            <div>
+              {{carttotal-userorder[0].referbalance}}
+            </div>
+
+
+          </div> -->
+        </div>
+        <!-- <span fxFlex="45" *ngIf="!verified" class="total" fxLayoutAlign="flex-end">Total-{{carttotal}}</span> -->
+      </div>
+      <div fxLayout="column" class="payment-options">
+        <div fxLayout="row">
+          <img *ngIf="appimages" src={{appimages[3].img}}>
+          <img *ngIf="appimages" src={{appimages[12].img}}>
+        </div>
+        <div>
+          <p>Google Pay And Paytm are Available at time of delivery</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div *ngIf="ordercomplete" fxLayoutAlign="center" fxLayout="column" class="ordercomplete">
+    <p>Thanks your order is placed you will be redirect</p>
+    <img *ngIf="appimages" src={{appimages[9].img}}>
+
+  </div>
+</div>

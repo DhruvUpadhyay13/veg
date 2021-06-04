@@ -1,0 +1,916 @@
+//$(document).ready(function(){
+//  $(".crs_left").find("p").addClass("sp_ovr");
+// 
+//});
+//Get Touch and Urgent Help start here
+$(document).ready(function () {
+  $(".get_touch, .get_touch_mark").click(function () {
+	  $(".get_tc_1").toggleClass("get_touch_over");
+	  $('.overlay_bg').toggle()
+  });
+
+  $('.mn_pos').before("<div class='overlay_bg'></div>")
+  $('.overlay_bg').click(function () {
+	  $(this).toggle();
+	  $(".get_tc_1").toggleClass("get_touch_over");
+  })
+});
+
+$(document).ready(function () {
+  $(".chat_box, .chat_box_mark").click(function () {
+	  $(".chat_box_1").toggleClass("chat_box_over");
+	  $('.overlay_bg1').toggle()
+  });
+  $('.mn_pos').before("<div class='overlay_bg1'></div>")
+  $('.overlay_bg1').click(function () {
+	  $(this).toggle();
+	  $(".chat_box_1").toggleClass("chat_box_over");
+  })
+});
+$(window).load(function () {
+  $(".se-pre-con").fadeOut("slow");;
+});
+//Get Touch and Urgent Help END Here
+
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0)
+{
+	$(window).load(function()
+	{
+		setTimeout(function()
+		{
+			$('input:-webkit-autofill').each(function()
+			{
+				var text = $(this).val();
+				var name = $(this).attr('name');
+				$(this).after(this.outerHTML).remove();
+				$('input[name=' + name + ']').val(text);
+			});
+		}, 50);
+	});
+}
+
+// Mid tabs//
+$(document).ready(function() {
+			RESPONSIVEUI.responsiveTabs();
+})				
+// radio buttons //	
+
+$(document).ready(function()
+{	
+	 $(".radio_btn").click(function()													
+	 {
+		$(".mid_tabs .compare_1 .review_form li label").removeClass('active_rdo_btn');
+		$(this).parent('label').addClass('active_rdo_btn');											
+	})	
+	
+	$(".radio_btn1").click(function()													
+	 {
+		$("ul.renew_policy_form_list li span label").removeClass('active_rdo_btn');
+		$(this).parent('label').addClass('active_rdo_btn');											
+	})
+	
+
+	$(".slide_up .contnt label input").click(function()																	  
+		{ 							
+			$(this).parent('label').toggleClass('checked');
+		});
+		
+	$(".selector_contnt label input").click(function(){
+		$(this).parent('label').toggleClass('checked')
+	})
+	
+	$(".selector_contnt .div").click(function(){
+		$(this).toggleClass('checked')
+	})	
+
+	$(".slide_up .heading").click(function()
+	{
+		$(this).next('.contnt').slideToggle('');
+		$(this).toggleClass("collapsed")
+	});
+});	
+
+
+
+// Search//			
+		
+$(document).ready(function()
+{
+	 $(".search_pop").click(function()													
+	 {
+		$(".search_pop_content").fadeIn();
+		$(".overly_1").show();											
+	})
+	
+	 $(".mail_it").click(function()													
+	 {
+		$(".email_fld").fadeIn();
+		$(".overly_1").show();
+		
+											
+	})
+	
+	
+	$(".overly_1").click(function()														
+	 {
+		 $(this).fadeOut();
+		$(".search_pop_content").fadeOut();
+		$(".email_fld").fadeOut();											
+	})	
+	
+});	
+	
+
+//------ faq------//
+
+//------ Inner Menu------//		
+
+$(document).ready(function(){
+    $(".mob_menu").click(function(){
+        $(".lt_nav").toggle();
+    });
+});
+
+
+
+//------get in touch Pop up------//		
+
+$(document).ready(function(){
+   
+    $(".pop_1").click(function(){
+        $(".pop_1_cnt").show();
+		$(".pop_2_cnt").hide();
+		$(".pop_3_cnt").hide();
+		$(".pop_4_cnt").hide();
+    });
+	
+	   $(".pop_2").click(function(){
+        $(".pop_2_cnt").show();
+		$(".pop_1_cnt").hide();
+		$(".pop_3_cnt").hide();
+		$(".pop_4_cnt").hide();
+    });
+	
+	   $(".pop_3").click(function(){
+        $(".pop_3_cnt").show();
+		$(".pop_1_cnt").hide();
+		$(".pop_2_cnt").hide();
+		$(".pop_4_cnt").hide();
+    });
+	
+	   $(".pop_4").click(function(){
+        $(".pop_4_cnt").show();
+		$(".pop_1_cnt").hide();
+		$(".pop_2_cnt").hide();
+		$(".pop_3_cnt").hide();
+    });
+	
+	
+});
+	
+	
+<!-------about insurance	----------->
+	
+	$(document).ready(function(){
+		
+    $("#inc_1").click(function(){
+		$(this).addClass("hov_acto");
+		 $("#inc_2").removeClass("hov_acto");
+		  $("#inc_3").removeClass("hov_acto");
+		  $("#inc_4").removeClass("hov_acto");
+		  $("#inc_5").removeClass("hov_acto");
+		  $("#inc_6").removeClass("hov_acto");
+		  
+        $(".inc_content_1").fadeIn();
+		$(".inc_content_2").hide();
+		$(".inc_content_3").hide();
+		$(".inc_content_4").hide();
+		$(".inc_content_5").hide();
+		$(".inc_content_6").hide();
+    });
+	
+	  $("#inc_2").click(function(){
+		  $("#inc_1, #inc_3, #inc_4, #inc_5, #inc_6").removeClass("hov_acto");
+		  $(this).addClass("hov_acto");
+        $(".inc_content_2").fadeIn();
+		$(".inc_content_1, .inc_content_3, .inc_content_4, .inc_content_5, .inc_content_6").hide();
+    });
+		
+	  $("#inc_3").click(function(){
+		  
+		   $("#inc_1").removeClass("hov_acto");
+		    $("#inc_2").removeClass("hov_acto");
+		  $(this).addClass("hov_acto");		  
+		  $("#inc_4").removeClass("hov_acto");
+		  $("#inc_5").removeClass("hov_acto");
+		  $("#inc_6").removeClass("hov_acto");
+		  
+        $(".inc_content_3").fadeIn();
+		$(".inc_content_1").hide();
+		$(".inc_content_2").hide();
+		$(".inc_content_4").hide();
+		$(".inc_content_5").hide();
+		$(".inc_content_6").hide();
+    });
+		
+	  $("#inc_4").click(function(){
+			  $("#inc_1").removeClass("hov_acto");
+				$("#inc_2").removeClass("hov_acto");
+			  $(this).addClass("hov_acto");		  
+			  $("#inc_3").removeClass("hov_acto");
+			  $("#inc_5").removeClass("hov_acto");
+			  $("#inc_6").removeClass("hov_acto");
+        $(".inc_content_4").fadeIn();
+		$(".inc_content_1").hide();
+		$(".inc_content_2").hide();
+		$(".inc_content_3").hide();
+		$(".inc_content_5").hide();
+		$(".inc_content_6").hide();
+    });
+	
+	$("#inc_5").click(function(){
+			$("#inc_1").removeClass("hov_acto");
+				$("#inc_2").removeClass("hov_acto");
+			  $(this).addClass("hov_acto");		  
+			  $("#inc_4").removeClass("hov_acto");
+			  $("#inc_3").removeClass("hov_acto");
+			  $("#inc_6").removeClass("hov_acto");	
+        $(".inc_content_4").hide();
+		$(".inc_content_1").hide();
+		$(".inc_content_2").hide();
+		$(".inc_content_3").hide();
+		$(".inc_content_5").fadeIn();
+		$(".inc_content_6").hide();
+    });
+	
+		$("#inc_6").click(function(){
+			$("#inc_1").removeClass("hov_acto");
+				$("#inc_2").removeClass("hov_acto");
+			  $(this).addClass("hov_acto");		  
+			  $("#inc_4").removeClass("hov_acto");
+			  $("#inc_3").removeClass("hov_acto");
+			  $("#inc_5").removeClass("hov_acto");	
+        $(".inc_content_4").hide();
+		$(".inc_content_1").hide();
+		$(".inc_content_2").hide();
+		$(".inc_content_3").hide();
+		$(".inc_content_5").hide();
+		$(".inc_content_6").fadeIn();
+    });
+	
+  
+	
+});
+	
+	
+	<!-------Why Maruti Insurance slider	----------->
+	
+	
+	$(document).ready(function(){
+    $(".remove_action_1").click(function(){
+     
+	 $( ".why_maruti_sld" ).removeClass( "wow" )
+		
+    });
+// Odd and even add class 
+	$(document).ready(function(){
+		$('ul.yBuy_here_product li:nth-child(odd)').addClass('animate_left1')
+		$('ul.yBuy_here_product li:nth-child(even)').addClass('animate_right1')
+	})	
+});
+
+jQuery(function($) {
+    // detect window size and init slideshow here
+    $(window).on('resize', function () {
+        // detect window size and pause or resume the slideshow
+			//alert('Testing Elert');		
+    });
+});
+
+$("ul.yBuy_here_product li .more").mouseenter(function(){ 
+        //block = true;
+       var $parent = $(this).closest("DIV");
+         $(this, $parent).prev().css({"background-color": "", "font-size": "100%", "top":"0"});
+});
+
+
+$(document).ready(function() {
+		$(".addons .heading").click(function(){
+		 $(this).next('.contnt_check').slideToggle('400');
+		 $(this).toggleClass("collapsed")
+    });
+	
+	$(".addons .contnt_check li label input").click(function(){
+		$(this).parent('label').toggleClass('label-checked');
+	})
+	
+	$(".paymnt_form .list ul.check li label input").click(function(){
+		$(this).parent('label').toggleClass('label-cheked');
+	})
+	
+});
+
+
+
+$(document).ready(function(){
+
+  $('.fund_cat > ul > li:first-child').addClass("active");
+  $('.achivement .fund_cat > ul > li:first-child').removeClass("active");
+  $('.fund_cat > ul > li:has(ul)').addClass("has-sub");
+
+  $('.fund_cat > ul > li > a').click(function() {
+    var checkElement = $(this).next();
+    
+    $('.fund_cat li').removeClass('active');
+    $(this).closest('li').addClass('active');	
+    
+    
+    if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+      $(this).closest('li').removeClass('active');
+      checkElement.slideUp('normal');
+    }
+    
+    if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+      $('.fund_cat ul ul:visible').slideUp('normal');
+      checkElement.slideDown('normal');
+    }
+    
+    if (checkElement.is('ul')) {
+      return false;
+    } else {
+      return true;	
+    }		
+  });
+
+});
+
+
+
+//start here dashbord//
+$(".dash_1").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_2").removeClass('actv_2');
+	 $(".dash_3").removeClass('actv_2');
+	 $(".dash_4").removeClass('actv_2');
+	 $(".dash_5").removeClass('actv_2');
+	 $(".dash_6").removeClass('actv_2');
+	 
+	  $(".dash_1_box").show();
+	  $(".dash_2_box").hide();
+	  $(".dash_3_box").hide(); 
+	  $(".dash_4_box").hide();
+	  $(".dash_5_box").hide();
+	  $(".dash_6_box").hide();	  
+});
+
+$(".dash_2").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_1").removeClass('actv_2');
+	 $(".dash_3").removeClass('actv_2');
+	 $(".dash_4").removeClass('actv_2');
+	 $(".dash_5").removeClass('actv_2');
+	 $(".dash_6").removeClass('actv_2');
+	 
+	  $(".dash_1_box").hide();
+	  $(".dash_2_box").show();
+	  $(".dash_3_box").hide(); 
+	  $(".dash_4_box").hide();
+	  $(".dash_5_box").hide();
+	  $(".dash_6_box").hide();	  
+});
+
+$(".dash_3").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_2").removeClass('actv_2');
+	 $(".dash_1").removeClass('actv_2');
+	 $(".dash_4").removeClass('actv_2');
+	 $(".dash_5").removeClass('actv_2');
+	 $(".dash_6").removeClass('actv_2');
+	 
+	  $(".dash_1_box").hide();
+	  $(".dash_2_box").hide();
+	  $(".dash_3_box").show(); 
+	  $(".dash_4_box").hide();
+	  $(".dash_5_box").hide();
+	  $(".dash_6_box").hide();	  
+});
+
+$(".dash_4").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_2").removeClass('actv_2');
+	 $(".dash_3").removeClass('actv_2');
+	 $(".dash_1").removeClass('actv_2');
+	 $(".dash_5").removeClass('actv_2');
+	 $(".dash_6").removeClass('actv_2');
+	 	 
+	  $(".dash_1_box").hide();
+	  $(".dash_2_box").hide();
+	  $(".dash_3_box").hide(); 
+	  $(".dash_4_box").show();
+	  $(".dash_5_box").hide();
+	  $(".dash_6_box").hide();	  
+});
+
+$(".dash_5").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_2").removeClass('actv_2');
+	 $(".dash_3").removeClass('actv_2');
+	 $(".dash_4").removeClass('actv_2');
+	 $(".dash_1").removeClass('actv_2');
+	 $(".dash_6").removeClass('actv_2');
+	 	 
+	  $(".dash_1_box").hide();
+	  $(".dash_2_box").hide();
+	  $(".dash_3_box").hide(); 
+	  $(".dash_4_box").hide();
+	  $(".dash_5_box").show();
+	  $(".dash_6_box").hide();	  
+});
+
+$(".dash_6").click(function(){
+	$(this).addClass('actv_2');
+	$(".dash_2").removeClass('actv_2');
+	 $(".dash_3").removeClass('actv_2');
+	 $(".dash_4").removeClass('actv_2');
+	 $(".dash_5").removeClass('actv_2');
+	 $(".dash_1").removeClass('actv_2');
+	 	 
+	  $(".dash_1_box").hide();
+	  $(".dash_2_box").hide();
+	  $(".dash_3_box").hide(); 
+	  $(".dash_4_box").hide();
+	  $(".dash_5_box").hide();
+	  $(".dash_6_box").show();	  
+});
+
+
+/*tabfor.dashboard*/
+  $('ul.sub_tab > li').addClass("sub-tab");
+  $('ul.sub_tab li:first-child').addClass('activ');
+  $('ul.sub_tab > li').click(function() {
+    //var checkElement = $(this).next();
+    
+    $('ul.sub_tab li').removeClass('activ');
+    $(this).closest('li').addClass('activ');	      
+  });
+
+//end here dashbord//
+
+$(".rd_1").click(function(){
+	$(this).addClass("blue_border");
+	$(this).children(".fill_off").addClass("fill_on");
+	$(".o_ring").addClass("o_ring_h");
+	
+	$('.rd_2').removeClass("blue_border");
+	$('.rd_2').children(".fill_off").removeClass("fill_on");
+	
+});
+
+
+$(".rd_2").click(function(){
+	$(this).addClass("blue_border");
+	$(this).children(".fill_off").addClass("fill_on");
+	$(".o_ring").addClass("o_ring_h");	
+	
+	$('.rd_1').removeClass("blue_border");
+	$('.rd_1').children(".fill_off").removeClass("fill_on");
+	$(".o_ring").removeClass("o_ring_h");
+	
+});
+
+$('.call_back ').click(function(){
+	$('.time_box').slideToggle('fast')
+})
+
+
+$(document).ready( function () {
+	$('#dropdown_selector').change(function(){
+		/* setting currently changed option value to option variable */
+		var option = $(this).find('option:selected').val();
+	//alert('');
+		/* setting input box value to selected option value */
+		$('#showoption').val('Enter ' + option);
+	});
+});
+
+$('.time_box .time > label').click(function(){
+	//alert('error');
+	$(this).parent().toggleClass('active')
+})
+
+
+$('.main_nav ul > li:first-child').addClass('hover_l');
+$('.hover_l').mouseenter(function(){
+	//alert('.main_nav ul li');
+	//$('.customer_zone_detail').slideDown();
+	//('new_s')
+	$('.overley').css('display','block');
+})
+$('.overley').mouseenter(function(){
+	//$('.customer_zone_detail').removeClass('new_s')
+	//$('.customer_zone_detail').slideUp()
+	$(this).css('display','none');
+})
+
+$('.login_top .agree .check').click(function(){
+	$(this).toggleClass('active')
+})
+
+$('.customer_zone_detail ul li').click(function(){
+	//alert('');
+	$('.customer_zone_detail ul li').removeClass('hover_l');
+	$(this).addClass('hover_l');
+})
+
+
+$('.other_feed').click(function(){
+	//alert('123');
+	$('.tr').show()
+})
+$('.other_feed1').on('change',function() {
+	alert('HoLLA');
+	$('.tr1').show()
+})
+
+$('.change_insurer').on('change',function() {
+	//alert('00');
+	$('.royal_sundaram').hide()
+})
+
+///$('.next_show').mouseenter(function(){
+	//$(this).next('p').show(200);
+///})
+//$('.next_show').mouseleave(function(){
+	//$(this).next('p').hide(200);
+//})
+
+
+
+$( window ).resize(function() {
+  var width = $(window).width();
+if(width <= 980)
+{
+//alert("hello");
+//$('body').css("display" , "none") 
+$('.hover_l').click(function(){
+	//alert('.main_nav ul li');
+	$('.customer_zone_detail').addClass('new_s')
+	$('.overley').css('display','block');
+})
+$('.overley').click(function(){
+	$('.customer_zone_detail').removeClass('new_s')
+	$(this).css('display','none');
+})
+
+
+ }
+ else{
+	 //alert("hello");
+	 //$('body').css("display","block")
+	 }
+})
+
+
+
+/*===========for careers page==========*/
+
+$(document).ready(function()
+{
+$(".job_1").click(function()													
+	{
+$ (this).next( "" ).slideToggle() ;
+	// alert("test")
+		
+})
+	
+});	
+
+	
+$('.continue_read').click(function(){
+		$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+		//var $this = $(this);
+		//$this.toggleClass('continue_read');
+		//if($this.hasClass('continue_read')){
+			//$this.text('More');			
+		//} else {
+			//$this.text('Less');
+		//}
+	$(".detailed_content").slideToggle();	
+	 $('html, body').animate({
+scrollTop: $(".detailed_content").offset().top - 50
+}, 1000,"");
+})	
+
+
+
+
+$(".continue_read_1").click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".detailed_content_1").slideToggle();	
+	 $('html, body').animate({
+		scrollTop: $(".detailed_content_1").offset().top - 50
+		}, 1000,"");
+});
+
+$('.dealer_wrkshp').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".dealer_wrkshp_bx").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".dealer_wrkshp_bx").offset().top - 50
+		}, 1000,"");
+})
+$('.twng_fcility').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".towing_facility_content").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".towing_facility_content").offset().top - 50
+		}, 1000,"");	
+})
+
+$('.instant_policy_issuance').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".instant_policy_issuance_content").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".instant_policy_issuance_content").offset().top - 50
+		}, 1000,"");		
+	//$('.instant_policy_issuance_content').slideToggle()
+})
+
+$('.no_hiddien_charges').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".no_hiddien_charges_content").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".no_hiddien_charges_content").offset().top - 50
+		}, 1000,"");		
+	//$('.no_hiddien_charges_content').slideToggle()
+})
+$('.insurance_needs').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".insurance_needs_content").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".insurance_needs_content").offset().top - 50
+		}, 1000,"");		
+	//$('.insurance_needs_content').slideToggle()
+})
+$('.customer_care_btn').click(function(){
+	$(this).html($(this).text() == 'Concise' ? 'Read Full' : 'Concise');
+	$(".customer_care_content").slideToggle();	
+	$('html, body').animate({
+		scrollTop: $(".customer_care_content").offset().top - 50
+		}, 1000,"");
+	//$('.customer_care_content').slideToggle()
+})
+
+$('.continue_read_2n').click(function(){
+	//alert('new-error')
+	
+	$(".detailed_content_3").slideDown();	
+	 $('html, body').animate({
+		scrollTop: $(".detailed_content_3").offset().top - 50
+		}, 1000,"");
+});
+
+
+$('.band1').click(function(){
+	$('.sten1').hide()
+	$('.sten2').show()	
+})
+
+$(document).on("click", ".clos_rfresh", function(){
+	//alert('close');
+    location.reload(true);
+});
+
+
+$('.click_slct_bnfits').click(function(){
+	$(this).toggleClass('arrow_ups');
+	$('ul.benefits_select').slideToggle()	
+})
+$('ul.benefits_select li').click(function(){
+		$('ul.benefits_select').slideToggle();
+		$('.click_slct_bnfits').toggleClass('arrow_ups');	
+})
+
+
+/*============all about car========*/
+$(document).ready(function(){
+   
+    $(".aac_1").click(function(){
+        $(".abt_cnt_01").show();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_2, .aac_3, .aac_4, .aac_5, .aac_6, .aac_7").removeClass("acto_8");
+		
+    });
+	
+
+$(".aac_2").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").show();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_3, .aac_4, .aac_5, .aac_6, .aac_7").removeClass("acto_8");
+		
+});
+	
+$(".aac_3").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").show();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_2, .aac_4, .aac_5, .aac_6, .aac_7").removeClass("acto_8");
+});	
+
+
+$(".aac_4").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").show();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_3, .aac_5, .aac_6, .aac_7").removeClass("acto_8");
+});	
+
+
+$(".aac_5").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").show();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_3, .aac_4, .aac_6, .aac_7").removeClass("acto_8");
+});	
+
+$(".aac_6").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").show();
+		$(".abt_cnt_07").hide();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_3, .aac_4, .aac_5, .aac_7").removeClass("acto_8");
+});	
+	
+	$(".aac_7").click(function(){
+        $(".abt_cnt_01").hide();
+		$(".abt_cnt_02").hide();
+		$(".abt_cnt_03").hide();
+		$(".abt_cnt_04").hide();
+		$(".abt_cnt_05").hide();
+		$(".abt_cnt_06").hide();
+		$(".abt_cnt_07").show();
+		$(this).addClass("acto_8");
+		$(".aac_1, .aac_3, .aac_4, .aac_5, .aac_6").removeClass("acto_8");
+});	
+	
+	
+});
+
+
+$(document).ready(function () {
+          $('.scrollto').click(function () {
+              var aTag = $(this).attr('href');
+              $('html,body').animate({
+                  scrollTop: $(aTag).offset().top-50
+				  //slideToggle: $(aTag).toggle().top
+              }, 1000);
+              return false;
+          });
+ });
+
+
+
+
+<!--==============for compare plan left nav quick access==============-->
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1320) {
+        $(".compare_quick_access").addClass("compare_quick_access_1");
+       
+    } else if ($(this).scrollTop() < 1320) {
+    	$(".compare_quick_access").removeClass("compare_quick_access_1");
+       
+    }
+});
+
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1320) {
+        $(".compare_quick_access").addClass("compare_quick_access_1");
+       
+    } else if ($(this).scrollTop() < 1320) {
+        $(".compare_quick_access").removeClass("compare_quick_access_1");
+       
+    }
+});
+
+
+
+
+$('.view_directorship').click(function(){
+	$(this).html($(this).text() == '-' ? '+' : '-');
+	$(this).next('.directorship').slideToggle();	
+})
+
+
+$(function() {
+    //caches a jQuery object containing the header element
+    var header = $(".inner_head");
+    //$(header).addClass('clearHeader');	
+	$(window).scroll(function() {
+      $(document).ready(function() {
+	    var scroll = $(window).scrollTop();
+		if ($(window).width() >= 768) {	
+		//alert('00');	
+        if (scroll >= 1) {
+            header.removeClass('clearHeader').addClass("darkHeader");
+        } else {
+            header.removeClass("darkHeader").addClass('clearHeader');
+        }
+		}
+		else {
+   //alert('More than 960');
+				   if (scroll >= 100) {
+							header.removeClass('clearHeader').addClass("clearHeader");
+						} else {
+							header.removeClass("clearHeader").addClass('clearHeader');
+						}
+		}
+    });
+	});
+});
+
+
+
+if (
+$('header').hasClass('inner_head')) {
+	///alert('01');
+    $('body').addClass('fixed_b');
+}
+
+
+$(window).bind({
+     load:function(){
+     },	 
+	 
+     resize:function(){
+     
+	 },
+	 
+     scroll:function(){
+    }
+});
+$(window).scroll(function() {
+		if ($(this).scrollTop() > 445) {
+			$(".tb_white").addClass("tb_white_add");		
+	 } else if ($(this).scrollTop() < 445) {
+		   $(".tb_white").removeClass("tb_white_add");		   
+		}	
+});
+// loader 
+jQuery(window).load(function() {
+        // will first fade out the loading animation
+	jQuery("#status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+	jQuery("#preloader").delay(500).fadeOut("slow");
+})
+function hasPlaceholderSupport() {
+	var input = document.createElement('input');
+	return ('placeholder' in input);
+}
+//var fag=true;
+//$(window).scroll(function() { 
+//	var x= $(window).scrollTop();
+//	if(x<=60)
+//	fag=true;		
+//    if (x >= 120 && fag==true) {
+//		fag=false;
+//	   $('html, body').animate({scrollTop: $(".mid_tabs").offset().top - 100}, 600,"");
+//    }
+//});
+//alert($(window).scrollTop());
+$(document).ready(function(){
+  $("#term_cnt").load("Privacy-Policy.aspx #privc_plcy");
+});
+

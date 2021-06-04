@@ -1,0 +1,125 @@
+﻿
+function HtmlScriptExpValidate(oSrc, args) {
+    var str = args.Value.toLowerCase();
+    if (str.match(/<[a-z]|<!|&#|\Won[a-z]*\s*=|(script\s*:)|expression\(/) == null)
+        args.IsValid = true;
+    else
+        args.IsValid = false;
+}
+
+function HtmlScriptValidate(oSrc, args) {
+    var str = args.Value.toLowerCase();
+    if (str.match(/([\<])([^\>]{1,})*([\>])/i) == null)
+        args.IsValid = true;
+    else
+        args.IsValid = false;
+}
+
+function IsValidImage(cid) {
+    if (cid.value.replace(/^\s+|\s+$/g, '') != "") {
+        var file = cid.value;
+        var totExten = "";
+        var validExtensions = new Array(".bmp", ".jpg", ".gif", ".jpeg", ".png");
+        var allowSubmit = false;
+        var ext = file.slice(file.lastIndexOf(".")).toLowerCase();
+        for (var i = 0; i < validExtensions.length; i++) {
+            if (validExtensions[i] == ext) {
+                allowSubmit = true;
+            }
+            if (totExten == "")
+                totExten = validExtensions[i];
+            else
+                totExten += ", " + validExtensions[i];
+        }
+        if (allowSubmit == false) {
+            alert("Only files with extensions " + totExten + " are allowed.");
+            cid.value = "";
+            return false;
+        }
+    }
+}
+
+function IsValidDoc(cid) {
+    if (cid.value.replace(/^\s+|\s+$/g, '') != "") {
+        var file = cid.value;
+        var totExten = "";
+        var validExtensions = new Array(".zip", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".rar");
+        var allowSubmit = false;
+        var ext = file.slice(file.lastIndexOf(".")).toLowerCase();
+        for (var i = 0; i < validExtensions.length; i++) {
+            if (validExtensions[i] == ext) {
+                allowSubmit = true;
+            }
+            if (totExten == "")
+                totExten = validExtensions[i];
+            else
+                totExten += ", " + validExtensions[i];
+        }
+        if (allowSubmit == false) {
+            alert("Only files with extensions " + totExten + " are allowed.");
+            cid.value = "";
+            return false;
+        }
+    }
+}
+
+function IsValidImageDoc(cid) {
+    if (cid.value.replace(/^\s+|\s+$/g, '') != "") {
+        var file = cid.value;
+        var totExten = "";
+        var validExtensions = new Array(".bmp", ".jpg", ".gif", ".jpeg", ".png", ".zip", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".rar");
+        var allowSubmit = false;
+        var ext = file.slice(file.lastIndexOf(".")).toLowerCase();
+        for (var i = 0; i < validExtensions.length; i++) {
+            if (validExtensions[i] == ext) {
+                allowSubmit = true;
+            }
+            if (totExten == "")
+                totExten = validExtensions[i];
+            else
+                totExten += ", " + validExtensions[i];
+        }
+        if (allowSubmit == false) {
+            alert("Only files with extensions " + totExten + " are allowed.");
+            cid.value = "";
+            return false;
+        }
+    }
+}
+
+function IsValidPdf(cid) {
+    if (cid.value.replace(/^\s+|\s+$/g, '') != "") {
+        var file = cid.value;
+        var totExten = "";
+        var validExtensions = new Array(".pdf");
+        var allowSubmit = false;
+        var ext = file.slice(file.lastIndexOf(".")).toLowerCase();
+        for (var i = 0; i < validExtensions.length; i++) {
+            if (validExtensions[i] == ext) {
+                allowSubmit = true;
+            }
+            if (totExten == "")
+                totExten = validExtensions[i];
+            else
+                totExten += ", " + validExtensions[i];
+        }
+        if (allowSubmit == false) {
+            alert("Only files with extensions " + totExten + " are allowed.");
+            cid.value = "";
+            return false;
+        }
+    }
+}
+
+
+
+function checknum(numvalue) {
+
+    var check = document.getElementById(numvalue);
+
+    if (isNaN(check.value)) {
+        alert("Please fill numeric values only.");
+        check.value = "";
+    }
+
+}

@@ -1,0 +1,1801 @@
+﻿@charset "utf-8";@font-face{font-family:'dosisextralight';src:url('../../fonts/dosis-extralight_3-webfont.eot');src:url('../fonts/dosis-extralight_3-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/dosis-extralight_3-webfont.woff') format('woff'),
+url('../fonts/dosis-extralight_3-webfont.ttf') format('truetype'),
+url('../fonts/dosis-extralight_3-webfont.svg#dosisextralight') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'dosislight';src:url('../fonts/dosis-light_3-webfont.eot');src:url('../fonts/dosis-light_3-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/dosis-light_3-webfont.woff') format('woff'),
+url('../fonts/dosis-light_3-webfont.ttf') format('truetype'),
+url('../fonts/dosis-light_3-webfont.svg#dosislight') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'dosisregular';src:url('../fonts/dosis-regular_3-webfont.eot');src:url('../fonts/dosis-regular_3-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/dosis-regular_3-webfont.woff') format('woff'),
+url('../fonts/dosis-regular_3-webfont.ttf') format('truetype'),
+url('../fonts/dosis-regular_3-webfont.svg#dosisregular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'DosisBold';src:url('../fonts/DosisBold.eot');src:url('../fonts/DosisBold.eot') format('embedded-opentype'),
+url('../fonts/DosisBold.woff') format('woff'),
+url('../fonts/DosisBold.ttf') format('truetype'),
+url('../fonts/DosisBold.svg#DosisBold') format('svg');}
+@font-face{font-family:'kabel_bk_btbook';src:url('../fonts/kabeln_2-webfont.eot');src:url('../fonts/kabeln_2-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/kabeln_2-webfont.woff') format('woff'),
+url('../fonts/kabeln_2-webfont.ttf') format('truetype'),
+url('../fonts/kabeln_2-webfont.svg#kabel_bk_btbook') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'swiss_721light';src:url('../fonts/swiss_721_light-webfont.eot');src:url('../fonts/swiss_721_light-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/swiss_721_light-webfont.woff') format('woff'),
+url('../fonts/swiss_721_light-webfont.ttf') format('truetype'),
+url('../fonts/swiss_721_light-webfont.svg#swiss_721light') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'swiss921_btregular';src:url('../fonts/ufonts.com_swiss-921-bt_0-webfont.eot');src:url('../fonts/ufonts.com_swiss-921-bt_0-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/ufonts.com_swiss-921-bt_0-webfont.woff') format('woff'),
+url('../fonts/ufonts.com_swiss-921-bt_0-webfont.ttf') format('truetype'),
+url('../fonts/ufonts.com_swiss-921-bt_0-webfont.svg#swiss921_btregular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:'MyriadHebrew-Regular';src:url('../fonts/MyriadHebrew-Regular_gdi.eot');src:url('../fonts/MyriadHebrew-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+url('../fonts/MyriadHebrew-Regular_gdi.ttf') format('truetype'),
+url('../fonts/MyriadHebrew-Regular_gdi.svg#MyriadHebrew-Regular') format('svg');font-weight:400;font-style:normal;font-stretch:normal;unicode-range:U+0020-25CA;}
+@font-face{font-family:'AgendaBold';src:url('../fonts/AgendaBold.eot');src:url('../fonts/AgendaBold.eot') format('embedded-opentype'),
+url('../fonts/AgendaBold.woff2') format('woff2'),
+url('../fonts/AgendaBold.woff') format('woff'),
+url('../fonts/AgendaBold.ttf') format('truetype'),
+url('../fonts/AgendaBold.svg#AgendaBold') format('svg');}
+@font-face{font-family:'PalatinoLinotype-Italic';src:url('../fonts/PalatinoLinotype-Italic_gdi.eot');src:url('../fonts/PalatinoLinotype-Italic_gdi.eot?#iefix') format('embedded-opentype'),
+url('../fonts/PalatinoLinotype-Italic_gdi.woff') format('woff'),
+url('../fonts/PalatinoLinotype-Italic_gdi.ttf') format('truetype'),
+url('../fonts/PalatinoLinotype-Italic_gdi.svg#PalatinoLinotype-Italic') format('svg');font-weight:400;font-style:italic;font-stretch:normal;unicode-range:U+0-10FFFF;}
+@font-face{font-family:'NunitoBold';src:url('../fonts/NunitoBold.eot');src:url('../fonts/NunitoBold.eot') format('embedded-opentype'),
+url('../fonts/NunitoBold.woff2') format('woff2'),
+url('../fonts/NunitoBold.woff') format('woff'),
+url('../fonts/NunitoBold.ttf') format('truetype'),
+url('../fonts/NunitoBold.svg#NunitoBold') format('svg');}
+ul, ul li{list-style-type:none;padding:0}
+p{font-family:'MyriadHebrew-Regular';font-size:15px;line-height:22px;color:#656565;}
+body{font-family:"MyriadHebrew-Regular";font-size:15px;line-height:22px;color:#555;}
+input{color:rgba(153,153,153,1)}
+input:focus{outline:none;box-shadow:0px 0px 7px #61C5FA !important;border-color:#61C5FA !important;}
+select:focus{border-color:#61C5FA !important;box-shadow:0 0 7px #61C5FA !important;transition-duration:.4s;outline:none;}
+textarea:focus{border-color:#61C5FA !important;box-shadow:0 0 7px #61C5FA !important;transition-duration:.4s;outline:none;}
+select.change_insurer{outline:none !important}
+select.change_insurer:focus{box-shadow:none !important;outline:none !important;}
+select.change_insurer option{outline:none !important}
+.inner_page_frame h1 span{color:#085394;display:block;font-size:17px;font-family:'MyriadHebrew-Regular';margin:15px 0 0}
+ul.claim_process_list{list-style-type:none;font-family:'MyriadHebrew-Regular';float:left;width:100%;margin:30px 0 35px 0;-webkit-animation:claim_process_list .7s 1;-webkit-animation-direction:alternate;animation:claim_process_list .7s 1;animation-direction:alternate;}
+@keyframes claim_process_list{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes claim_process_list{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+ul.claim_process_list li{float:left;width:50%;margin:0 0 10px 0;line-height:19px;padding:3px 30px 15px 55px;background:url(https://nexa1.azureedge.net/insurance/images/claim_1.png);background-repeat:no-repeat;font-size:17px;color:rgba(0,0,0,.9);}
+ul.claim_process_list li + li{background:url(https://nexa1.azureedge.net/insurance/images/claim_2.png);background-repeat:no-repeat;}
+ul.claim_process_list li + li + li{background:url(https://nexa1.azureedge.net/insurance/images/claim_3.png);background-repeat:no-repeat;}
+ul.claim_process_list li + li + li + li{background:url(https://nexa1.azureedge.net/insurance/images/claim_4.png);background-repeat:no-repeat;}
+ul.claim_process_list li a{color:rgba(0,0,0,.9);}
+.sub_heading{color:#343434;float:left;font-family:"dosisregular";font-size:28px;margin:10px 0 5px;text-align:left;width:100%;}
+.claim_box{width:100%;float:left;margin:0 0 30px 0;background:#efeff4;padding:15px 10px;font-family:"MyriadHebrew-Regular";-webkit-animation:claim_box_n .7s 1;-webkit-animation-direction:alternate;animation:claim_box_n .7s 1;animation-direction:alternate;}
+@keyframes claim_box_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes claim_box_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+.policy_no{width:38%;padding:20px 25px 35px;background:#fff;float:left;}
+.policy_no label{color:#333333;font-size:17px;font-weight:normal;display:block;margin-bottom:4px;}
+.policy_no input{color:#b8b8b8;width:100%;float:left;margin:0 0 0 0;border:1px solid #cdcdcd;padding:4px 5px;font-family:'swiss_721light';font-size:21px;font-weight:bold;transition:all .5s ease}
+.policy_no input:focus{border-color:#f08e8a;transition-duration:1s;}
+.emailId{width:61.3%;float:left;margin:0 0 0 0.6%;background:#fff;padding:20px 25px 35px 35px;}
+.emailId .or{background:#efeff4;color:#333;padding:4px 0;border-radius:50%;float:left;margin:4px 0 0 -52px;font-size:16px;width:32px;text-align:center;}
+.emailId label{color:#333333;font-size:17px;font-weight:normal;display:block;margin-bottom:4px;}
+.emailId input{color:#b8b8b8;float:left;margin:0 0 0 0;border:#cdcdcd 1px solid;padding:4px 5px;font-family:'swiss_721light';font-size:21px;font-weight:bold;}
+.emailId input[type="text"]{width:58%;margin-right:2%;}
+.emailId input[type="text"]:last-child{width:40%;background:#fff;float:left;margin:0}
+.report_claim{width:100%;float:left;margin:10px 0 0 0;}
+.report_claim p{font-size:13px;color:#333;font-style:italic;padding:0px 5px 0;float:left;width:72%;line-height:normal;margin-bottom:0;}
+.report_claim input[type="submit"]{width:;float:right;padding:6px 40px 5px;font-family:"MyriadHebrew-Regular";color:#fff;font-size:15px;text-transform:uppercase;font-weight:bold;margin:0 .8% 0 0;background:#0059a9;border:solid 1px #3b7fbd;border-radius:0px;transition:all .5s}
+.emailId input[type="text"]:focus{border-color:#f08e8a;transition-duration:1s;}
+.report_claim input[type="submit"]:hover{background:#3b7fbd;}
+.download_claim_form{width:100%;float:left;border:10px solid #efeff4;margin:0 0 0px 0;padding:0 0 0 0;-webkit-animation:download_claim_form_n .7s 1;-webkit-animation-direction:alternate;animation:download_claim_form_n .7s 1;animation-direction:alternate;}
+@keyframes download_claim_form_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes download_claim_form_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+.download_claim_form span{border-bottom:3px solid #d7dcea;color:#000;float:left;font-family:"MyriadHebrew-Regular";font-size:22px;font-weight:bold;margin-bottom:10px;margin-right:15%;text-align:left;width:auto;padding:0 25% 2px 2%;}
+.download_claim_form .img{width:15%;float:left;margin:0 2% 0 0;}
+.download_claim_form .text{width:100%;float:left;font-size:18px;padding:35px 19% 30px 30px;font-style:italic;line-height:20px;font-family:'dosisregular';}
+.download_claim_form .text span{color:#b3b3b3;font-size:18px;border:0;padding:5px 0;margin:0;float:left;width:100%;font-weight:normal}
+.download_claim_form .imgs{float:right;margin:0 10px 10px 0;background:#005ba9;padding:3px;border-radius:2px;}
+.support_no{background:#fff none repeat scroll 0 0;border:10px solid #efeff4;float:right;font-family:"kabel_bk_btbook";padding:43px 0;text-align:center;width:100%;-webkit-animation:support_no_n .7s 1;-webkit-animation-direction:alternate;animation:support_no_n .7s 1;animation-direction:alternate;}
+@keyframes support_no_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes support_no_n{0%{opacity:0;-webkit-opacity:0;transform:scale(.8);-webkit-transform:scale(.8);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1.0);-webkit-transform:scale(1);}
+}
+.support_no span{border-bottom:3px solid #d7dcea;color:#000;float:left;font-family:"MyriadHebrew-Regular";font-size:22px;font-weight:bold;margin-bottom:10px;margin-right:15%;text-align:left;width:100%;padding:0 0% 2px 2%;}
+.support_no .captions{font-family:'kabel_bk_btbook';font-size:23px;line-height:normal;color:#4d4c4c;}
+.support_no .no{color:#085394;font-family:'dosislight';font-size:50px;line-height:normal}
+.sms_alert{width:75%;float:left;margin:0 0 0 0;background:#fff;padding:20px 25px;}
+.fields{width:49%;margin-left:1%;float:left}
+.fields label{color:#333333;display:block;font-size:17px;font-weight:normal;margin-bottom:4px;}
+.fields input{border:1px solid #cdcdcd;color:#b8b8b8;float:left;font-family:"swiss_721light";font-size:21px;font-weight:bold;margin:0;padding:4px 5px;width:100%;}
+.fields input:focus{border-color:#f08e8a;transition-duration:.5s;}
+.sms_alert textarea{width:99%;float:left;margin:10px 0 0 1%;border:1px solid #cdcdcd;padding:5px;color:#797979;height:50px;}
+.sms_alert textarea:focus{border-color:#f08e8a;transition-duration:.5s;}
+.claim_box .sms_alert_text{width:23%;float:right;}
+.claim_box .sms_alert_text p{color:#333;float:left;font-size:13px;line-height:normal;font-style:italic;padding:0 5px;width:92%;}
+.claim_box .sms_alert_text input[type="submit"]{width:;text-align:center;float:right;padding:6px 40px 5px;font-family:"MyriadHebrew-Regular";color:#fff;font-size:15px;text-transform:uppercase;font-weight:bold;margin:50px 0% 0 0;background:#0059a9;border:solid 1px #3b7fbd;border-radius:0px;transition:all .5s}
+.claim_box .sms_alert_text input[type="submit"]:hover{background:#3b7fbd;}
+.page_title{color:#085394;float:left;font-family:"swiss_721light";font-size:25px;margin:10px 0 0;padding:0;width:100%;float:left}
+.right_side{width:100%;background:#f5f4f9;float:left;padding:20px 8px 40px;margin:5px 0 0 0;}
+.right_side p{color:#085394;font-family:"MyriadHebrew-Regular";font-size:15px;line-height:normal}
+.right_side span{float:left;width:100%;margin:0 0 0 0;font-family:'NunitoBold';position:relative;font-size:30px;color:#085394;}
+.right_side span::after{background:#fff none repeat scroll 0 0;bottom:10px;content:"";height:2px;left:8%;position:absolute;width:86%;}
+.right_side article{color:#393535;font-family:"MyriadHebrew-Regular";font-size:17px;padding:0 5px 5px 5px;line-height:19px;}
+.detail_filter{background:#f0f0f0;width:100%;margin:10px 0 20px 0;float:left;font-family:"MyriadHebrew-Regular";}
+.detail_filter h4{background:#005aa9;width:100%;float:left;margin:0 0 0 0;padding:15px 6%;color:#fff;font-size:16px;font-family:"MyriadHebrew-Regular";font-weight:bold;}
+.detail_filter ul{list-style-type:none;padding:0 0 10px 0;margin:10px 0 20px 6%;width:88%;border-bottom:dashed 1px #c7c7c7;float:left;font-family:"MyriadHebrew-Regular";}
+.detail_filter ul li{line-height:24px;font-size:15px;width:100%;float:left;margin:0 0 0 0;}
+.detail_filter ul li a{color:#000;}
+.detail_filter ul li a span{color:#787878;}
+.slide_up{width:88%;float:left;margin:0 0 0 6%;}
+.slide_up .heading{border:solid 1px #c3c3c3;width:100%;float:left;margin:20px 0 0;background:#fff;font-size:15px;padding:5px 10px;color:rgba(0,0,0,.8);cursor:pointer}
+.slide_up .heading:after{content:'+';float:right;font-weight:bold}
+.slide_up .collapsed:after{content:'-';float:right;font-weight:bold}
+.detail_filter ul li:first-child .slide_up .contnt{display:block}
+.detail_filter ul li:first-child .slide_up .heading::after{content:'-'}
+.detail_filter ul li:first-child .slide_up .collapsed:after{content:'+';}
+.slide_up .contnt{color:#474747;margin:10px 0 0 0;float:left;display:none}
+.slide_up .contnt label input{background:#fff;opacity:0;filter:alpha(opacity=0);}
+.slide_up .contnt label{color:#474747;font-weight:normal;float:left;width:100%;margin:4px 0 0 10px;background:transparent url("https://nexa1.azureedge.net/insurance/images/chekbox-img.png") no-repeat scroll left 2px;padding-left:10px;}
+.checked{background-position:left -76px !important;}
+ul.filter-container{border:none;width:100%;margin:0;padding:0 0 35px 0;}
+ul.plans_list{width:100%;float:left;margin:0 0 5px 0;}
+ul.plans_list li{width:100%;float:left;margin:0 0 7px;padding:25px 30px;background:#fff;transition:all .6s ease;}
+ul.plans_list li:nth-child(odd){background:#efeff4}
+ul.plans_list li:hover{box-shadow:0px 1px 8px #9F9F9F;transition:all .6s ease}
+.catlog_plan_detail{width:100%;float:left;margin:12px 0 10px 0;font-family:'swiss_721light';}
+.catlog_plan_detail .result_info{float:left;margin:0 0 0 0;width:30%;color:#949494;font-size:17px;}
+.catlog_plan_detail .result_info span{color:#4f4f4f;}
+.catlog_plan_detail .sort_by{width:auto;float:right;color:#646464;font-size:17px;margin-right:15px;}
+.catlog_plan_detail .sort_by span{color:#005aa9;padding-right:15px;background:url("https://nexa1.azureedge.net/insurance/images/bot_arrow.jpg") no-repeat scroll right center;background-size:10px 7px;}
+.company_logo{width:30%;float:left;margin:0 0 0 0;padding:30px 0;}
+.policy_detail{width:45%;float:left;margin:0 0 0 0;}
+.policy_detail h5{color:#005aa9;font-size:18px;margin-top:0}
+.policy_detail p{width:100%;float:left;margin:0 0 0 0;color:#000;font-size:14px}
+.policy_detail p span{color:#6c6c6c;width:44%;float:right}
+.policy_ammount{width:20%;float:right;border-left:solid 1px #d5d5d9;margin:15px 0 0 0%;padding:0 0 0 4%;}
+.policy_ammount .price{color:#005aa9;font-size:32px;font-family:"MyriadHebrew-Regular";line-height:normal}
+.policy_ammount .price span{font-size:26px;line-height:normal}
+.policy_ammount .ncb{font-size:18px;color:rgba(0,0,0,.7);line-height:normal;padding-left:20px;}
+.policy_ammount .buy_now{width:auto;padding:5px 15px;background:#da3f3a;border-radius:4px;float:left;margin:25px 0 0 23px;font-size:14px;}
+.policy_ammount .buy_now a{color:#fff;}
+.policy_ammount .buy_now a:hover{text-decoration:none;}
+.plans_heading{width:100%;float:left;margin:45px 0 5px 0;font-size:20px;color:#005aa9;font-family:"MyriadHebrew-Regular";}
+ul.why_by{width:100%;float:left;margin:20px 0 40px 0;padding:0 0 0;font-family:"MyriadHebrew-Regular";}
+ul.why_by li{background:#e9f3fb;font-size:15px;color:#656565;line-height:22px;border-radius:3px;position:relative;padding:35px 20px;width:29%;margin-right:3%;float:left}
+ul.why_by li span{background:#005aa9;position:absolute;top:-15px;padding:6px 12px;border-radius:50%;font-size:21px;color:#fff;font-weight:normal;}
+.contact_details{width:100%;float:left;margin:10px 0 30px 0;font-family:"MyriadHebrew-Regular";}
+.contact_details .map{margin:15px 0 10px 0;width:100%;float:left;}
+.contact_details h4{color:#0059a9;font-size:22px;float:left;width:100%;font-family:'dosisregular';}
+.contact_details p{margin-bottom:0;line-height:20px;}
+.contact_details ul{width:100%;float:left;margin:15px 0 20px 0;}
+.contact_details ul li{font-size:15px;color:#3e3e3e;padding:0 0 5px 0;}
+.contact_details ul li img{padding:0 10px 0 0}
+.contact_details ul li a{color:#3e3e3e;}
+.conto_btn{}
+.save{width:auto;float:left;margin:0 0 0 0;padding:0 0px;text-align:center;}
+.save span{float:left;clear:both;color:#72a4f7;width:100%;text-transform:uppercase;}
+.save span a{color:#72a4f7;}
+.share{width:auto;float:left;margin:0 0 0 0;padding:0 5px;}
+.share span{float:left;clear:both;width:100%;text-transform:uppercase;}
+.share span a{color:#72a4f7;}
+.contact_form{width:100%;float:left;margin:10px 0 30px 0;font-family:"MyriadHebrew-Regular";}
+.contact_form .title{font-family:"swiss_721light";font-size:25px;width:100%;float:left;margin:6px 0px 10px 0px;padding:0px;color:#5c5c5c}
+.contact_form p{width:100%;float:left;margin:0 0 21px 0;}
+.contact_form input{width:74%;padding:12px 18px;border-radius:5px;color:#aaaaaa;font-size:13px;border:solid 1px #c3c3c3;}
+.contact_form textarea{width:74%;padding:12px 15px 18px;border-radius:5px;color:#aaaaaa;font-size:13px;border:solid 1px #c3c3c3;float:left;}
+.contact_form select{width:36%;padding:7px 15px;min-height:45px;border-radius:5px;color:#aaaaaa;font-size:13px;border:solid 1px #c3c3c3;margin:0 1% 0 0}
+.contact_form select option{padding:5px;}
+.contact_form input[type="submit"]{background:#d03833;width:20%;float:left;border:none;border-radius:4px;color:#fff;padding:10px 0;font-size:14px;text-transform:uppercase;margin:5px 0 0 0;}
+.accident_repair > .insurance_heading{margin-top:10px;}
+.seamless_services{margin:0px 0 60px 0;float:left;width:100%;}
+.insurance_heading{font-size:38px;font-family:'dosisregular';text-align:center;padding-bottom:10px;margin-top:60px}
+.towing_heading{color:#fff;font-size:38px;font-family:'dosisregular';text-align:center;padding-bottom:10px;margin-top:50px}
+.insurance_heading a{color:rgba(0,0,0,.8);}
+.seamless_services p{text-align:center;font-size:17px;color:#515151;line-height:22px;padding:15px 15% 10px;}
+.seamless_services p br{display:none;}
+.seamless_services p span{color:#dd2b32;font-size:16px;}
+.seamless_services p a{color:#0d6dc1;cursor:pointer;}
+.seamless_services p a:hover{text-decoration:none;}
+.hand_box{float:left;margin:0 0 30px 0;padding:0;width:100%;position:relative;text-align:center}
+.hand_box .mob_hand{position:relative;text-align:right;width:100%;padding:0 12% 0 0;transition:all 1.5s ease;opacity:0;transform:scale(0);}
+.hand_box .mob_hand.animated{opacity:1;transform:scale(1);}
+.box_southern{float:left;position:absolute;font-family:'dosislight';width:330px;left:-40px;top:140px;z-index:1;}
+.box_southern .arrow_text{font-size:26px;color:#6e6e6e;float:left;width:160px;margin-left:10px;text-align:right;line-height:24px;transition:all .8s ease .7s;opacity:0;}
+.box_southern .arrow_text.animated{opacity:1;margin-left:0;}
+.box_southern .arrow_text span{color:#0d6dc1;font-size:48px;width:100%;}
+.box_southern .arrow{float:left;margin:8px 0px 0 22px;opacity:0;transition:all .8s ease .3s;}
+.box_southern .arrow.animated{opacity:1;margin-left:12px;}
+.box_cities{float:left;position:absolute;font-family:'dosislight';width:330px;left:0px;bottom:150px;z-index:1;}
+.box_cities .arrow_text{font-size:26px;color:#6e6e6e;float:left;width:160px;text-align:right;line-height:30px;margin:20px 0 0 15px;opacity:0;transition:all .7s ease 1.1s;}
+.box_cities .arrow_text.animated{opacity:1;margin-left:0;}
+.box_cities .arrow_text span{color:#0d6dc1;font-size:48px;width:100%;float:left}
+.box_cities .arrow{float:left;margin:29px -30px 0 10px;transition:all .7s ease 0.9s;opacity:0;}
+.box_cities .arrow.animated{margin-right:0px;opacity:1;}
+.box_northern{position:absolute;top:140px;right:-10.5%;z-index:1;font-family:'dosislight';}
+.box_northern .arrow_text{font-size:26px;color:#6e6e6e;float:right;width:180px;text-align:left;line-height:30px;margin:-30px 15px 0 10px;transition:all .9s ease 1.9s;opacity:0;}
+.box_northern .arrow_text.animated{opacity:1;margin-right:0;}
+.box_northern .arrow_text span{color:#0d6dc1;font-size:48px;width:100%;float:left}
+.box_northern .arrow{float:left;margin:-27px 30px 0 0;opacity:0;transition:all .9s ease 1.5s;}
+.box_northern .arrow.animated{margin-right:0;opacity:1}
+.box_eastern{position:absolute;bottom:85px;right:1%;z-index:1;font-family:'dosislight';}
+.box_eastern .arrow_text{font-size:26px;color:#6e6e6e;float:right;width:180px;text-align:left;line-height:30px;margin:0px 10px 0 10px;opacity:0;transition:all .9s ease 2.5s;}
+.box_eastern .arrow_text.animated{opacity:1;margin-right:0;}
+.box_eastern .arrow_text span{color:#0d6dc1;font-size:48px;width:100%;float:left}
+.box_eastern .arrow{float:left;margin:0 20px 0 0;transition:all .9s ease 2.1s;opacity:0;}
+.box_eastern .arrow.animated{opacity:1;margin-right:0;}
+.claim_buy_box{position:absolute;right:-50px;bottom:30px;font-family:'dosisregular';}
+.claim_buy_box .buy_new_policy{float:left;margin:0 20px 0 0px;width:95px;text-align:center;}
+.claim_buy_box .buy_new_policy_img{width:100%;position:relative;text-align:center;animation-name:claim_buy;-webkit-animation-name:claim_buy;animation-duration:.5s;-webkit-animation-duration:.5s;animation-delay:2.5s;-webkit-animation-delay:2.5s;opacity:0;-webkit-opacity:0;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+.claim_buy_box .buy_new_policy_text{width:100%;text-align:center;font-size:21px;line-height:24px;color:#005aa9;}
+.claim_buy_box .buy_new_policy_text a{color:#005aa9;}
+.claim_buy_box .claim_settlement{float:left;margin:0 0px 0 10px;width:95px;text-align:center;font-family:'dosisregular';}
+.claim_buy_box .claim_settlement_img{width:100%;text-align:center;position:relative;animation-name:claim_buy;-webkit-animation-name:claim_buy;animation-duration:0.6s;-webkit-animation-duration:0.6s;animation-delay:2.7s;-webkit-animation-delay:2.7s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+.claim_buy_box .claim_settlement_text{width:100%;text-align:center;font-size:21px;line-height:24px;color:#005aa9;}
+.claim_buy_box .claim_settlement_text a{color:#005aa9;}
+@keyframes claim_buy{0%{opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes claim_buy{0%{opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.blue_bg{background:#005aa9;width:100%;float:left;margin:0 0 0;padding:55px 0 0 0;}
+.blue_bg .heading_b{font-size:38px;text-align:center;width:100%;margin:0 0 15px 0;color:#fff;font-family:'dosisregular';}
+.workshop .heading_b{color:#555}
+.blue_bg p{font-size:17px;text-align:center;color:#fff;line-height:22px;text-align:center;padding:10px 18%}
+.blue_bg p br{display:none}
+.workshop p{color:#555}
+.blue_bg p span{color:#fff;font-size:16px;}
+.blue_bg p a{color:#fff;cursor:pointer;}
+.blue_bg p a:hover{text-decoration:none;}
+.hassle_free{width:100%;float:left;margin:30px 0 35px 0;text-align:center;position:relative}
+.marutiinsurance_hassle{display:inline-block;margin:20px 120px 0 0;width:490px;position:relative;min-height:326px;overflow:hidden;float:right}
+.marutiinsurance_hassle img{position:absolute;left:0;bottom:-60%;animation-name:marutiinsurance_hassle;-webkit-animation-name:marutiinsurance_hassle;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@keyframes marutiinsurance_hassle{0%{top:70%;}
+100%{top:0px}
+}
+@-webkit-keyframes marutiinsurance_hassle{0%{top:70%;}
+100%{top:0px}
+}
+.hassle_stool{bottom:20px;display:inline-block;left:14%;position:absolute;width:360px;}
+.hassle_stool ul{list-style-type:none;padding:0;margin:0;}
+.hassle_stool ul li{display:inline;margin:0 0 0 5px}
+.hassle_stool ul li img{vertical-align:bottom}
+.accident_repair{width:100%;float:left;margin:0 0 0;padding:40px 0 15px 0;}
+.accident_repair p{color:rgba(0,0,0,.9);font-size:17px;line-height:22px;text-align:center;padding:10px 17%}
+.accident_repair p br{display:none;}
+.accident_repair p span{font-size:16px;color:#ed1d25;}
+.accident_repair p a{color:#0d6dc1}
+.cashless_repair{width:100%;float:left;margin:50px 0 2%;text-align:center;}
+.cashless_repair .cash_less{float:right;margin:20px 12% 0 0px;width:298px;position:static;-webkit-transform:translate3d(0%, 0, 0);transform:translate3d(0%, 0, 0);opacity:.5;-webkit-opacity:.5;transition:all 1s ease;}
+.cashless_repair .cash_less.animated{-webkit-transform:translate3d(-45%, 0, 0);transform:translate3d(-45%, 0, 0);opacity:1;-webkit-opacity:1;}
+.service_station{float:left;margin:0 0px 0 0;position:relative;width:38%;}
+.service_station_img{float:left;margin:0 0 0 0;animation-name:bottom_station;-webkit-animation-name:bottom_station;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@keyframes bottom_station{0%{margin-right:8%;opacity:.2;-webkit-opacity:.2;}
+100%{margin-right:24%;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes bottom_station{0%{margin-right:8%;opacity:.2;-webkit-opacity:.2;}
+100%{margin-right:24%;opacity:1;-webkit-opacity:1;}
+}
+.service_station_car{position:absolute;z-index:1;bottom:0;left:16%;animation-delay:.2s;-webkit-animation-delay:.2s;animation-name:car_scale;-webkit-animation-name:car_scale;animation-duration:1s;-webkit-animation-duration:1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes car_scale{0%{transform:scale(.5);-webkit-transform:scale(.5);opacity:.3;-webkit-opacity:.3}
+100%{transform:scale(1);-webkit-transform:scale(1);opacity:1;-webkit-opacity:1}
+}
+@-webkit-keyframes car_scale{0%{transform:scale(.5);-webkit-transform:scale(.5);opacity:.3;-webkit-opacity:.3}
+100%{transform:scale(1);-webkit-transform:scale(1);opacity:1;-webkit-opacity:1}
+}
+.service_station_rupee{z-index:1;bottom:0;left:16%;transition:all 1s ease;-webkit-transform:translate3d(40%px, 0, 0);transform:translate3d(40%, 0, 0);opacity:.2;-webkit-opacity:.2}
+.service_station_rupee.animated{-webkit-transform:translate3d(75%, 0, 0);transform:translate3d(75%, 0, 0);opacity:1;-webkit-opacity:1;}
+.quality_repair{width:100%;float:left;margin:30px 0 20px 0;text-align:center;position:relative;}
+.quality_repair_main{width:550px;float:left;margin:40px 0 0 28%;position:relative;min-height:350px;}
+.quality_repair_main .quality_control{position:absolute;z-index:2;top:-15px;left:6.5%;}
+.quality_repair .quality_stamp{position:absolute;top:7%;z-index:4;left:31%;animation-delay:1.0s;-webkit-animation-delay:1.0s;animation-duration:0.5s;-webkit-animation-duration:0.5s;opacity:0;-webkit-opacity:0;transform:scale(1.5);-webkit-transform:scale(1.5);}
+.quality_repair .quality_stamp.animated {opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1); transition:all .5s ease 1s;}
+.quality_repair .quality_check{position:absolute;top:7%;left:31%;z-index:5;overflow:hidden;animation-delay:1.0s;-webkit-animation-delay:1.0s;animation-duration:0.5s;-webkit-animation-duration:0.5s;opacity:0;-webkit-opacity:0;transform:scale(1.5);-webkit-transform:scale(1.5);}
+.quality_repair .quality_check.animated {opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1); transition:all .5s ease 1s;}
+.quality_repair .quality_car{position:absolute;z-index:1;left:50%;bottom:3%;margin-left:-69px;animation-duration:1.0s;-webkit-animation-duration:1.0s;animation-delay:0.7s;-webkit-animation-delay:0.7s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0; transform:scale(.3);-webkit-transform:scale(.3);}
+.quality_repair .quality_car.animated {opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1); transition:all 1s ease .7s;}
+
+.quality_repair .quality_gate{position:absolute;z-index:1;left:25%;bottom:0%;animation-delay:.2s;-webkit-animation-delay:.2s;animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+.quality_repair .quality_gate.animated {left:29%;opacity:1;-webkit-opacity:1; transition:all 1.2s ease .2s;}
+.quality_repair .quality_wheel{position:absolute;z-index:1;right:29%;bottom:-4%;animation-delay:0.2s;-webkit-animation-delay:0.2s;animation-duration:1.2s;-webkit-animation-duration:1.2s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+.quality_repair .quality_wheel.animated {right:33.5%;opacity:1;-webkit-opacity:1;transform:rotate(-180deg); transition:all 1.2s ease .2s;}
+
+.towing{width:100%;float:left;margin:0 0 0 0;padding:20px 0 55px 0;text-align:center;background:#005AA9}
+.towing p{text-align:center;padding:5px 17% 0;color:#fff;}
+.towing p br{display:none;}
+.towing_car{width:520px;margin:0 auto;overflow:hidden;padding:40px 0 0 0;}
+.car_tow{float:left;width:100%;padding:40px 0 0 10px;text-align:center;margin-left:25%;transition:all 1.5s ease;}
+.car_tow.animated{margin-left:0;}
+.tow_line{width:434px;float:left;overflow:hidden;position:relative;height:1px;}
+.tow_line img{float:left;position:absolute;right:0;animation-name:tow_line;-webkit-animation-name:tow_line;animation-delay:.2s;-webkit-animation-delay:.2s;animation-duration:5s;-webkit-animation-duration:5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@keyframes tow_line{0%{left:20%;}
+100%{left:-190%;}
+}
+@-webkit-keyframes tow_line{0%{left:20%;}
+100%{left:-190%;}
+}
+.easy_transfer{width:633px;margin:0 auto;overflow:hidden;text-align:center;padding:40px 0 30px;}
+.easy_transfer_rupee{width:100%;float:left;margin:0 0 0;text-align:center;padding:22px 0 0 0;position:relative;opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);transition:all .7s ease 1s;}
+.easy_transfer_rupee.animated{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+.easy_transfer_rupee .arrow_01{position:absolute;left:0;top:69px;z-index:2;width:100%;text-align:center;transition:all 3s ease 1.5s;}
+.easy_transfer_rupee .arrow_01.animated{opacity:1;}
+.easy_transfer_rupee .arrow_02{position:absolute;left:0;top:69px;z-index:2;width:100%;text-align:center;transition:all 2s ease 2s;animation-name:arrow_02;-webkit-animation-name:arrow_02;animation-duration:2s;-webkit-animation-duration:2s;animation-delay:2s;-webkit-animation-delay:2s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;-webkit-animation-iteration-count:2;animation-iteration-count:2;}
+@keyframes arrow_02{0%{opacity:0;-webkit-opacity:0;}
+50%{opacity:1;-webkit-opacity:1;}
+100%{opacity:0;-webkit-opacity:0;}
+}
+@-webkit-keyframes arrow_02{0%{opacity:0;-webkit-opacity:0;}
+50%{opacity:1;-webkit-opacity:1;}
+100%{opacity:0;-webkit-opacity:0;}
+}
+.easy_transfer_rupee .arrow_03{position:absolute;left:0;top:69px;z-index:2;width:100%;text-align:center;animation-name:arrow_03;-webkit-animation-name:arrow_03;animation-duration:3s;-webkit-animation-duration:3s;animation-delay:2.5s;-webkit-animation-delay:2.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;-webkit-animation-iteration-count:1;animation-iteration-count:1;}
+@keyframes arrow_03{0%{opacity:0;-webkit-opacity:0;}
+25%{opacity:1;-webkit-opacity:1;}50%{opacity:0;opacity:0}
+100%{opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes arrow_03{0%{opacity:0;-webkit-opacity:0;}
+25%{opacity:1;-webkit-opacity:1;}
+50%{opacity:0;opacity:0}
+100%{opacity:1;-webkit-opacity:1;}
+}
+.easy_transfer_rupee .arrow_04{position:absolute;left:0;top:69px;z-index:2;width:100%;text-align:center;animation-name:arrow_04;-webkit-animation-name:arrow_04;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:3s;-webkit-animation-delay:3s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;-webkit-animation-iteration-count:2;animation-iteration-count:2;}
+@keyframes arrow_04{0%{opacity:0;-webkit-opacity:0;}
+50%{opacity:1;-webkit-opacity:1;}
+100%{opacity:0;-webkit-opacity:0;}
+}
+@-webkit-keyframes arrow_04{0%{opacity:0;-webkit-opacity:0;}
+50%{opacity:1;-webkit-opacity:1;}
+100%{opacity:0;-webkit-opacity:0;}
+}
+.easy_transfer_left_icon{float:left;margin:0 0 0 0;width:140px;transition:all .9s ease .5s;opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+.easy_transfer_left_icon.animated{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+.easy_transfer_right_icon{float:right;margin:0 0 5% 0;width:140px;transition:all .9s ease .5s;opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+.easy_transfer_right_icon.animated{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+.easy_transfer_icon{float:left;min-height:224px;margin:0 40px 0 75px;width:232px;position:relative;}
+.easy_transfer_icon img{animation-name:transfer_icon;-webkit-animation-name:transfer_icon;animation-duration:.7s;-webkit-animation-duration:.7s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;animation-timing-function:ease-out;-webkit-animation-timing-function:ease-out;opacity:0;-webkit-opacity:0;position:absolute;}
+@keyframes transfer_icon{0%{opacity:0;-webkit-opacity:0;top:100%;}
+100%{opacity:1;-webkit-opacity:1;top:0}
+}
+@-webkit-keyframes transfer_icon{0%{opacity:0;-webkit-opacity:0;top:100%;}
+100%{opacity:1;-webkit-opacity:1;top:0}
+}
+.policy_issuance{width:100%;float:left;margin:0 0 0 0;padding:5px 0 35px 0;}
+.policy_issuance p{color:#5e5e5e;line-height:22px;text-align:center;}
+.policy_issuance_img{width:100%;margin:0 auto;text-align:center;padding:60px 0 15px 0;position:relative;min-height:260px;overflow:hidden;}
+@keyframes issuance_img{0%{opacity:.1;-webkit-opacity:.1;transform:scale(.75);-webkit-transform:scale(.75);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes issuance_img{0%{opacity:.1;-webkit-opacity:.1;transform:scale(.75);-webkit-transform:scale(.75);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.policy_issuance_btn{position:absolute;left:0px;top:50px;left:0px;opacity:.5;-webkit-opacity:.5;transition:all 1.2s ease .2s;}
+.policy_issuance_btn.animated{left:100px;opacity:1;-webkit-opacity:1;}
+.policy_issuance_print{position:absolute;right:0px;top:50px;z-index:-1;float:right;right:0;opacity:.5;-webkit-opacity:.5;transition:all 1s ease .2s;}
+.policy_issuance_print.animated{right:110px;opacity:1;-webkit-opacity:1;}
+.plan_compare{width:100%;float:left;margin:15px 0 0 0;border:solid 1px #e5e5e5;border-bottom:0;}
+.plan_compare ul{list-style-type:none;padding:0;margin:0 0 0 0;}
+.plan_compare ul li{width:28%;float:left;border-right:solid 1px #e5e5e5;padding:20px 20px 16px 40px;font-family:'MyriadHebrew-Regular';min-height:170px;}
+.plan_compare ul li + li{width:32%;}
+.plan_compare ul li .plan_heading{color:#005aa9;font-size:22px;margin:0 0 10px 0}
+.plan_compare ul li .plan_heading span{font-size:15px;color:#ef363d;float:right;text-transform:capitalize;}
+.plan_compare ul li .plan_heading span a{color:#ef363d;}
+.plan_compare ul li:first-child p{width:75%;float:left;margin:0px 0 0 0;color:#000;font-size:15px;line-height:19px}
+.plan_compare ul li:first-child p span{color:rgba(0,0,0,.6)}
+.plan_compare ul li + li p{width:95%;float:left;margin:0px 0 0 0;color:#000;font-size:15px;line-height:19px}
+.plan_compare ul li + li p span{color:rgba(0,0,0,.7);width:30%;float:right;text-align:left;}
+.plan_compare ul li + li + li{text-align:center;line-height:130px;width:20%;font-size:18px;font-weight:bold;color:rgba(0,0,0,.7)}
+.plan_compare ul li + li + li a{color:rgba(0,0,0,.65);}
+.plan_compare ul li + li + li + li{color:rgba(0,0,0,.65);text-align:center;font-size:46px;color:#005aa9;font-weight:normal;border:none}
+.price_new span{font-size:18px;display:inline-block;vertical-align:top;line-height:none;}
+.price_new{width:100%;float:left;margin:15px 0 0;line-height:normal;font-weight:normal;}
+.price_new span{line-height:normal;vertical-align:super;}
+.premium{width:100%;float:left;margin:0 0 0;text-align:center;color:rgba(237,29,37,0.89);line-height:normal;font-size:15px;}
+.y_here{color:#005aa9;float:left;width:100%;margin:0 0 0;padding:10px 0 0;text-align:center;font-size:16px;line-height:normal;}
+.y_here a{color:#005aa9;font-weight:bold;}
+.select_addons{width:100%;float:left;margin:0 0 20px 0;padding:0 0 0 0;background:#f4f4f4;}
+.select_addons .select_title{font-family:'dosislight';color:#ffffff;padding:20px 25px;background:#005ba9;font-size:22px;float:left;position:relative;}
+.select_addons .select_title::after{border-top:15px solid transparent;border-bottom:15px solid transparent;border-left:14px solid #005ba9;border-style:solid;content:'';position:absolute;right:-10px;top:32%}
+.select_addons .addon_selected{width:64.5%;float:left;padding:5px 0 0 60px;}
+.selector_contnt{float:left;width:100%;margin:0 0 0 0;}
+.selector_contnt label{width:29%;margin:2px 0 0;padding:0 0 0 10px;color:#474747;font-weight:normal;font-size:15px;font-family:"MyriadHebrew-Regular";background:transparent url("https://nexa1.azureedge.net/insurance/images/chekbox-img.png") no-repeat scroll left 2px;cursor:pointer;}
+.tc_1 .selector_contnt label{width:100%;margin:2px 0 0;padding:0 0 0 10px;color:#474747;font-weight:normal;font-size:15px;font-family:"MyriadHebrew-Regular";background:transparent url("https://nexa1.azureedge.net/insurance/images/icons/proposal_checkbox_img.png") no-repeat scroll left 2px;cursor:pointer;}
+.selector_contnt label input{background:#fff;opacity:0;filter:alpha(opacity=0);}
+.feature_and_benifits{width:100%;float:left;margin:0 0 0;overflow:hidden;}
+.feature_and_benifits_heading{font-family:'dosisregular';font-size:28px;color:#fff;text-align:center;width:448px;background:url(https://nexa1.azureedge.net/insurance/images/common_feature_bg.png);padding:31px 0 30px;margin:50px auto 5px auto;}
+.all_insurer{width:100%;float:left;margin:0 0 0 0;text-align:center;text-transform:uppercase;color:rgba(0,0,0,.7);font-size:20px;font-family:"MyriadHebrew-Regular";}
+.insurer{width:100%;float:left;margin:0 0 30px 0;}
+.insurer_car{float:left;margin:57px 10px 0 -30px;width:298px;}
+.insurer_plans{width:592px;float:left;margin:15px 30px 0 10px;min-height:200px;background:url(https://nexa1.azureedge.net/insurance/images/mi_insurer.png) no-repeat;padding:0 20px 0 20px;}
+.insurer_plans ul{list-style-type:none;padding:0;}
+.insurer_plans ul li{display:inline-block;width:32%;text-align:center;font-family:"MyriadHebrew-Regular";}
+.insurer_plans_items{width:100%;float:left;margin:0 0 0 0;padding:52px 10px 5px;animation-name:insurer_plans_items;-webkit-animation-name:insurer_plans_items;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:0.8s;-webkit-animation-delay:0.8s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes insurer_plans_items{0%{opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes insurer_plans_items{0%{opacity:0;-webkit-opacity:0;transform:scale(0);-webkit-transform:scale(0);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.insurer_plans_items span{float:left;width:100%;text-transform:uppercase;color:rgba(0,0,0,.7);font-size:16px;padding:10px 0 0;line-height:13px;font-weight:bold;}
+.insurer_human{float:left;width:153px;margin:-90px 0 0 0;}
+.insurer_human img{width:135px;}
+.individual_feature{width:100%;float:left;margin:0 0 0;}
+.individual_feature_heading{font-family:'dosisregular';font-size:28px;color:#fff;text-align:center;width:448px;background:url(https://nexa1.azureedge.net/insurance/images/common_feature_bg.png);padding:25px 0 36px;margin:0px auto 5px auto;}
+.individual_benifits_list{width:100%;float:left;position:relative;margin:15px 0 25px 0;}
+.individual_benifits_list #flexiselDemo1, #flexiselDemo2, #flexiselDemo3, .flexiselDemo3{display:none;}
+.individual_benifits_list .nbs-flexisel-container{position:relative;max-width:100%;}
+.individual_benifits_list .nbs-flexisel-ul{position:relative;width:99999px;margin:0px;padding:0px;list-style-type:none;text-align:center;}
+.individual_benifits_list .nbs-flexisel-inner{overflow:hidden;float:left;width:100%;border:0px solid #ccc;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;}
+.individual_benifits_list .flexiselDemo3 .nbs-flexisel-item{float:left;margin:0px 3px 0 0px;padding:0px;cursor:pointer;position:relative;line-height:0px;background:#f0f0f0;min-height:355px;font-family:"MyriadHebrew-Regular";}
+.individual_benifits_list .flexiselDemo3 .nbs-flexisel-item img{cursor:pointer;position:relative;margin-top:10px;margin-bottom:10px;}
+.flexHeading{float:left;width:100%;padding:28px 0;text-align:center;background:#005ba9;color:#fff;font-size:16px;font-family:"MyriadHebrew-Regular";text-transform:uppercase;margin:0 0 15px 0}
+.flexIcons{width:100%;text-align:center;padding:15px 0;float:left;}
+.flexIcons_img{width:100%;float:left;margin:0 0 0;min-height:83px;vertical-align:middle;position:relative}
+.flexIcons_img img{vertical-align:middle;position:absolute !important;top:0;left:0;bottom:0;right:0;margin:auto !important;}
+.flexIcons span{width:100%;text-align:center;float:left;padding:15px 0 0 0;font-size:17px;color:#000;}
+.individual_benifits_list .nbs-flexisel-nav-left,
+.individual_benifits_list .nbs-flexisel-nav-right{width:22px;height:40px;position:absolute;cursor:pointer;z-index:100;opacity:0.5;}
+.individual_benifits_list .nbs-flexisel-nav-left{left:-40px;top:160px !important;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/prev_1.png") repeat scroll 0 0;}
+.individual_benifits_list .nbs-flexisel-nav-right{right:-40px;top:160px !important;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/next_1.jpg") repeat scroll 0 0;}
+.yBuy_here{float:left;width:100%;margin:15px 0 80px 0;overflow:hidden}
+.yBuy_here_heading{font-family:'dosisregular';font-size:28px;color:rgba(254,254,254,.89);text-align:center;width:283px;background:url(https://nexa1.azureedge.net/insurance/images/yIbuy_icon.png);padding:27px 0 38px;margin:0px auto 0px auto;}
+ul.yBuy_here_product{width:100%;padding:0 0 0 20px;float:left;margin:20px 0 0 0;text-align:center;}
+ul.yBuy_here_product li{float:left;width:46.7%;margin:0 0% 21px 21px;min-height:368px;background:#f0f0f0;position:relative;overflow:hidden}
+.buyHere_heading{width:100%;float:left;font-family:'dosisregular';color:rgba(0,0,0,.88);font-size:28px;margin:5px 0}
+ul.yBuy_here_product li .more{position:absolute;background:#005ba9;color:#fff;right:0;bottom:0;padding:10px 15px;width:100%;transition:all .5s ease;font-family:'dosisregular';font-size:22px;margin:0px 0;}
+ul.yBuy_here_product li .more::after{border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:10px solid transparent;border-left:8px solid #fff;border-style:solid;content:'';position:absolute;right:10px;top:32%;margin:0 0 0 10px;transform:rotate(-90deg);transition:all .0s ease;}
+ul.yBuy_here_product li .more:hover{background:rgba(254,254,254,.75);color:#005ba9;}
+ul.yBuy_here_product li .more:hover::after{border-left-color:#005ba9;transform:rotate(90deg);margin:5px 0 0 10px;}
+ul.yBuy_here_product li .more:hover .buyHere_paragraph{display:none}
+.yBuy_img{width:100%;text-align:center;padding:0 0 0 0;min-height:320px;position:relative;}
+.yBuy_img img{position:absolute;margin:auto;left:0;right:0;bottom:0;top:0}
+ul.yBuy_here_product li:last-child{float:none;display:inline-block}
+.buyHere_paragraph{position:absolute;top:100%;width:100%;height:100%;background:#005ba9;transition:all 0.8s ease}
+.buyHere_paragraph_box{display:table;width:100%;height:100%}
+.buyHere_paragraph p{bottom:0;color:#fff;display:table-cell;text-align:center;vertical-align:middle;font-size:16px;padding:0 6%;}
+.buyHere_paragraph p span{font-size:17px;font-weight:bold;font-weight:bold;}
+@-webkit-keyframes bounceInLeft{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(-3000px, 0, 0);transform:translate3d(-3000px, 0, 0)}
+60%{opacity:1;-webkit-transform:translate3d(25px, 0, 0);transform:translate3d(25px, 0, 0)}
+75%{-webkit-transform:translate3d(-10px, 0, 0);transform:translate3d(-10px, 0, 0)}
+90%{-webkit-transform:translate3d(5px, 0, 0);transform:translate3d(5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+@keyframes bounceInLeft{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(-3000px, 0, 0);transform:translate3d(-3000px, 0, 0)}
+60%{opacity:1;-webkit-transform:translate3d(25px, 0, 0);transform:translate3d(25px, 0, 0)}
+75%{-webkit-transform:translate3d(-10px, 0, 0);transform:translate3d(-10px, 0, 0)}
+90%{-webkit-transform:translate3d(5px, 0, 0);transform:translate3d(5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+.bounceInCar{-webkit-animation-name:bounceInCar;animation-name:bounceInCar;animation-duration:1.1s;-webkit-animation-duration:1.1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;}
+@-webkit-keyframes bounceInCar{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.15, .61, .55, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:.2;-webkit-transform:translate3d(-100px, 0, 0);transform:translate3d(-100px, 0, 0)}
+70%{opacity:1;-webkit-transform:translate3d(30px, 0, 0);transform:translate3d(30px, 0, 0)}
+100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+@keyframes bounceInCar{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:.2;-webkit-transform:translate3d(-100px, 0, 0);transform:translate3d(-100px, 0, 0)}
+70%{opacity:1;-webkit-transform:translate3d(30px, 0, 0);transform:translate3d(30px, 0, 0)}
+100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+.bounceInAnim{-webkit-animation-name:bounceInAnim;animation-name:bounceInAnim;animation-duration:1.1s;-webkit-animation-duration:1.1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;}
+@-webkit-keyframes bounceInAnim{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.15, .61, .55, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:.2;-webkit-transform:translate3d(100px, 0, 0);transform:translate3d(100px, 0, 0)}
+70%{opacity:1;-webkit-transform:translate3d(-20px, 0, 0);transform:translate3d(-20px, 0, 0)}
+100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+@keyframes bounceInAnim{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:.2;-webkit-transform:translate3d(100px, 0, 0);transform:translate3d(100px, 0, 0)}
+70%{opacity:1;-webkit-transform:translate3d(-20px, 0, 0);transform:translate3d(-20px, 0, 0)}
+100%{-webkit-transform:none;transform:none;opacity:1;}
+}
+.bounceInLeft{-webkit-animation-name:bounceInLeft;animation-name:bounceInLeft;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@-webkit-keyframes bounceInRight{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(3000px, 0, 0);transform:translate3d(3000px, 0, 0)}
+60%{opacity:1;-webkit-transform:translate3d(-25px, 0, 0);transform:translate3d(-25px, 0, 0)}
+75%{-webkit-transform:translate3d(10px, 0, 0);transform:translate3d(10px, 0, 0)}
+90%{-webkit-transform:translate3d(-5px, 0, 0);transform:translate3d(-5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+@keyframes bounceInRight{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(3000px, 0, 0);transform:translate3d(3000px, 0, 0)}
+60%{opacity:1;-webkit-transform:translate3d(-25px, 0, 0);transform:translate3d(-25px, 0, 0)}
+75%{-webkit-transform:translate3d(10px, 0, 0);transform:translate3d(10px, 0, 0)}
+90%{-webkit-transform:translate3d(-5px, 0, 0);transform:translate3d(-5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+.bounceInRight{-webkit-animation-name:bounceInRight;animation-name:bounceInRight;animation-duration:2.5s;-webkit-animation-duration:2.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@-webkit-keyframes bounceInUp{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.15, .61, .55, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:0;-webkit-transform:translate3d(0, 3000px, 0);transform:translate3d(0, 100px, 0)}
+60%{opacity:1;-webkit-transform:translate3d(0, -20px, 0);transform:translate3d(0, -20px, 0)}
+75%{-webkit-transform:translate3d(0, 10px, 0);transform:translate3d(0, 10px, 0)
+opacity:.4;-webkit-opacity:.4;}
+90%{-webkit-transform:translate3d(0, -5px, 0);transform:translate3d(0, -5px, 0)}
+100%{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0)
+opacity:1;-webkit-opacity:1;}
+}
+@keyframes bounceInUp{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(0, 100px, 0);transform:translate3d(0, 100px, 0);opacity:.3;-webkit-opacity:.3;}
+100%{-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);opacity:1;-webkit-opacity:1;}
+}
+.bounceInUp{-webkit-animation-name:bounceInUp;animation-name:bounceInUp;animation-delay:0.5s;-webkit-animation-delay:0.5s;animation-duration:0.8s;-webkit-animation-duration:0.8s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@-webkit-keyframes bounceInDown{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.15, .61, .55, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:0;-webkit-transform:translate3d(0, -10px, 0);transform:translate3d(0, -10px, 0);opacity:.1;-webkit-opacity:.1;}
+60%{opacity:1;-webkit-transform:translate3d(0, 25px, 0);transform:translate3d(0, 25px, 0);opacity:.3;-webkit-opacity:.3;}
+75%{-webkit-transform:translate3d(0, -10px, 0);transform:translate3d(0, -10px, 0);opacity:.6;-webkit-opacity:.6;}
+90%{-webkit-transform:translate3d(0, 5px, 0);transform:translate3d(0, 5px, 0);opacity:.8;-webkit-opacity:.8;}
+100%{-webkit-transform:none;transform:none;opacity:1;-webkit-opacity:1;}
+}
+@keyframes bounceInDown{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.15, .61, .55, 1);animation-timing-function:cubic-bezier(0.15, .61, .55, 1)}
+0%{opacity:0;-webkit-transform:translate3d(0, -20px, 0);transform:translate3d(0, -20px, 0);opacity:.2;-webkit-opacity:.2;}
+100%{-webkit-transform:none;transform:none;opacity:1;-webkit-opacity:1;}
+}
+.bounceInDown{animation-name:bounceInDown;-webkit-animation-name:bounceInDown;animation-delay:.2s;-webkit-animation-delay:.2s;animation-duration:1.0s;-webkit-animation-duration:1.0s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+.flexAnimation1{animation-name:flexAnimation1;-webkit-animation-name:flexAnimation1;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:.1s;-webkit-animation-delay:.1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation1{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation1{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation2{animation-name:flexAnimation2;-webkit-animation-name:flexAnimation2;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:.6s;-webkit-animation-delay:.6s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation2{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation2{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation3{animation-name:flexAnimation3;-webkit-animation-name:flexAnimation3;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:1.1s;-webkit-animation-delay:1.1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation3{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation3{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation4{animation-name:flexAnimation4;-webkit-animation-name:flexAnimation4;animation-duration:.9s;-webkit-animation-duration:0.9s;animation-delay:1.6s;-webkit-animation-delay:1.6s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation4{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation4{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation5{animation-name:flexAnimation5;-webkit-animation-name:flexAnimation5;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:2.1s;-webkit-animation-delay:2.1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation5{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation5{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation6{animation-name:flexAnimation6;-webkit-animation-name:flexAnimation6;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:2.6s;-webkit-animation-delay:2.6s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation6{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation6{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation7{animation-name:flexAnimation7;-webkit-animation-name:flexAnimation7;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:3.1s;-webkit-animation-delay:3.1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation7{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation7{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation8{animation-name:flexAnimation8;-webkit-animation-name:flexAnimation8;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:3.6s;-webkit-animation-delay:3.6s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation8{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation8{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation9{animation-name:flexAnimation9;-webkit-animation-name:flexAnimation9;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:4.1s;-webkit-animation-delay:4.1s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation9{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation9{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+.flexAnimation10{animation-name:flexAnimation10;-webkit-animation-name:flexAnimation10;animation-duration:.9s;-webkit-animation-duration:.9s;animation-delay:4.7s;-webkit-animation-delay:4.7s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:0;-webkit-opacity:0;}
+@keyframes flexAnimation10{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes flexAnimation10{0%{opacity:.2;-webkit-opacity:.2;transform:scale(.4);-webkit-transform:scale(.4);}
+100%{opacity:1;-webkit-opacity:1;transform:scale(1);-webkit-transform:scale(1);}
+}
+@-webkit-keyframes animate_left1{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(-100px, 0, 0);transform:translate3d(-100px, 0, 0)}
+80%{-webkit-transform:translate3d(5px, 0, 0);transform:translate3d(5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+@keyframes animate_left1{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(-100px, 0, 0);transform:translate3d(-100px, 0, 0)}
+80%{-webkit-transform:translate3d(5px, 0, 0);transform:translate3d(5px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+.animate_left1{-webkit-animation-name:animate_left1;animation-name:animate_left1;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+@-webkit-keyframes animate_right1{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(100px, 0, 0);transform:translate3d(100px, 0, 0)}
+80%{-webkit-transform:translate3d(-10px, 0, 0);transform:translate3d(-10px, 0, 0)}
+100%{-webkit-transform:none;transform:none}
+}
+@keyframes animate_right1{0%, 100%, 60%, 75%, 90%{-webkit-animation-timing-function:cubic-bezier(0.215, .61, .355, 1);animation-timing-function:cubic-bezier(0.215, .61, .355, 1)}
+0%{opacity:0;-webkit-transform:translate3d(100px, 0, 0);transform:translate3d(100px, 0, 0)}
+80%{-webkit-transform:translate3d(-10px, 0, 0);transform:translate3d(-10px, 0, 0);}
+100%{-webkit-transform:none;transform:none}
+}
+.animate_right1{animation-name:animate_right1;-webkit-animation-name:animate_right1;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;}
+.car_man{transition:all 1.5s ease;transform:translate3d(150px, 0, 0);opacity:.5;}
+.car_man.animated{transform:translate3d(0px, 0, 0);opacity:1;}
+@keyframes man_car{0%{left:49% transform:scale(.4);-webkit-transform:scale(.4);opacity:0;-webkit-transform:translate3d(150px, 0, 0);transform:translate3d(150px, 0, 0)}
+100%{left:47%;transform:scale(1);-webkit-transform:scale(1);-webkit-transform:translate3d(0px, 0, 0);transform:translate3d(0px, 0, 0);}
+}
+@-webkit-keyframes man_car{0%{left:49% transform:scale(.4);-webkit-transform:scale(.4);opacity:0;-webkit-transform:translate3d(150px, 0, 0);transform:translate3d(150px, 0, 0);}
+100%{left:47%;transform:scale(1);-webkit-transform:scale(1);-webkit-transform:translate3d(0px, 0, 0);transform:translate3d(0px, 0, 0);}
+}
+.hassle_free_anim{width:454px;margin:0 auto;overflow:hidden;position:relative;padding:20px 0 40px;}
+.hassle_free_anim .bottom{width:59px;height:35px;position:absolute;left:47%;bottom:135px;animation-name:foot_anim;-webkit-animation-name:foot_anim;animation-duration:1.0s;-webkit-animation-duration:1.0s;animation-timing-function:ease;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;opacity:1;}
+.claim_assistance{width:100%;float:left;margin:1% 0 5px 0;background:#dc4a4b;padding:10px 0 23px;overflow:hidden;}
+.claim_assistance_heading{width:100%;float:left;text-align:center;font-size:36px;color:#fff;font-family:'dosisregular';margin:15px 0 8px;}
+ul.claim_assistance_detail{width:100%;float:left;margin:10px 0 0 0;padding:0;list-style-type:none;-webkit-animation:claim_assistance_detail 1.7s;-webkit-animation-direction:alternate;animation:claim_assistance_detail 1.7s;animation-direction:alternate;}
+@keyframes claim_assistance_detail{}
+@-webkit-keyframes claim_assistance_detail{}
+ul.claim_assistance_detail li{float:left;width:20%;margin:0 0 0 0;position:relative;padding:0 !important;background:none !important;border:none;cursor:pointer;}
+ul.claim_assistance_detail li:nth-child(1){animation-name:claim_process_01;-webkit-animation-duration:1.0s;animation-duration:1.0s;animation-delay:0.0s;animation-fill-mode:forwards;-webkit-animation-timing-function:ease;animation-timing-function:ease;opacity:0}
+@keyframes claim_process_01{0%{opacity:0;margin-left:-15px;}
+100%{opacity:1;margin-left:0px;}
+}
+ul.claim_assistance_detail li:nth-child(2){animation-name:claim_process_02;-webkit-animation-duration:1.0s;animation-duration:1.0s;animation-delay:0.3s;animation-fill-mode:forwards;-webkit-animation-timing-function:ease;animation-timing-function:ease;opacity:0}
+@keyframes claim_process_02{0%{opacity:0;margin-left:-15px;}
+100%{opacity:1;margin-left:0px;}
+}
+ul.claim_assistance_detail li:nth-child(3){animation-name:claim_process_03;-webkit-animation-duration:1.0s;animation-duration:1.0s;animation-delay:0.6s;animation-fill-mode:forwards;-webkit-animation-timing-function:ease;animation-timing-function:ease;opacity:0;}
+@keyframes claim_process_03{0%{opacity:0;margin-left:-15px;}
+100%{opacity:1;margin-left:0px;}
+}
+ul.claim_assistance_detail li:nth-child(4){animation-name:claim_process_04;-webkit-animation-duration:1.0s;animation-duration:1.0s;animation-delay:0.9s;animation-fill-mode:forwards;-webkit-animation-timing-function:ease;animation-timing-function:ease;opacity:0;}
+@keyframes claim_process_04{0%{opacity:0;margin-left:-15px;}
+100%{opacity:1;margin-left:0px;}
+}
+ul.claim_assistance_detail li:nth-child(5){animation-name:claim_process_05;-webkit-animation-duration:1.0s;animation-duration:1.0s;animation-delay:1.2s;animation-fill-mode:forwards;-webkit-animation-timing-function:ease;animation-timing-function:ease;opacity:0;}
+@keyframes claim_process_05{0%{opacity:0;margin-left:-15px;}
+100%{opacity:1;margin-left:0px;}
+}
+ul.claim_assistance_detail li:nth-child(2):before{border:none}
+ul.claim_assistance_detail li:nth-child(2):after{border:none}
+ul.claim_assistance_detail li:nth-child(3){background:none !important;border:none !important}
+ul.claim_assistance_detail li:nth-child(3):hover{background:none !important}
+.cliam_process_9{padding:1.5% 0 15px 0;float:left;width:100%;}
+.cliam_process_9 ul.claim_assistance_detail li .icon_img{border-bottom:dotted 1px #999;padding-top:0;}
+.cliam_process_9 ul.claim_assistance_detail li .description{text-align:center;color:#000;position:relative;}
+.cliam_process_9 .next_show{font-size:17px;line-height:18px;padding:0 17px}
+.cliam_process_9 .next_show strong{color:#005aa9;}
+.cliam_process_9 ul.claim_assistance_detail li .description p{color:#111;width:100%;}
+.cliam_process_9 .mid_tabs li strong{border:0}
+ul.claim_assistance_detail li .count{width:90%;float:left;text-align:center;}
+ul.claim_assistance_detail li .count span{display:inline-block;background:#fff;color:#dc4a4b;font-size:30px;font-family:'dosisregular';border-radius:50%;width:58px;padding:7px 0}
+ul.claim_assistance_detail li .icon_img{width:99.8%;float:left;margin:15px 0 0 0;min-height:150px;text-align:center;padding:20px 10px 0 0;border-bottom:dotted 1px #fff;position:relative;}
+ul.claim_assistance_detail li .right_img{width:10%;float:right;margin:0 0 0 0;position:absolute;right:0%;top:22px;}
+ul.claim_assistance_detail li .description{font-family:'dosisregular';width:99%;float:left;margin:20px 0 0 0;color:#fff;font-size:15px;line-height:17px;}
+ul.claim_assistance_detail li .description .next_show strong{display:block;margin-bottom:7px;}
+ul.claim_assistance_detail li .description .next_show:hover + p{transform:scale(1);opacity:1;bottom:60px;}
+ul.claim_assistance_detail li:hover .description .next_show + p{transform:scale(1);opacity:1;bottom:60px;}
+ul.claim_assistance_detail li .description p{color:#666;font-size:14px;line-height:18px;position:absolute;bottom:70px;z-index:2;background:#fff;padding:10px 10px 11px;width:90%;left:2%;border-radius:3px;transition:all .5s ease .2s;transform:scale(1);opacity:.0;box-shadow:0 0 2px #ccc;}
+ul.claim_assistance_detail li .description p:after{content:'';width:0px;height:0px;border-left:10px solid transparent;border-right:10px solid transparent;border-top:12px solid #fff;position:absolute;bottom:-10px;left:0;right:0;margin:auto;}
+.next_show{cursor:pointer;display:block;}
+.arrow_indication{position:absolute;width:100%;bottom:-15px}
+.intro{width:100%;float:left;margin:20px 0 0 0;}
+.intro p{font-size:17px;line-height:22px;}
+.intro span{}
+.renew_policy_form{width:97%;float:left;margin:1% 0 2% 1%;padding:0 0 0 0%;box-shadow:0px 0px 8px #b1b1b1;position:relative;background:#fff;}
+.renew_policy_form:before{content:'';position:absolute;width:90px;height:90px;background:#0093ff;z-index:-1;top:-10px;left:-10px;}
+#cntmain_Panel1 .renew_policy_form{padding:0 0 0 4%}
+.existing_customer{float:left;width:53%;margin:0% 0% 0 2%;padding:0 0 0 15px;}
+.ex_customer{float:right;width:35%;margin:11% 9% 2% 0}
+ul.existing_cx_list{float:left;list-style-type:none;margin:0% 0 0 0;width:100%;}
+ul.existing_cx_list li{display:block;float:left;margin:0 0 15px 0;width:100%;}
+ul.existing_cx_list li input{color:rgba(0,0,0,.7);}
+ul.existing_cx_list li:first-child input{background:url(https://nexa1.azureedge.net/insurance/images/engine_no_icon.png) no-repeat;background-position:8px center;}
+ul.existing_cx_list li:nth-child(2) input{background:url(https://nexa1.azureedge.net/insurance/images/chasis_icon.png) no-repeat;background-position:8px center;}
+ul.existing_cx_list li:nth-child(4) input{background:url(https://nexa1.azureedge.net/insurance/images/registration_icon.png) no-repeat;background-position:8px center;}
+ul.existing_cx_list li input[type="submit"]{margin:10px 0 0 0}
+.renew_policy_form form input[type="button"]{background:#005ba9 url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 81% center;color:#fff;text-transform:uppercase;padding:10px 15px 10px 0;margin:10px 0 0 0;width:160px;border:none;border-radius:3px;transition:all .5s ease;}
+.renew_policy_form form input[type="button"]:hover{background:#107cdc url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 85% center;}
+.conditional{width:;padding:0 5px;float:left;margin:0 0 0 0;font-size:19px;text-transform:uppercase;}
+.conditional span{padding:5px;float:left;color:#fff;background:#d44141;border-radius:4px;}
+.conditional::before{content:'';width:48px;height:1px;background:#d44141;float:left;margin:18px 6px 0 50px;}
+.conditional::after{content:'';width:48px;height:1px;background:#d44141;float:left;margin:18px 10px 0 6px;}
+.incorrect_details{}
+.incorrect_details .modal-header{border-bottom:1px solid #e3e3e3;position:relative;padding:30px 0 10px 30px;margin-bottom:10px;}
+.incorrect_details .modal-header .close{border-radius:0 3px 3px 0;font-family:"swiss_721light";font-size:22px;font-weight:normal;height:66px;opacity:1;position:absolute;text-transform:uppercase;top:-10px;right:6px;width:46px;z-index:99}
+.modal-content{border-radius:0;border-bottom:7px solid #005ba9;border-radius:4px;}
+.incorrect_details .modal-header .close span{border:medium none;float:none;font-family:"swiss_721light";font-size:22px;margin:0;padding:0;width:auto;}
+.incorrect_details .modal-body{padding:2% 0 14% 50px}
+.incorrect_details .modal-body span{width:15px;height:11px;background:url(https://nexa1.azureedge.net/insurance/images/icons/arrow_error.png);display:inline-block;margin:0 4px 0 5px;}
+.incorrect_details .modal-body span.ora{background-image:none;border:medium none;border-radius:50%;color:#404040;display:inline-block;font-size:25px;height:40px;margin:6% 0 0 30px;padding:10px 0;text-align:center;text-transform:uppercase;width:40px;vertical-align:top;position:relative;}
+.incorrect_details .modal-body span.ora:after{background:rgb(200, 199, 199);content:"";height:40px;left:48%;position:absolute;top:115%;width:1px;}
+.incorrect_details .modal-body span.ora:before{background:rgb(200, 199, 199);content:"";height:40px;left:48%;position:absolute;top:-80%;width:1px;}
+.incorrect_details .modal-title{font-size:18px;color:#e63933;font-weight:normal;font-family:'swiss_721light';}
+.incorrect_details .modal-title span{background:#ec4a45;color:#fff;font-weight:bold;border-radius:50%;padding:3px 11px;font-size:20px;margin:0 4px 0 0}
+.customer_detail_box{width:90%;margin:50px 0 30px 0px;float:left;}
+.customer_details{width:100%;float:left;margin:0px 0 0 0px;border:solid 0px #d4d4d4;}
+.customer_details tr th{background:#ededed;color:#0e0e0e;font-weight:normal;width:50%;padding:17px 5px 15px 35px;font-size:15px;}
+.customer_details tr th:first-child{border-right:solid 0px #e5e5e5;}
+.customer_details tr td{font-weight:normal;width:50%;padding:11px 5px 9px 35px;font-size:15px;color:#999;}
+.customer_details tr td:first-child{border-right:solid 0px #e5e5e5;color:#222}
+.customer_details tr{border-bottom:solid 1px #e5e5e5;}
+.customer_details tr:last-child{border:none;}
+.customer_details tr:nth-child(odd){background:#fff;}
+.live_mi_customer{width:100%;float:left;margin:20px 0 40px 0;}
+.car_details{width:30%;float:left;background:#f0f0f0}
+.car_details .detail_title{background:#005aa9;color:#fff;font-size:20px;padding:11px 0 11px 25px;float:left;width:100%;margin:0 0 0;}
+.about_car{width:100%;float:left;margin:0 0 0 0;padding:20px 0 0 25px;color:#000;}
+.about_car p{color:#000}
+.about_car p span{color:#666;font-size:14px;padding:0 0 0 10px;}
+.live_customer_policy_detail{width:67%;float:left;margin:0 0 0 3%;background:#f3f3f3;padding:50px 40px;}
+.live_customer_policy_title{font-size:26px;color:#000;font-family:'swiss_721light';width:100%;float:left;margin:0 0 20px 0}
+.live_customer_policy_detail p span{color:#080808;width:27%;float:left}
+.live_customer_policy_detail hr{width:100%;float:left;margin:30px 0 25px 0;height:1px;background:#dadada;}
+.live_customer_policy_detail .price{color:#000;font-size:35px;font-weight:normal}
+.live_customer_policy_detail .price span{font-size:20px;color:rgba(0,0,0,.65)}
+.live_customer_policy_detail .buy{float:left;width:auto;margin:20px 0 0 0;color:#fff;text-transform:uppercase;font-size:17px;}
+.live_customer_policy_detail .buy a{display:block;padding:12px 20px;background:#43b628;color:#fff;border-radius:5px;transition:all .5s ease;}
+.live_customer_policy_detail .buy input{background:none;border:none;text-transform:uppercase;color:#fff;}
+.live_customer_policy_detail .buy a:hover{background:#2a9212;}
+.addons{float:left;width:100%;margin:25px 0 50px 0;padding:0 25px 0 25px;min-height:180px;}
+.addons .heading{width:100%;float:left;margin:0 0 20px 0;background:#fff url(https://nexa1.azureedge.net/insurance/images/plus-min.png);border:solid 1px #CCCCCC;padding:10px 10px;color:#000;text-transform:uppercase;cursor:pointer;background-repeat:no-repeat;background-position:96% -16px;}
+.addons .collapsed{background-position:96% 14px;}
+.addons .contnt_check{width:100%;float:left;margin:0 0 0 0;}
+.addons .contnt_check li{}
+.addons .contnt_check li label{font-weight:normal;font-size:15px;width:100%;float:left;background:url(https://nexa1.azureedge.net/insurance/images/check-uncheck.png);background-repeat:no-repeat;background-position:10px -47px;padding-left:10px;cursor:pointer;}
+.label-checked{background-position:10px 1px !important;}
+.addons .contnt_check li label input{opacity:0;width:25px;}
+.policy_renew_box{width:99%;float:left;margin:3% 0 10% 1%;padding:2% 0 0 4%;box-shadow:0px 0px 8px #b1b1b1;position:relative;background:#fff;}
+.policy_renew_box:before{content:'';position:absolute;width:90px;height:90px;background:#0093ff;z-index:-1;top:-10px;left:-10px;}
+ul.policy_detail_form{float:left;margin:0 0 0 0;width:100%;padding:20px 0;}
+ul.policy_detail_form li{float:left;display:inline-block;width:49%;margin:0 0 18px 0;min-height:42px}
+ul.policy_detail_form li span{float:left;margin:0;width:19%;}
+ul.policy_detail_form li span label{background:transparent url("https://nexa1.azureedge.net/insurance/images/radio-but.png") no-repeat scroll left 0;cursor:pointer;float:left;margin:7px 0 0;padding:2px 0 5px 20px;width:100%;}
+ul.policy_detail_form li span label input{border:0 none;opacity:0;outline:0 none;width:auto;}
+ul.policy_detail_form li label{width:33%;float:left;font-size:15px;padding:11px 15px 0 0;font-weight:normal;}
+ul.policy_detail_form li input:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+ul.policy_detail_form li input{width:55%;float:left;padding:10px 10px 10px 15px;border:solid 1px #bfbfbf;color:#555;font-size:14px;}
+ul.policy_detail_form li input.span2{background:url(https://nexa1.azureedge.net/insurance/images/calendar_icon.png);background-repeat:no-repeat;background-position:96% center;cursor:pointer}
+ul.policy_detail_form li select{width:55%;float:left;padding:9px 10px;border:solid 1px #bfbfbf;color:#555;font-size:14px;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:96% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+ul.policy_detail_form li select option{padding:5px;}
+ul.policy_detail_form li select:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+ul.policy_detail_form li input[type="submit"]{background:#005ba9 url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 80% center;color:#fff;text-transform:uppercase;padding:12px 15px 12px 0;margin:0px 0 0 0;width:115px;border:none;border-radius:3px;transition:all .5s ease;font-size:16px;}
+ul.policy_detail_form li input[type="submit"]:hover{background:#107cdc url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat;background-position:85% center;box-shadow:0 0 2px #666}
+ul.policy_detail_form li p{width:100%;float:left;margin:0 0 15px 0;color:#111}
+ul.policy_detail_form li p textarea{width:55%;border:solid 1px #ccc;min-height:105px;padding:10px 15px;float:left;color:#aaa;border-radius:3px;}
+ul.policy_detail_form li p textarea:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+.edited{width:55% !important;background:#005ba9 url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 90% center !important;}
+.edited:hover{background:#107cdc url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 93% center !important;}
+ul.prev_insurance_detls{float:left;margin:11% 0 0 0%;padding:0 0 0 0px;width:100%%;}
+ul.prev_insurance_detls li{display:block;float:left;margin:0 0 15px;width:100%;}
+ul.prev_insurance_detls li label{float:left;font-size:17px;font-weight:normal;margin:0;padding:10px 0 0;width:30%;line-height:16px;}
+ul.prev_insurance_detls li input:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+ul.prev_insurance_detls li input{border:1px solid #bfbfbf;border-radius:2px;color:rgba(153, 153, 153, 0.6);font-size:15px;font-weight:lighter;padding:10px 5px 11px 50px;width:50%;}
+ul.prev_insurance_detls li:first-child input{background:url(https://nexa1.azureedge.net/insurance/images/rupee_icon.png);background-repeat:no-repeat;background-position:15px center}
+ul.prev_insurance_detls li:nth-child(2) input{background:url(https://nexa1.azureedge.net/insurance/images/lcb_icon.png);background-repeat:no-repeat;background-position:12px center}
+ul.prev_insurance_detls li:nth-child(3) input{background:url(https://nexa1.azureedge.net/insurance/images/claim_taken_icon.png);background-repeat:no-repeat;background-position:12px center}
+ul.prev_insurance_detls li:nth-child(4) input{background:url(https://nexa1.azureedge.net/insurance/images/date_iocn.png);background-repeat:no-repeat;background-position:12px center}
+.renew_plicy_new ul.prev_insurance_detls li input[type="submit"]{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 92% center;border:medium none;border-radius:3px;color:#fff;margin:10px 0 0;padding:10px 40px 10px 15px;text-transform:uppercase;transition:all 0.5s ease 0s;width:auto;}
+.renew_plicy_new ul.prev_insurance_detls li input[type="submit"]:hover{background:#107cdc url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat;background-position:95% center;box-shadow:0 0 2px #666;}
+.prev_insurnce_img{float:right;margin:4% 10% 5% 0;width:28%;}
+.make_payment_box{float:left;margin:20px 0 40px;width:100%;}
+.payment_details{width:28%;float:left;margin:0 0 0 0;background:#f0f0f0;min-height:495px;}
+.option_selected{background:#f0f0f0;float:left;margin:0;width:28%;}
+.left_heading{background:#005aa9 none repeat scroll 0 0;color:#fff;float:left;font-size:18px;margin:0;padding:11px 0 11px 20px;width:100%;}
+ul.selected_options{width:100%;float:left;margin:0 0 0 0;padding:0 0 0 0px;}
+ul.selected_options li{color:#000;font-size:15px;padding:12px 0 12px 20px;border-top:solid 1px #dadada;}
+ul.selected_options li:first-child{border:none}
+ul.selected_options li span{color:#7b7b7b;}
+.car_details_payment{border:solid 1px #e5e5e5;width:70%;margin:0 0 0 2%;float:left;}
+.car_details_payment_heading{width:100%;float:left;margin:0 0 0 0;background:#e6e6e6;font-size:18px;color:rgba(0,0,0,0.8);padding:11px 0 11px 20px;}
+.car_details_payment_details{width:100%;float:left;margin:0 0 0 0;padding:0 0 0 0;}
+.fund_cat,.fund_cat ul,.fund_cat li,.fund_cat a{margin:0;padding:0;border:0;list-style:none;font-weight:normal;text-decoration:none;line-height:1;position:relative;}
+.fund_cat{float:left;width:100%;margin:0px 0 0px 0px;}
+.fund_cat a{line-height:1.3;}
+.fund_cat > ul > li{color:#656565;font-size:15px;border-radius:2px;margin-top:1px;width:100%;float:left}
+.fund_cat > ul > li:first-child{margin-top:-1px;}
+.fund_cat > ul > li > a{font-size:15px;display:block;border-top:none;color:#656565;padding:0 10px;background:#e6e6e6;width:100%;float:left}
+.fund_cat > ul > li > a:focus{outline:none}
+.fund_cat > ul > li > a > span{display:block;padding:12px 8px 9px 5px;font-size:18px;}
+.fund_cat > ul > li > a:hover{text-decoration:none;}
+.fund_cat > ul > li.active{margin-bottom:12px;}
+.fund_cat > ul > li.active a{background:#005aa9;color:#fff;}
+.fund_cat > ul > li.has-sub > a span{background:url(https://nexa1.azureedge.net/insurance/images/arrows_new.png) no-repeat;background-position:99% -21px;}
+.fund_cat > ul > li.has-sub.active > a span{background:url(https://nexa1.azureedge.net/insurance/images/arrows_new.png) no-repeat;background-position:99% 16px;padding:11px 10px 9px 5px;color:#fff;}
+.fund_cat ul li:first-child ul{display:block}
+.fund_cat ul ul{display:none;background:#fff;width:100%;float:left}
+.fund_cat ul ul li{padding:0 10px 10px 15px;border:0px solid #d4d4d4;font-size:14px;color:#656565;line-height:22px;width:100%;float:left}
+.fund_cat ul ul li:last-child{border-bottom:none;}
+.fund_cat ul ul a{padding:10px 10px 10px 25px;display:block;color:#676767;font-size:15px;font-weight:normal;}
+.fund_cat ul ul a:before{content:'\00BB';position:absolute;left:10px;color:#e94f31;}
+.fund_cat ul ul a:hover{color:#e94f31;}
+.payment_dtls{width:100%;display:block;margin:10px 0 0 0;padding:15px;float:left}
+.payment_dtls p{font-size:16px;line-height:21px;margin-bottom:10px;}
+.paymnt_form{margin:20px 0 0 0;}
+.paymnt_form .list{margin-bottom:15px;float:left;width:100%;}
+.paymnt_form .list label{width:23%;float:left;font-size:15px;color:#000;font-weight:normal;padding:10px 0 0 0}
+.paymnt_form .list label.state{width:10%;margin:0 0 0 2%}
+.paymnt_form .list input{width:45%;padding:10px;border-radius:4px;border:solid 1px #ccc;color:#444}
+.paymnt_form .list input:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+.paymnt_form .list input.city{float:left;width:15%;}
+.paymnt_form .list select:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+.paymnt_form .list select.date{width:11%;float:left;padding:5px 10px;margin:0 2% 0 0;border:solid 1px #bfbfbf;color:#444;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:90% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;}
+.paymnt_form .list select.date option{padding:5px;width:100%}
+.paymnt_form .list select.month{width:15%;float:left;padding:5px 10px;margin:0 2% 0 0;border:solid 1px #bfbfbf;color:#444;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:90% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;}
+.paymnt_form .list select.month option{padding:5px;width:100%}
+.paymnt_form .list select.year{width:15%;float:left;padding:5px 10px;border:solid 1px #bfbfbf;color:#444;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:90% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;}
+.paymnt_form .list select.year option{padding:5px;width:100%}
+.paymnt_form .list select.year1{width:32%;float:left;padding:5px 10px;border:solid 1px #bfbfbf;color:#444;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:90% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;}
+.paymnt_form .list select.year1 option{padding:5px;width:100%}
+.paymnt_form .list textarea{width:45%;min-height:100px;padding:10px;border-radius:4px;border:solid 1px #ccc;color:#444}
+.paymnt_form .list textarea:focus{border:1px solid #f08e8a;box-shadow:0 0 2px #999;transition-duration:1s;}
+.paymnt_form .list select.states{width:18%;float:left;padding:5px 10px;margin:0 2% 0 0;border:solid 1px #bfbfbf;color:#444;background:url(https://nexa1.azureedge.net/insurance/images/select-arrow.png);background-repeat:no-repeat;background-position:90% 17px;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;}
+.paymnt_form .list select.states option{padding:5px;width:100%}
+.paymnt_form .list ul.check{width:45%;float:left}
+.paymnt_form .list ul.check li{width:100%;float:left;margin:0 0 10px 0;padding:0 0 0 0;}
+.paymnt_form .list ul.check li label{width:100%;float:left;margin:0 0 0 0;padding:10px 0 5px 25px;background:url(https://nexa1.azureedge.net/insurance/images/payment_details_chck.png);background-repeat:no-repeat;background-position:0px 7px;cursor:pointer;}
+.paymnt_form .list ul.check li label.label-cheked{background-position:0px -76px;}
+.paymnt_form .list ul.check li label input{opacity:0;float:left;width:15px;}
+.click_connect_imgs{float:right;margin:50px 15% 0 0;width:auto;}
+.click_connect1{float:left;margin:2% 0 0 3%;padding:0 0 0 15px;width:50%;}
+.renew_policy_form .click_connect1 label{float:left;font-size:17px;font-weight:normal;margin:0;padding:9px 0 0;width:30%;}
+.renew_policy_form .click_connect1 input{border:solid 1px #bfbfbf;width:60%;color:rgba(0,0,0,.7);font-size:15px;font-weight:lighter;padding:10px 5px 10px 45px;border-radius:2px;}
+.renew_policy_form .click_connect1 input:focus{border:1px solid #f08e8a;transition-duration:1s;box-shadow:0 0 2px #999;}
+.renew_policy_form .click_connect1 input[type="submit"]{background:#005ba9 url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 81% center;color:#fff;text-transform:uppercase;padding:12px 15px 10px 0;margin:20px 0 0 0;width:160px;border:none;border-radius:3px;transition:all .8s ease;}
+.renew_policy_form .click_connect1 input[type="submit"]:hover{background:#107cdc url(https://nexa1.azureedge.net/insurance/images/white_arrow.png) no-repeat 90% center;}
+.renew_policy_form .click_connect1 .reason{appearance:none;-webkit-appearance:none;-moz-appearance:none;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/question_mark_icon.png") no-repeat scroll 4% 10px;border:1px solid #bfbfbf;color:#aaa;float:left;font-size:14px;padding:0 0px 0 0px;width:60%;}
+.renew_policy_form .click_connect1 .reason select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/select-arrow.png") no-repeat scroll 96% 17px;border:0px solid #bfbfbf;color:#aaa;float:left;font-size:14px;padding:6px 10px 6px 40px;width:100%;}
+.renew_policy_form .click_connect1 .reason select option{padding:5px;}
+ul.check_claim_status{width:100%;float:left;margin:0 0 0 0;padding:4% 0 2% 4%;}
+ul.check_claim_status li{width:100%;float:left;margin:0 0 15px 0}
+ul.check_claim_status li label{width:15%;float:left;margin:0 0 0 0;padding:10px 0 0 0;font-size:15px;font-weight:normal}
+ul.check_claim_status li input{border:1px solid #bfbfbf;border-radius:2px;color:rgba(0, 0, 0, 0.6);font-size:15px;font-weight:lighter;padding:10px 5px 10px 45px;width:32%;margin:0;float:left}
+ul.check_claim_status li textarea{border:1px solid #bfbfbf;width:32%;border-radius:3px;height:70px;padding:10px;}
+ul.check_claim_status li:first-child > input{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/registration_icon.png") no-repeat scroll 10px center;}
+ul.check_claim_status li input[type="submit"]{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 80% center;border:medium none;border-radius:3px;color:#fff;margin:0px 0 0 5px;padding:10px 15px 10px 0;text-transform:uppercase;transition:all 0.5s ease 0s;width:125px;float:left}
+ul.check_claim_status li input[type="submit"]:hover{background:#0F81E5 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat;background-position:88% center;box-shadow:0 0 2px #666;}
+.recv_clm_no{width:32%;color:#000;text-transform:uppercase;font-size:16px;float:left;cursor:pointer;margin:10px 0 0 0}
+.recv_clm_no a{padding:18px 40px 18px 25px;background:#005ba9 url(https://nexa1.azureedge.net/insurance/images/white_arrow.png);background-repeat:no-repeat;background-position:88% center;float:left;width:100%;color:#fff;transition:all .5s ease;border-radius:2px}
+.recv_clm_no a:hover{background:#0F81E5 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 92% center;box-shadow:0 0 3px #ccc}
+.claim_status_report{width:100%;float:left;margin:25px 0 35px 0;}
+.claim_status_report table{width:100%;float:left;margin:0 0 0;border:solid 1px #d7d7d7;}
+.claim_status_report table tr{}
+.claim_status_report table tr:nth-child(odd){background:#f2f2f2;}
+.claim_status_report table tr th{width:25%;border-left:solid 1px #d2d2d4;padding:11px 0 11px 25px;font-weight:normal;font-size:16px;background:#eaeaec}
+.claim_status_report table tr th:first-child{border:none;}
+.claim_status_report table tr td{width:25%;border-left:solid 1px #d2d2d4;padding:11px 0 11px 25px;color:rgba(0,0,0,0.6);}
+.claim_status_report table tr td:first-child{border:none;}
+ul.auto_claim_status_form{float:left;margin:2% 0 0 5%;padding:0 0 0 15px;width:53%;}
+ul.auto_claim_status_form li{display:block;float:left;margin:0 0 15px;width:100%;}
+ul.auto_claim_status_form li label{float:left;font-size:17px;font-weight:normal;line-height:16px;margin:0;padding:10px 0 0;width:30%;}
+ul.auto_claim_status_form li input{border:1px solid #bfbfbf;border-radius:2px;color:rgba(153, 153, 153, 0.6);font-size:15px;font-weight:lighter;padding:11px 5px 11px 50px;width:50%;}
+ul.auto_claim_status_form li input.no{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/registration_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form li input.call{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/phone_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form li input.email{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/id_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form li input[type="submit"]{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 81% center;border:medium none;border-radius:3px;color:#fff;margin:5px 0 0;padding:11px 15px 11px 0;text-transform:uppercase;transition:all 0.7s ease;width:120px;}
+ul.auto_claim_status_form li input[type="submit"]:hover{background:#107cdc url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat;background-position:88% center;}
+ul.auto_claim_status_form_2{float:left;margin:5% 0 0 5%;padding:0 0 0 15px;width:80%;}
+ul.auto_claim_status_form_2 li{display:block;float:left;margin:0 0 15px;width:100%;}
+ul.auto_claim_status_form_2 li label{float:left;font-size:17px;font-weight:normal;line-height:16px;margin:0;padding:10px 0 0;width:16%;}
+ul.auto_claim_status_form_2 li span{color:#005ba9;padding:0 10px;font-size:16px;}
+ul.auto_claim_status_form_2 li input{border:1px solid #bfbfbf;border-radius:2px;color:rgba(153, 153, 153, 0.6);font-size:15px;font-weight:lighter;padding:11px 5px 11px 50px;width:38%;}
+ul.auto_claim_status_form_2 li input.fadin{background-color:#f1f1f1 !important;}
+ul.auto_claim_status_form_2 li input.no{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/registration_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form_2 li input.call{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/phone_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form_2 li input.email{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/id_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form_2 li input.opt_icon{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/opt_icon.png") no-repeat scroll 8px center;}
+ul.auto_claim_status_form_2 li input[type="submit"]{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 81% center;border:medium none;border-radius:3px;color:#fff;margin:5px 0 0;padding:11px 15px 11px 0;text-transform:uppercase;transition:all 0.7s ease;width:120px;}
+ul.auto_claim_status_form_2 li input[type="submit"]:hover{background:#0F81E5 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat;box-shadow:0 0 4px #999;background-position:88% center}
+ul.auto_claim_status_form_2 li .opt{width:38%;float:left;margin:30px 0 5% 0}
+ul.auto_claim_status_form_2 li .opt input{width:100%;}
+ul.auto_claim_status_form_2 li .opt input[type="submit"]{width:120px;margin:12px 0 0 0}
+ul.auto_claim_status_form_2 li input[type="submit"].faded{opacity:.5}
+.track_status{width:100%;float:left;margin:60px 0 12% 0;padding:0 0 0 0;}
+.track_status h2{font-size:20px;color:#000;font-family:'dosisregular';font-weight:bold}
+.track_status .progress{background:#f2f2f2 url(https://nexa1.azureedge.net/insurance/images/progress-bor-icon.png);background-position:right 0;background-repeat:no-repeat;box-shadow:none;height:24px;border-radius:15px;width:80%;overflow:visible}
+.track_status .progress .progress-bar-success{background:#008a00;box-shadow:none;border-radius:15px;position:relative;}
+.track_status .progress .progress-bar-success span{position:absolute;top:100%;color:#000;font-size:15px;width:60%;left:20%;padding:15px 0 0 0;background:url(https://nexa1.azureedge.net/insurance/images/after_progressbar.png) no-repeat top center;}
+.track_status .progress .progress-bar-success span strong{font-weight:bold;}
+.track_status .progress .progress-bar-success span p{font-size:13px;line-height:15px;padding:5px 0 0 0;}
+.progress_detail{width:80%;text-align:right;float:left}
+.progress_detail strong{font-weight:600;color:#000;padding:0 0 5px 0}
+.progress_detail p{color:#008a00;font-size:14px;line-height:16px;}
+ul.urgent_help{width:100%;float:left;margin:50px 0;}
+ul.urgent_help li{background:url(https://nexa1.azureedge.net/insurance/images/urgent_side.png) !important;background-repeat:no-repeat !important;background-position:right center !important;float:left;width:25%;text-align:center;border:none !important;}
+ul.urgent_help li:hover{background:url(https://nexa1.azureedge.net/insurance/images/urgent_side.png) !important;background-repeat:no-repeat !important;background-position:right 0 !important;}
+ul.urgent_help li:last-child{background:none !important;}
+ul.urgent_help li h3{font-size:22px;color:#000;margin:15px 0 0px}
+ul.urgent_help li a{color:#005aa9;font-size:14px;text-transform:uppercase;background:none;}
+.click_connect{width:100%;text-align:center;margin:0 0 0 0;}
+.toll_free{width:100%;float:left;margin:10px 0 50px 0;font-size:32px;color:rgba(0,0,0,.77);font-weight:normal}
+.toll_free span{color:#005aa9;}
+#carousel-example-generic2 .carousel-inner > .item{width:90%;margin:0 5%;}
+.photo{text-align:center;}
+.photo img{display:inline-block;}
+#carousel-example-generic2 .carousel-inner{margin:7% 0 4%}
+#carousel-example-generic2 .info{padding:0 2%}
+#carousel-example-generic2 .info h5{font-size:24px}
+.contrl{position:absolute;width:100%;top:40%;z-index:9;}
+.contrl .left{float:left;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+.contrl .right{float:right;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;}
+.workshop{background:#fff !important}
+.submit{background-position:80% center !important;margin-right:10px !important;padding-left:20px !important;padding-right:25px !important;width:auto !important;}
+.submit:hover{background-position:91% center !important}
+.icon_name{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/name_icon.png") no-repeat scroll 8px center;}
+.no{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/registration_icon.png") no-repeat scroll 8px center;}
+.no1{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/icons/icon-1.png") no-repeat scroll 8px center;}
+.call{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/phone_icon.png") no-repeat scroll 8px center;}
+.call_home{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/phone_icon_1.png") no-repeat scroll 8px center;padding:10px 5px 10px 45px!important;}
+.email{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/id_icon.png") no-repeat scroll 8px center;}
+.opt_icon{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/opt_icon.png") no-repeat scroll 8px center;}
+.coverage_icon{background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/coverage_icon.png") no-repeat scroll 8px center;}
+.calendar{background:url(https://nexa1.azureedge.net/insurance/images/calendar_icon.png);background-repeat:no-repeat;background-position:3% center;cursor:pointer}
+.date_icon{background:url(https://nexa1.azureedge.net/insurance/images/date_iocn.png);background-repeat:no-repeat;background-position:8px center}
+.lcb_icon{background:url(https://nexa1.azureedge.net/insurance/images/lcb_icon.png);background-repeat:no-repeat;background-position:10px center}
+.rupee_icon{background:url(https://nexa1.azureedge.net/insurance/images/rupee_icon.png);background-repeat:no-repeat;background-position:13px center}
+.engine_icon{background:url(https://nexa1.azureedge.net/insurance/images/engine_no_icon.png) no-repeat;background-position:4px center;}
+.engine_icon1{background:url(https://nexa1.azureedge.net/insurance/images/icons/icon2.png) no-repeat;background-position:8px center;}
+.chasis_icon{background:url(https://nexa1.azureedge.net/insurance/images/chasis_icon.png) no-repeat;background-position:8px center;}
+.chasis_icon1{background:url(https://nexa1.azureedge.net/insurance/images/icons/icon3.png) no-repeat;background-position:8px center;}
+.policy_icon{background:url(https://nexa1.azureedge.net/insurance/images/policy_no_icon.png) no-repeat;background-position:6px center;}
+.fadin{background-color:#f1f1f1 !important;}
+input.faded[type="submit"]{opacity:0.5;}
+.opt{float:left;margin:30px 0 0 30%;width:52%;}
+.opt input[type=text]{width:100%;padding-left:15px;}
+.lock_sign{float:right;margin:10% 12% 0 0}
+ul.get_quote{float:left;margin:3% 0 0 0%;padding:0 0 5% 0px;width:98%;}
+ul.get_quote li{width:50%;float:left;margin:0 0 17px 0;border:none !important;background:none !important;padding:0 !important;}
+ul.get_quote li:nth-child(2):before{display:none}
+ul.get_quote li:nth-child(2):after{display:none}
+ul.get_quote li label{float:left;font-size:17px;font-weight:normal;margin:0;padding:9px 0 0;width:30%;}
+ul.get_quote li input{border:solid 1px #bfbfbf;width:52%;color:rgba(0,0,0,.7);font-size:15px;font-weight:lighter;padding:10px 5px 10px 45px;border-radius:2px;}
+ul.get_quote li input[type='submit']{transition:all 0.7s ease 0s;width:160px;}
+ul.get_quote li input[type='submit']:hover{background:#e63933 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat;background-position:86% center;}
+ul.get_quote li select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/select-arrow.png") no-repeat scroll 96% 17px;border:0px solid #bfbfbf;color:rgba(0, 0, 0, 0.7);float:left;font-size:15px;padding:8px 10px 9px 40px;width:52%;border:solid 1px #bfbfbf;border-radius:2px;}
+ul.get_quote li .registr{-moz-appearance:none;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/registration_icon.png") no-repeat scroll 4% 13px;color:#aaa;float:left;font-size:14px;padding:0;width:52%;}
+ul.get_quote li .registr select{width:100%;}
+ul.get_quote li .registr select option{padding:5px}
+ul.get_quote li .fuel{-moz-appearance:none;background:rgba(0, 0, 0, 0) url("https://nexa1.azureedge.net/insurance/images/fuel_type_icon.png") no-repeat scroll 2% 8px;color:#aaa;float:left;font-size:14px;padding:0;width:52%;}
+ul.get_quote li .fuel select{width:100%;}
+ul.get_quote li .fuel select option{padding:5px}
+.sign_up_form{background:#fff;box-shadow:0 0 8px #b1b1b1;float:left;margin:3% 0 10% 1%;padding:0;position:relative;width:99%;}
+.sign_up_form:before{background:#0093ff none repeat scroll 0 0;content:"";height:90px;left:-10px;position:absolute;top:-10px;width:90px;z-index:-1;}
+.sign_up_form .imgs{float:right;width:41%;margin-right:4%;margin-bottom:2%}
+.sign_up_form > .get_quote{margin-top:5%;width:57%;margin-left:5%;}
+.sign_up_form > .get_quote li{width:100%}
+.dashboard_main_box{background:#f2f2f2;padding:25px 0 0 0;float:left;width:100%;}
+.dashboard_main_box h1{color:#5c5c5c;float:left;font-family:"swiss_721light";font-size:25px;margin:10px 0;padding:0;width:auto;}
+.dashboard_box{width:100%;float:left;margin:10px 0 2% 0;padding:0 0 5% 0;box-shadow:0 0 2px #999;background:#fff;}
+ul.links{background:#e4f0fa;width:100%;float:left;margin:0 0 0 0;}
+ul.links li{float:left;margin:0 0 0 0;border-left:solid 1px #ccdae7;min-height:105px;position:relative;text-align:center;cursor:pointer;}
+ul.links li.actv_2:after{content:'';position:absolute;width:24px;height:11px;top:98%;left:45%;background:url(https://nexa1.azureedge.net/insurance/images/blue_down_arrow.png);}
+ul.links li:first-child{border:none}
+ul.links li .profile_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-43px -31px;}
+ul.links li.actv_2 .profile_img{height:55px;margin:10px 0 0 0;background-position:-43px -151px;}
+ul.links li .vehicle_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:66px;display:inline-block;background-position:-156px -33px}
+ul.links li.actv_2 .vehicle_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:66px;display:inline-block;background-position:-156px 113px}
+ul.links li .policy_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-284px -33px;}
+ul.links li.actv_2 .policy_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-284px 113px;}
+ul.links li .endorsement_img{height:58px;margin:8px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-402px -31px}
+ul.links li.actv_2 .endorsement_img{height:58px;margin:8px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-402px 118px}
+ul.links li .claims_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:58px;display:inline-block;background-position:-533px -26px}
+ul.links li.actv_2 .claims_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:58px;display:inline-block;background-position:-533px 120px}
+ul.links li .service_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-667px -26px;}
+ul.links li.actv_2 .service_img{height:55px;margin:10px 0 0;background:url(https://nexa1.azureedge.net/insurance/images/sprite_dashboard.png);width:51px;display:inline-block;background-position:-667px 113px;}
+ul.links li .dashboard_title{font-size:17px;}
+ul.links li.actv_2 .dashboard_title{color:#fff;}
+ul.links li.actv_2{background:#005aa9;}
+ul.links li.dash_1{width:170px;}
+ul.links li.dash_2{width:188px;}
+ul.links li.dash_3{width:158px;}
+ul.links li.dash_4{width:162px;}
+ul.links li.dash_5{width:149px;}
+ul.links li.dash_6{width:180px;}
+ul.notification{width:auto;float:right;margin:10px 15px 0 0}
+ul.notification li{position:relative;float:left;margin:0 10px 0 0;}
+.alerts{background:#fa7a1b;right:-13px;border:solid 1px #fff;color:#fff;position:absolute;font-size:15px;padding:3px 5px;border-radius:15px;top:-18px;}
+.alerts a{color:#fff;}
+.dash_1_box{width:100%;float:left;margin:30px 0 0 0;padding:0 0 5% 2%;}
+ul.sub_tab{width:98%;float:left;margin:35px 0 0 1%;}
+ul.sub_tab li{float:left;margin:0px 0 0 10px;font-size:17px;color:#000;position:relative;}
+ul.sub_tab li .tab_name{border:solid 2px rgba(0,0,0,0);padding:8px 20px;border-radius:25px;cursor:pointer}
+ul.sub_tab li.activ .tab_name{border:solid 2px #eaeaea;padding:8px 20px;border-radius:25px;}
+ul.sub_tab li.activ .tab_name:after{content:'';width:19px;height:12px;position:absolute;top:41px;left:47%;background:url(https://nexa1.azureedge.net/insurance/images/down-arrow.png);}
+.tab_sub_box{display:none}
+.activ .tab_sub_box{display:block}
+.dash_1_box .dashboard_inner_form{width:100%;float:left;margin:80px 0 10px 0;}
+.dash_1_box .dashboard_inner_form ul{}
+.dash_1_box .dashboard_inner_form ul li{float:left;margin:0 0 0 0;width:45%;min-height:50px;}
+.dash_1_box .dashboard_inner_form ul li label{width:25%;float:left;margin:0 0 0 0;padding:10px 0 0 0;font-size:17px;font-weight:normal}
+.dash_1_box .dashboard_inner_form ul li:hover label{color:#000}
+.dash_1_box .dashboard_inner_form ul li input{width:68%;float:left;margin:0 0 0 0;padding:10px 15px;color:#c8c8c8;font-size:16px;border:solid 1px #bfbfbf;border-radius:4px;}
+.dash_1_box .dashboard_inner_form ul li textarea{width:68%;float:left;margin:0 0 0 0;padding:10px 15px;color:#c8c8c8;font-size:16px;border:solid 1px #bfbfbf;border-radius:4px;min-height:116px}
+.dash_1_box .responsive-tabs-wrapper{float:left;width:100%;position:relative}
+.dash_1_box .responsive-tabs__list{top:0}
+.dash_1_box .responsive-tabs li{font-size:17px;background:none;width:auto;padding:8px 20px;}
+.dash_1_box .responsive-tabs li{border:solid 2px rgba(0,0,0,0)}
+.dash_1_box .responsive-tabs li:nth-child(2){background:none}
+.dash_1_box .responsive-tabs li:hover{background:none;}
+.dash_1_box .responsive-tabs__list__item{padding:10px;text-transform:none}
+.dash_1_box .responsive-tabs__list__item--active::after{background:url(https://nexa1.azureedge.net/insurance/images/down-arrow.png) !important;content:"";height:12px;left:47%;position:absolute;top:100%;width:21px;z-index:999999;}
+.dash_1_box .responsive-tabs__list__item--active{background:none !important;color:#000 !important;border:solid 2px #eaeaea !important;padding:8px 20px;border-radius:25px !important;}
+.dash_1_box .responsive-tabs li:nth-child(2).responsive-tabs__list__item--active{background:none !important}
+.dash_1_box .responsive-tabs li:nth-child(3).responsive-tabs__list__item--active{background:none !important}
+.dash_1_box .responsive-tabs li:nth-child(2):after{background:none;}
+.dash_1_box .responsive-tabs li:nth-child(2):before{background:none}
+.dash_2_box{display:none;float:left;width:100%;padding:3%;}
+.dash_3_box{display:none;float:left;width:100%;padding:3%;}
+.dash_4_box{display:none;float:left;width:100%;padding:3%;}
+.dash_5_box{display:none;float:left;width:100%;padding:3%;}
+.dash_6_box{display:none;float:left;width:100%;padding:3%;}
+.arrow_prefix{width:100%;text-align:center;padding:25px 0 5px;float:left;font-size:18px;}
+.arrow_prefix .btns{font-size:18px;text-transform:uppercase;color:#fff;background:#005aa9;padding:10px 25px;border-radius:5px;transition:all .5s ease;}
+.arrow_prefix .btns:hover{background:#026cc9;}
+.prefix_img_arrow{width:auto;display:inline-block;margin:0px 6px 0px 10px;}
+.tofileclaim{display:inline-block;width:120px;text-align:left;color:#2a2a2a}
+.tofileclaim span{float:left;margin:0px 0 -20px 0}
+.number{display:inline-block;width:220px;text-align:left;}
+.number strong{float:left;width:100%;margin:5px 0 -25px 1px;color:#666;font-weight:normal;font-size:16px;}
+.number span{color:#005aa9;font-size:48px;float:left;width:100%;margin:0;}
+@media only screen and (min-width:800px) and (max-width:1200px){.sms_alert{padding:20px 10px 20px 5px}
+.support_no{float:left;margin:0 0 40px;width:100%;}
+.support_no span{margin-right:0;font-size:20px;}
+.download_claim_form .img{width:25%}
+.download_claim_form .img img{width:100%}
+.download_claim_form span{font-size:20px;margin-right:0%;padding:0 15% 2px 2%;width:94%;}
+.claim_box .sms_alert_text input[type="submit"]{margin-top:30px;}
+.company_logo{padding:5px 0 10px;width:100%;text-align:center;}
+.policy_detail{float:left;margin:0;width:72%;}
+ul.plans_list li{padding:15px 10px 25px;}
+.policy_ammount{padding:0 6px 0 0%;text-align:right;width:25%;}
+.policy_ammount .buy_now{float:right}
+ul.why_by li{width:31%;margin-right:2%}
+.plans_heading{margin:25px 0 5px;}
+.slide_up .contnt label{font-size:14px;margin:4px 0 0;padding-left:6px;width:100%;}
+.contact_details .map img{width:100%;}
+.contact_form form input{width:98%;}
+.contact_form form textarea{width:98%}
+.contact_form form select{width:48%;}
+.inner_page_frame .container{width:94%;}
+.seamless_services{margin:0px 0 40px;}
+.box_southern{left:-25px;}
+.box_cities{bottom:19%;left:-10%;}
+.box_northern{right:-2%;top:25%;}
+.box_northern .arrow{width:170px;text-align:right}
+.hassle_stool{left:6%;}
+.marutiinsurance_hassle{margin:20px 0 0;}
+.marutiinsurance_hassle img{right:4%;}
+.cash_less{margin:0 0 0;}
+@keyframes cash_less{0%{margin-left:5%;opacity:.5;-webkit-opacity:.5;}
+100%{margin-left:10%;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes cash_less{0%{margin-left:5%;opacity:.5;-webkit-opacity:.5;}
+100%{margin-left:10%;opacity:1;-webkit-opacity:1;}
+}
+.service_station{margin:0;width:355px;}
+.service_station_car{left:43px;}
+@keyframes bottom_station{0%{margin-right:-8%;opacity:.2;-webkit-opacity:.2;}
+100%{margin-right:50px;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes bottom_station{0%{margin-right:-8%;opacity:.2;-webkit-opacity:.2;}
+100%{margin-right:50px;opacity:1;-webkit-opacity:1;}
+}
+.quality_repair_main{margin:50px 0 0 15%;}
+.feature_and_benifits_heading{margin:30px auto 5px;}
+.select_addons{margin-bottom:10px;}
+.insurer_car{margin:20px 10px 30px 0px;text-align:center;width:100%;}
+.insurer_plans{float:none;margin:15px auto 0;overflow:hidden;}
+.insurer_human{margin:0;text-align:center;width:100%;}
+.flexIcons span{font-size:14px;white-space:nowrap;}
+.flexHeading{font-size:14px;padding:25px 0;text-transform:uppercase;white-space:nowrap;}
+.buyHere_heading{font-size:22px;line-height:24px;}
+.individual_benifits_list .nbs-flexisel-nav-right{right:-20px;}
+.individual_benifits_list .nbs-flexisel-nav-left{left:-20px;}
+ul.renew_policy_form_list li:nth-child(5) span label{display:block}
+ul.renew_policy_form_list li span{width:50%;}
+.customer_detail_box{width:100%;margin:0 0 5% 5%}
+.click_connect_imgs{float:right;margin:50px 10% 0 0;width:28%;}
+.hand_box .mob_hand{padding-right:25%;}
+.box_southern .arrow_text span{font-size:40px;}
+.box_cities .arrow_text span{font-size:40px;}
+.box_northern .arrow_text span{font-size:40px;}
+.box_eastern .arrow_text span{font-size:40px;}
+.box_southern .arrow_text{width:140px;font-size:22px;}
+.box_cities .arrow_text{font-size:22px;}
+.box_northern .arrow_text{font-size:22px}
+.box_eastern .arrow_text{font-size:22px;}
+.hand_box .mob_hand img{width:70%}
+.box_southern{top:25%;left:-10%;width:auto;}
+ul.get_quote li label{width:45%;}
+.renew_policy_form{padding:0px 0}
+ul.yBuy_here_product li .more{font-size:16px}
+ul.yBuy_here_product li{min-height:150px;padding:10px 0 60px 0}
+.yBuy_img{width:100%;min-height:180px;}
+.yBuy_img img{width:95%;}
+ul.yBuy_here_product li:nth-child(2) .yBuy_img img{width:37%;}
+.buyHere_paragraph p span{font-size:130% !important}
+.buyHere_paragraph p{font-size:14px;}
+.renew_policy_form .renew_plicy_new input{padding-top:8px;padding-bottom:8px;}
+.renew_plicy_new ul.renew_policy_form_list li{margin-bottom:8px;}
+.renew_plicy_new ul.renew_policy_form_list li > .radio_set{width:185px !important;}
+.renew_policy_right .call img{margin-left:3%}
+.intro p{font-size:16px;line-height:22px;}
+.intro p br{display:none;}
+.renew_plicy_new{margin:1% 0 0;padding:0 0 0 3%;width:60%;}
+.initiate_claim_intimation{width:37%;margin-top:9%;}
+.click_to_connect{width:60%;overflow:hidden}
+.click_to_connect .content_box_click{width:80%;}
+.click_to_connect .content_box_click::after{left:90%;}
+.claim_center_car h2{padding:0}
+.claim_center_car ul.get_quote li label{width:100%;}
+.claim_center_car .opt{margin:0}
+ul.get_quote{float:left;margin:5% 0 0 4%;padding:0 0 5% 15px;width:92%;}
+.enter_claim_no{width:60%}
+.imgs_tab_slider img{width:100%}
+.mid_tabs .compare_1 .rgt_img img.animated{margin-left:0;width:100%;}
+.renew_policy_form_home div:nth-child(2n+1) input{width:44%}
+.renew_policy_form_home div:nth-child(2n) input{width:80%}
+.maruti_lt_sec .maruti_icon_slide{left:230px;top:125px;width:34%;}
+.maruti_lt_sec .maruti_icon_slide img{width:80%;}
+.content_tab_slider p br{display:none}
+.abt_insurance{overflow:hidden}
+ul.links li.dash_1{width:16%;}
+ul.links li.dash_2{width:16%;}
+ul.links li.dash_3{width:16%;}
+ul.links li.dash_4{width:16%;}
+ul.links li.dash_5{width:16%;}
+ul.links li.dash_6{width:16%;}
+ul.links li .dashboard_title{font-size:15px;}
+.dash_1_box .responsive-tabs__list{top:0 !important;}
+.dash_1_box .dashboard_inner_form ul li{width:49%;}
+.car_details_baord{width:70%}
+.select_addons .addon_selected{padding:0px 0 0 30px;width:61%;}
+.selector_contnt label{margin-top:1px;width:40%}
+.renew_now input{margin:18px 0}
+ul.check_claim_status li label{width:25%;}
+.feedback_new{background-position:right 100px}
+.feedback_new .fdf_1{margin-left:24.5% !important;}
+.aac_cnt{padding-left:10px;}
+ul.claim_assistance_detail li .description p{bottom:110px;}
+ul.claim_assistance_detail li:hover .description .next_show + p{bottom:100px;}
+/*Quality Repairs Animation*/
+.quality_repair .quality_gate { left:20%;}
+.quality_repair .quality_gate.animated { left:24%;}
+.quality_repair .quality_wheel { right:26%; bottom:-3%;}
+.quality_repair .quality_wheel.animated {right:30%}
+.quality_repair .quality_stamp { left: 25%; top: 5%; }
+.quality_repair .quality_check {left: 25%;top: 5%;}
+}
+@media only screen and (min-width:800px) and (max-width:1002px){ul.claim_assistance_detail li{width:33%;min-height:280px;}
+.sub_heading{font-size:22px;}
+.partners .partner_title{font-size:26px}
+ul.partner_list li{margin:0;min-height:80px;width:25%;}
+.service_station_rupee{transform:translate3d(15%, 0px, 0px);}
+.service_station_rupee.animated{left:0;transform:translate3d(35%, 0px, 0px);}
+.cashless_repair .cash_less{transform:translate3d(10%, 0px, 0px);}
+.cashless_repair .cash_less.animated{margin-right:0;opacity:1;transform:translate3d(-35%, 0px, 0px);}
+.claim_center_car .car_img{display:none}
+.enter_claim_no{width:70%}
+.feeds .feed_img img{width:100%}
+.insurer_plans .nbs-flexisel-item img{width:auto;}
+.individual_feature .container{width:94%}
+.about_us_bg_img{background:none;min-height:300px;}
+.about_us .about_text strong br{display:none;}
+ul.partner_list{width:98%;}
+ul.partner_list li:nth-child(2){padding:0 10px;width:32%;}
+ul.partner_list li:first-child{padding:0 0;}
+ul.partner_list li:nth-child(4){width:32%;padding:0 20px;}
+ul.partner_list li{width:32%;padding:0 15px;}
+ul.partner_list li img{width:100%;}
+ul.partner_list li:nth-last-child(3){width:25%}
+.cal_images{width:94%;}
+/*Quality Repairs Animation*/
+.quality_repair .quality_gate { left:12%;}
+.quality_repair .quality_gate.animated { left:17%;}
+.quality_repair .quality_wheel { right:18%; bottom:-3%;}
+.quality_repair .quality_wheel.animated {right:23%}
+.quality_repair .quality_stamp { left: 20%; top: 5%; }
+.quality_repair .quality_check {left: 20%;top: 5%;}
+}
+@media only screen and (max-width:800px){.download_claim_form .img{width:20%}
+.download_claim_form .img img{width:100%}
+.download_claim_form{width:100%;margin-bottom:20px;}
+.download_claim_form span{width:100%;margin-right:0;padding-right:0;}
+.support_no{width:100%;float:left;margin-right:0}
+.right_side{margin-bottom:40px;}
+.right_side span::after{left:30px;width:90%}
+.company_logo{padding:5px 0 10px;width:100%;text-align:center;}
+.policy_detail{float:left;margin:0;width:72%;}
+ul.plans_list li{padding:15px 10px 25px;}
+.policy_ammount{padding:0 6px 0 0%;text-align:right;width:25%;}
+.policy_ammount .buy_now{float:right}
+ul.why_by li{width:31%;margin-right:2%}
+.plans_heading{margin:25px 0 5px;}
+.slide_up .contnt label{font-size:14px;margin:4px 0 0;padding-left:6px;width:100%;}
+.contact_details .map img{width:100%;}
+.contact_form form input{width:98%;}
+.contact_form form textarea{width:98%}
+.contact_form form input[type="submit"]{width:30%;}
+.contact_form form select{width:48%;}
+.hassle_stool ul li{float:left;display:none}
+.hassle_stool ul li:last-child{display:block}
+.cash_less{margin-right:0}
+@keyframes cash_less{0%{margin-left:0%;opacity:.5;-webkit-opacity:.5;}
+100%{margin-left:6%;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes cash_less{0%{margin-left:0%;opacity:.5;-webkit-opacity:.5;}
+100%{margin-left:6%;opacity:1;-webkit-opacity:1;}
+}
+.service_station{margin:0;width:205px;}
+.service_station_car{left:25px;}
+.why_maruti_inner{width:94%;}
+.seamless_services{margin:20px 0 40px;}
+.hassle_stool{left:6%;}
+.marutiinsurance_hassle{margin:20px 0 0;}
+.quality_repair_main{float:none;margin:40px auto 0;width:550px;}
+.plan_compare ul li{padding:15px 20px 10px 15px;border-bottom:1px solid #e5e5e5;width:45%;}
+.plan_compare ul li + li{border-right:medium none;width:55%;}
+.plan_compare ul li + li + li{width:40%;}
+.plan_compare ul li + li + li + li{width:60%;border-left:solid 1px #e5e5e5;}
+.plan_compare ul li:first-child p{width:100%;}
+.select_addons{padding:0 0 15px 0}
+.select_addons .select_title{width:100%;padding:10px;text-align:center}
+.select_addons .select_title::after{right:48.5%;top:80%;transform:rotate(90deg);}
+.select_addons .addon_selected{padding:20px 0 0 20px;width:79%;}
+.selector_contnt label{margin:0px 0 0;padding:0 0 0 12px;width:40%;}
+.feature_and_benifits_heading{margin:30px auto 5px;}
+.select_addons{margin-bottom:10px;}
+.insurer_car{margin:20px 10px 30px 0px;text-align:center;width:100%;}
+.insurer_plans{float:none;margin:15px auto 0;overflow:hidden;}
+.insurer_human{margin:0;text-align:center;width:100%;}
+.flexIcons span{font-size:14px;white-space:nowrap;}
+.flexHeading{font-size:14px;padding:25px 0;text-transform:uppercase;white-space:nowrap;}
+.buyHere_heading{font-size:22px;line-height:24px;}
+ul.yBuy_here_product li{width:45%;}
+ul.yBuy_here_product li p{line-height:20px;padding:0 10px;}
+.individual_benifits_list .nbs-flexisel-nav-right{right:10px;}
+.individual_benifits_list .nbs-flexisel-nav-left{left:10px;}
+ul.claim_assistance_detail li{width:32%;min-height:280px;margin-left:1%}
+.sub_heading{font-size:22px;}
+.renew_policy_form img.imgs{display:none}
+.renew_policy_form form{margin:0 0 0 0%;padding:0 0 0 15px;width:100%;}
+.ex_customer{display:none;}
+.customer_detail_box{width:96%;margin:0 0 5% 2%}
+.car_details{width:40%;}
+.live_customer_policy_detail{width:57%;}
+.live_mi_customer p{width:100%;float:left}
+.live_mi_customer p span{width:50%;}
+.car_details .detail_title{padding-left:15px;}
+.about_car{padding-left:15px;}
+.addons{padding:0 15px;}
+.addons .contnt_check li label{padding-left:0;font-size:14px;background-position:0 -47px;}
+.label-checked{background-position:0 1px !important;}
+ul.policy_detail_form{padding-left:20px;}
+ul.policy_detail_form li{width:99%;}
+.prev_insurnce_img{display:none;}
+ul.prev_insurance_detls{margin:2% 0 2% 0%;width:99%;}
+ul.prev_insurance_detls li label{width:40%;}
+.payment_details{width:35%}
+.car_details_payment{width:63%}
+.paymnt_form .list label{width:32%;}
+.paymnt_form .list input{width:65%;}
+.paymnt_form .list select.date{width:18%;}
+.paymnt_form .list select.month{width:20%;}
+.paymnt_form .list select.year{width:22%;}
+.paymnt_form .list select.year1{width:45%;}
+.paymnt_form .list textarea{width:65%;}
+.paymnt_form .list input.city{width:25%;}
+.paymnt_form .list select.states{margin:0 1% 0 0;width:28%;}
+.paymnt_form .list label.state{width:11%;}
+.paymnt_form .list ul.check{width:65%;}
+.click_connect_imgs{float:right;margin:15% 6% 0 0;width:28%;}
+.renew_policy_form .click_connect input{width:68%}
+.renew_policy_form .click_connect .reason{width:68%;}
+ul.check_claim_status li label{width:30%;}
+ul.check_claim_status li input{width:45%;}
+.recv_clm_no{width:65%;}
+.recv_clm_no a{background-position:94% center}
+ul.auto_claim_status_form{margin:2% 0 0 6%;width:88%;}
+ul.auto_claim_status_form li input{width:65%;}
+ul.auto_claim_status_form_2{width:95%;}
+ul.urgent_help li h3{color:#000;font-size:18px;margin:15px 0 0;}
+.toll_free{font-size:25px;}
+.box_southern{left:-2%;top:25%;}
+.box_southern .arrow_text{font-size:18px;width:120px;line-height:18px;}
+.box_southern .arrow_text span{font-size:30px;}
+.box_cities{bottom:18%;left:-6%;}
+.box_cities .arrow_text{font-size:18px;}
+.box_cities .arrow_text span{font-size:30px;}
+.box_northern{right:-5%;top:25%}
+.box_northern .arrow{text-align:right;width:auto;margin:-11% 0 0 0;}
+.box_northern .arrow_text span{font-size:30px;}
+.box_northern .arrow_text{font-size:18px;line-height:22px;margin-right:0}
+.box_eastern{bottom:15%;}
+.box_eastern .arrow_text span{font-size:30px;}
+.box_eastern .arrow_text{font-size:18px;line-height:22px;}
+.hand_box .mob_hand{padding-right:25%;}
+.hand_box .mob_hand img{width:70%;}
+ul.get_quote{width:96%;margin-left:2%;}
+ul.get_quote li label{width:45%;}
+.lock_sign{display:none;}
+.lock{display:none}
+.sign_up_form .get_quote{width:90%}
+.track_status .progress{width:98%}
+.progress_detail{width:98%}
+ul.check_claim_status{padding-bottom:0}
+.buyHere_paragraph p span{font-size:130% !important}
+.buyHere_paragraph p{font-size:14px;}
+ul.yBuy_here_product li .more{font-size:16px}
+.yBuy_img{width:100%;min-height:180px;}
+.yBuy_img img{width:95%;}
+ul.yBuy_here_product li{min-height:240px;}
+ul.yBuy_here_product li:nth-child(2) .yBuy_img img{width:37%;}
+.intro p br{display:none}
+.sign_up_form .imgs{display:none}
+.partners{margin:1% 0 0;overflow:auto;}
+.partners .partner_title{font-size:25px;line-height:24px}
+ul.partner_list li{margin:1.5% 0 0 0}
+ul.partner_list li:first-child{width:31%}
+ul.partner_list li:nth-child(2){width:30%}
+ul.partner_list li:nth-child(3){width:30%}
+ul.partner_list li:nth-child(4){width:30%}
+ul.partner_list li img{width:95%;}
+ul.partner_list li{margin:0;width:32%;min-height:75px;}
+ul.partner_list li:nth-last-child(3){width:25%}
+.service_station_rupee{transform:translate3d(5%, 0px, 0px);width:200px;}
+.service_station_rupee.animated{left:0;transform:translate3d(40%, 0px, 0px);}
+.cashless_repair .cash_less{transform:translate3d(10%, 0px, 0px);}
+.cashless_repair .cash_less.animated{margin-right:0;opacity:1;transform:translate3d(-35%, 0px, 0px);}
+.towing{overflow:hidden}
+.renew_policy_form .renew_plicy_new input{padding-top:8px;padding-bottom:8px;}
+.renew_plicy_new ul.renew_policy_form_list li{margin-bottom:8px;}
+.renew_plicy_new ul.renew_policy_form_list li > .radio_set{width:185px !important;}
+.renew_policy_right .call img{margin-left:0%;}
+.intro p{font-size:16px;line-height:22px;}
+.intro p br{display:none;}
+.renew_plicy_new{margin:1% 0 0 2%;padding:0 0 0% 10px;width:56%;}
+.renew_policy_right .blue_map_bg h3{font-size:18px;letter-spacing:0;line-height:22px;padding:0% 2% 0 5%;}
+ul.renew_policy_form_list li label.hide_n{display:none;}
+.claim_center_car .car_img{display:none}
+.claim_center_car h2{padding:0}
+.claim_center_car .opt{margin:0;}
+.claim_assistance{padding-left:2%;}
+.create_an_account_img{display:none}
+ul.get_quote li{width:100%;}
+.click_to_connect{overflow:hidden}
+.enter_claim_no{width:80%}
+.imgs_tab_slider img{width:100%}
+.abt_insurance{overflow:hidden}
+.next_back{text-align:center}
+.next_back a{float:none;display:inline-block}
+.why_maruti_sld span{float:none !important;display:inline-block;height:15px;}
+.next_back a span{float:left !important}
+.why_maruti_sld span img{margin-top:-10px;float:left}
+.cst_animation.animated::before{display:none}
+.cst_animation.animated::after{display:none}
+.cst_animation{margin-bottom:0;}
+ul.links li.dash_1{width:16%;}
+ul.links li.dash_2{width:16%;}
+ul.links li.dash_3{width:16%;}
+ul.links li.dash_4{width:16%;}
+ul.links li.dash_5{width:16%;}
+ul.links li.dash_6{width:16%;}
+.dash_1_box .dashboard_inner_form ul li{width:50%;}
+.dash_1_box .dashboard_inner_form{margin:3% 0}
+.dash_1_box .dashboard_inner_form ul li .radio_set{width:95px !important}
+ul.links li .dashboard_title{font-size:14px;padding:4px 0 0 0;line-height:14px;}
+.car_details_baord{width:70%}
+.dash_1_box{padding-right:1%;padding-left:1%}
+.individual_benifits_list{overflow:auto}
+.individual_benifits_list .flexIcons_img img{width:80%}
+.individual_benifits_list table th{padding:10px}
+.individual_benifits_list table td{padding:10px;}
+.individual_benifits_list table .td_bg td{font-size:18px;font-weight:normal}
+.insurer_plans .nbs-flexisel-item img{width:auto;}
+.individual_feature .container{width:94%}
+.feedback_new{background:none;}
+.feedback_new .fdf_1{margin-left:30% !important;}
+.feedback_new .slt_1{width:45%;}
+ul.check_claim_status li textarea{width:45%;}
+.cliam_process_9 .next_show{font-size:17px;line-height:17px;padding:0 20px}
+.aac_cnt{padding-left:10px;}
+/*Quality Repairs Animation*/
+.quality_repair .quality_gate { left:12%;}
+.quality_repair .quality_gate.animated { left:17%;}
+.quality_repair .quality_wheel { right:18%; bottom:-3%;}
+.quality_repair .quality_wheel.animated {right:23%}
+.quality_repair .quality_stamp { left: 20%; top: 5%; }
+.quality_repair .quality_check {left: 20%;top: 5%;}
+}
+@media only screen and (max-width:767px){.renew_plicy_new{width:96%;}
+.accident_repair{padding-top:10px;}
+.insurance_heading{font-size:30px;}
+.cashless_repair{margin:10px 0 0%;}
+.blue_bg{padding-top:40px;}
+.blue_bg .heading_b{font-size:30px;}
+.blue_bg p{padding:10px 2%}
+.hassle_free{margin:20px 0 15px;}
+.quality_repair{margin:10px 0 0;}
+.easy_transfer{padding:20px 0 10px;width:100%;}
+.insurance_heading{margin-top:20px;}
+.seamless_services p{padding-left:0;padding-right:0;}
+.hand_box{margin-bottom:0}
+.towing_heading{font-size:30px;margin-top:10px;}
+.towing{padding-bottom:0;}
+.customer_care .title{font-size:30px;margin-top:0;}
+.customer_care{padding:30px 0 0;}
+.policy_issuance_img img{width:95%;}
+.policy_issuance_img{padding-top:40px;}
+.print_mail{display:none}
+.detailed_content_1{width:100%}
+.detailed_content{width:100%;}
+.detailed_content li li{float:left;width:100%;margin-left:0}
+table.depreciations_table{width:96%;}
+.dealer_wrkshp_bx{width:96%;padding-bottom:0}
+.no_hiddien_charges_content{width:96%;padding-bottom:0}
+.insurance_needs_content{width:100%}
+.towing_facility_content{width:96%;}
+.customer_care_content{width:96%;}
+.instant_policy_issuance_content{width:96%;}
+/*Quality Repairs Animation*/
+.quality_repair .quality_gate { left:5%;}
+.quality_repair .quality_gate.animated { left:10%;}
+.quality_repair .quality_wheel { right:8%; bottom:-3%;}
+.quality_repair .quality_wheel.animated {right:13%}
+.quality_repair .quality_stamp { left: 12%; top: 5%; }
+.quality_repair .quality_check {left: 12%;top: 5%;}
+}
+@media only screen and (max-width:640px){.click_connect_imgs{display:none}
+.click_connect1{width:95%}
+.renew_policy_form form input[type="button"]{margin-top:0;}
+.sign_up_form{padding-top:10px;}
+.sign_up_form .imgs{display:none;}
+.partners .partner_title{padding:11px 15px 12px 8px;font-size:22px;margin-left:30px;}
+ul.partner_list{width:100%;margin-left:0}
+.accident_repair{overflow:hidden;}
+.cashless_repair .cash_less{transform:translate3d(30%, 0px, 0px);}
+.cashless_repair .cash_less.animated{transform:translate3d(-15%, 0px, 0px);}
+.seamless_services p br{display:none;}
+.towing p{padding:10px 5%;}
+.towing p br{display:none;}
+.accident_repair p{padding:10px 5%;}
+.accident_repair p br{display:none;}
+.renew_plicy_new{margin:1% 0 0 2%;width:96%;}
+.renew_policy_right{width:100%;}
+.renew_policy_right .blue_map_bg .imags{display:none;}
+.renew_policy_right .blue_map_bg h3{background:#1c7ed3 none repeat scroll 0 0;font-size:20px;letter-spacing:0;line-height:24px;margin:0;padding:10px 4% 10px 5%;position:static;}
+.renew_policy_right .call{padding:1% 0;}
+.renew_policy_right .call img{width:auto;}
+.click_connect_img{display:none}
+.create_an_account_img{display:none}
+.initiate_claim_intimation{width:98%;}
+.click_to_connect{margin:2% 0 0 0;width:98%;}
+.claim_links{float:left;margin:15px 0 10px -3px;width:310px;}
+.enter_claim_no{width:90%}
+.urgent_help{width:100%;overflow-x:auto}
+.urgent_help table{width:700px}
+.imgs_tab_slider{width:80%;margin:0 0 20px 10%;text-align:center}
+.imgs_tab_slider img{width:80%}
+.tab_2 h2{text-align:center !important}
+.content_tab_slider{width:97%;margin-left:2%;}
+.content_tab_slider h3{text-align:center;}
+.content_tab_slider p{text-align:center}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right{top:15%}
+.cst_animation.animated{font-size:30px;}
+.nbs-flexisel-inner{margin:40px 0 0;}
+.nbs-flexisel-nav-right{top:0 !important;}
+.nbs-flexisel-nav-left{top:0 !important;}
+.maruti_lt_sec .maruti_icon_slide{left:165px;top:95px;width:110px;}
+.maruti_lt_sec .maruti_icon_slide img{width:90%;}
+.dash_1_box .dashboard_inner_form ul li{width:98%;}
+.insurer_plans .nbs-flexisel-inner{margin:0;}
+ul.partner_list li{min-height:45px;}
+.about_us .about_text strong{font-size:24px;line-height:22px;}
+.intro p{width:100% !important;}
+}
+@media only screen and (max-width:500px){ul.claim_process_list{margin-bottom:0px;}
+.policy_no{padding:15px 20px 20px;width:100%;}
+.policy_no input{font-weight:normal;font-size:16px}
+.emailId{margin:10px 0 0 0;padding:25px 20px 35px 20px;width:100%;position:relative;font-weight:normal;}
+.emailId .or{left:48%;margin:0;position:absolute;top:-23px;}
+.emailId input{font-weight:normal;font-size:16px}
+.report_claim p{width:100%;}
+.sms_alert{width:100%;}
+.claim_box .sms_alert_text{width:100%;margin:10px 0 0 0;}
+.claim_box .sms_alert_text input[type="submit"]{margin-top:5px;}
+.fields input{font-size:16px;font-weight:normal;}
+.claim_box{margin-bottom:25px;}
+.fields label{margin-bottom:0}
+.fields{margin:0 0 10px 0;width:100%;}
+.sms_alert textarea{margin:2px 0 0 0%;width:100%;}
+.policy_detail{width:100%;}
+.policy_ammount{border:solid 1px #d5d5d9;border-width:1px 0 0 0;padding:10px 6px 0 0;text-align:left;width:100%;}
+.policy_ammount .buy_now{float:left;margin:10px 0 0px 10px;clear:both}
+.company_logo{text-align:left;}
+ul.why_by li{margin:0 0 30px 0;width:100%;}
+ul.why_by li:last-child{margin-bottom:0}
+.policy_ammount .price{float:left;}
+.policy_ammount .ncb{float:left;padding:10px 0 0 15px}
+.box_southern{float:left;left:0;margin:0 0 20px;position:static;width:100%;text-align:center}
+.box_southern .arrow_text{display:inline;float:none;width:auto;}
+.box_cities{float:left;left:0;margin:0 0 20px;position:static;width:100%;}
+.box_cities .arrow_text{width:auto;float:none;display:inline-block;margin:0;}
+.box_cities .arrow_text span{width:auto;}
+.box_northern{float:left;left:0;margin:10px 0 20px;position:static;width:100%;}
+.box_northern .arrow_text{float:none;margin:0;width:auto;display:inline-block;}
+.box_northern .arrow_text span{width:auto;}
+.claim_buy_box{position:static;width:100%;margin:10px 0 40px 0;float:left;text-align:center}
+.claim_buy_box .buy_new_policy{display:inline-block;float:none;}
+.claim_buy_box .claim_settlement{display:inline-block;float:none;}
+.hand_box .mob_hand{padding-right:0;text-align:center;float:left}
+.hassle_stool{display:none;}
+.easy_transfer{width:100%;}
+.easy_transfer_rupee{padding:22px 20px 0 0}
+.easy_transfer_rupee img{width:80%}
+.easy_transfer_rupee div img{width:100%}
+.easy_transfer_left_icon{width:20%;}
+.easy_transfer_left_icon img{width:100%;}
+.easy_transfer_icon{float:left;margin:0 3%;min-height:186px;position:relative;width:50%;}
+.easy_transfer_icon img{width:80%;left:10%;}
+.easy_transfer_right_icon{width:20%;}
+.easy_transfer_right_icon img{width:100%;}
+.blue_bg .heading_b{font-size:24px;margin:0 0 10px;line-height:28px;}
+.insurance_heading{font-size:24px;line-height:28px;padding-bottom:0px;}
+.blue_bg p{padding:0 10px}
+.blue_bg p br{display:none}
+.towing p{padding:0 10px;}
+.towing p br{display:none}
+.marutiinsurance_hassle{width:100%;min-height:250px;}
+.marutiinsurance_hassle img{width:80%;left:10%;}
+@keyframes marutiinsurance_hassle{0%{bottom:-100%;}
+100%{bottom:0px}
+}
+@-webkit-keyframes marutiinsurance_hassle{0%{bottom:-100%;}
+100%{bottom:0px}
+}
+.service_station{display:none}
+.towing_car{width:100%;}
+.car_tow{padding:30px 0 0;width:90%;}
+.car_tow img{width:90%;}
+.tow_line{width:90%;}
+.quality_repair_main{width:100%;min-height:250px;}
+.quality_repair_main .quality_control{width:30%}
+.quality_repair_main .quality_control img{width:100%}
+.quality_repair_main .workshop_car{width:50%;}
+.quality_repair_main .workshop_car img{width:100%}
+.quality_repair_main .meter{width:20%;}
+.quality_repair_main .meter img{width:100%;}
+.cashless_repair{margin:10px 0 0;}
+.cash_less{margin:0;text-align:center;width:100%;}
+.cash_less img{width:70%}
+@keyframes cash_less{0%{margin-left:0%;margin-top:-50px;opacity:.0;-webkit-opacity:.5;}
+100%{margin-left:0%;margin-top:-0px;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes cash_less{0%{margin-left:0%;margin-top:-50px;opacity:.0;-webkit-opacity:.5;}
+100%{margin-left:0%;margin-top:0px;opacity:1;-webkit-opacity:1;}
+}
+.plan_compare ul li{border-width:0 0 1px;min-height:50px;padding:15px 15px;width:100%;}
+.plan_compare ul li + li{width:100%;}
+.plan_compare ul li + li + li{width:100%;line-height:24px}
+.plan_compare ul li + li + li + li{border-left:0px solid #e5e5e5;width:100%;}
+.price_new{margin:0px 0 0;}
+.selector_contnt label{margin:2px 0 0 0;padding:0 0 0 15px;width:48%;}
+.insurer_plans{background:rgba(0, 0, 0, 0.00) none repeat scroll 0 0;margin:0 0 30px 1%;padding:0;width:98%;border-bottom:solid 2px rgba(0, 0, 0, .15);border-right:0;min-height:150px;}
+.insurer_plans ul{margin-bottom:0}
+.insurer_plans_items{padding:20px 0 14px;}
+.insurer_plans ul li:nth-child(even){border-right:0}
+.insurer_plans ul li:last-child{border-bottom:0}
+.insurer_plans ul li:nth-child(5){border-bottom:0}
+.insurer_plans ul li{width:49%;border-style:solid;border-width:2px 0px 0px 0;border-color:rgba(0, 0, 0, .15);}
+.insurer_plans_items{animation-delay:1.0s;-webkit-animation-delay:1s;}
+.feature_and_benifits_heading{margin:20px auto 11px;background:#005ba9;border-radius:34px;border:solid 1px #fff;padding:10px;font-size:24px;box-shadow:0px 0px 3px #959595;width:96%}
+.individual_feature_heading{margin:0px auto 11px;background:#005ba9;border-radius:34px;border:solid 1px #fff;padding:10px;font-size:24px;box-shadow:0px 0px 3px #959595;width:96%}
+.individual_benifits_list{margin:15px 0}
+ul.yBuy_here_product{padding:0;}
+ul.yBuy_here_product li{width:97%;margin:0 0 10px 1%;min-height:150px;padding:0 0 15px 0}
+.yBuy_img{min-height:190px;}
+.yBuy_here{margin:15px 0 20px;}
+ul.claim_process_list li{width:100%;margin:0 0 10px 0;}
+ul.claim_assistance_detail li{width:32%;min-height:280px;margin-left:1%}
+.download_claim_form .text{padding:15px 10% 0 20px;}
+.support_no{margin:0 0 20px 0;padding:20px 0 10px;}
+ul.claim_assistance_detail li:last-child{border-bottom:0;}
+ul.claim_assistance_detail li{border-bottom:0px solid #d34142;margin:0 0 10px 0%;min-height:180px;padding:0 0 20px;width:99%;}
+ul.claim_assistance_detail li .icon_img{width:100%;margin-top:0;padding-right:0;text-align:center;}
+ul.claim_assistance_detail li .right_img{display:none;}
+ul.claim_assistance_detail li .count{width:100%;}
+ul.claim_assistance_detail li .description{width:100%;text-align:center;margin:18px 0 0 0;}
+.next_show{padding:5px 0;display:block;}
+.renew_policy_form{padding:0}
+.renew_policy_form form{padding:20px;}
+.renew_policy_form form label{margin:0 0 2px;padding:0;width:100%;}
+.renew_policy_form form input{width:100%;}
+ul.renew_policy_form_list li:nth-child(5) > label{display:none}
+ul.renew_policy_form_list li span{width:50%;}
+.renew_policy_form form input[type="submit"]{margin-top:0}
+.car_details{width:100%;float:left;margin:0 0 25px 0;}
+.live_customer_policy_detail{width:100%;margin-left:0;padding:15px 15px 25px;}
+ul.policy_detail_form li{margin:0 0 10px}
+ul.policy_detail_form li label{width:41%;}
+ul.prev_insurance_detls{margin:5% 0 2% 0%;width:99%;}
+ul.prev_insurance_detls li input[type="submit"]{margin-top:0;}
+.payment_details{width:100%;min-height:200px;margin:0 0 15px 0}
+.car_details_payment{margin:0;width:100%;}
+.payment_dtls{padding:0}
+.payment_dtls p br{display:none}
+.click_connect_imgs{display:none}
+.click_connect{float:left;margin:5% 0 3% 2%;padding:0;width:98%;}
+ul.check_claim_status{padding:8% 0 7% 4%;}
+ul.check_claim_status li label{width:75%;}
+ul.check_claim_status li input{width:96% !important;margin:0 0 10px 0}
+ul.check_claim_status li input[type="submit"]{margin:0 0 10px 0;width:125px !important;}
+.recv_clm_no{width:96%;margin:0 0 0 0;}
+.claim_status_report table tr th{padding:10px 5px 10px 10px}
+.claim_status_report table tr td{padding:10px 5px 10px 10px}
+ul.auto_claim_status_form_2{width:95%;}
+ul.auto_claim_status_form_2 li label{width:70%;padding-bottom:5px;}
+ul.auto_claim_status_form_2 li span{padding:0;}
+ul.auto_claim_status_form_2 li input{width:90%}
+ul.auto_claim_status_form_2 li input[type="submit"]{margin:0}
+ul.auto_claim_status_form_2 li .opt{margin:0px 0 5%;width:90%;}
+.track_status .progress .progress-bar-success span p br{display:none}
+.track_status .progress{width:98%;}
+.progress_detail{float:right;text-align:right;width:50%;}
+.progress_detail p br{display:none;}
+ul.urgent_help li{width:50%;}
+.box_southern .arrow{display:none}
+.box_cities .arrow{display:none}
+.box_northern .arrow{display:none}
+.box_eastern .arrow{display:none}
+.box_eastern{float:left;left:0;margin:10px 0 20px;position:static;width:100%;text-align:center;}
+.box_eastern .arrow_text{width:100%;margin:0px 0 10px;float:left;padding:0 0 0;text-align:center;}
+.box_eastern .arrow_text span{float:none;display:inline-block;width:auto;}
+.hassle_free_anim{width:96%;text-align:center;margin:0 0 0 2%}
+.hassle_free_anim img{width:90%;}
+.policy_issuance_img{width:100%;}
+.click_connect1{width:94%;margin:5% 3%;padding:0;}
+ul.get_quote{width:94%;margin:5% 3%;padding:0;}
+ul.get_quote li label{width:45%;}
+.opt{float:left;margin:20px 0 0 0%;width:100%;}
+ul.partner_list li:first-child{width:55%;margin:0 0 1% 0}
+ul.partner_list li:nth-child(2){width:42%;margin:0 0 1% 0}
+ul.partner_list li:nth-child(3){width:45%;margin:0 0 2% 2%}
+ul.partner_list li:nth-child(4){width:52%;margin:1% 0 2% 0%}
+ul.partner_list li{margin:0 0 0 2%;min-height:90px;width:46%;}
+ul.partner_list li:last-child{width:auto}
+.easy_transfer_rupee .arrow_01{top:60px;}
+.easy_transfer_rupee .arrow_02{top:45px;}
+.renew_plicy_new ul.renew_policy_form_list li > .radio_set{margin-bottom:5px;}
+.renew_plicy_new ul.renew_policy_form_list{margin-top:1%;}
+.renew_policy_form .renew_plicy_new label{width: 100%; font-weight: bold;}
+.renew_policy_form .renew_plicy_new input{width:90%}
+.hide_n1{display:none}
+.renew_policy_form:before{top:-6px;left:-6px;}
+.renew_plicy_new ul.prev_insurance_detls li label{width:100%;margin:2px 0 4px 0;padding:0}
+.click_to_connect h2{float:left;font-family:"dosisregular";margin:0 0 10px;font-size:24px}
+.click_to_connect .content_box_click ul{padding:5%}
+.click_to_connect .content_box_click ul li label{width:100%;}
+.click_to_connect .content_box_click ul li input{width:98%;margin:4px 0 0 0}
+.select_addons .addon_selected{width:100%;}
+.renew_now{width:100%}
+.renew_now input{margin:10px 0}
+.insurer_plans .nbs-flexisel-nav-left{top:48px !important}
+.insurer_plans .nbs-flexisel-nav-right{top:48px !important}
+.crs_1_3_left .job_1 .job_1_lt{width:100%;margin-bottom:10px;}
+.crs_1_3_left .job_1 .job_1_rt{width:90%;padding-left:5px;}
+.hiring_bg{padding:0}
+.select_box_n1{width:90%}
+ul.partner_list li:nth-last-child(3){margin-left:10%;margin-top:-10px;width:35%;}
+ul.partner_list li:nth-last-child(2){padding:0;}
+ul.partner_list li:nth-child(2){margin:0 0 1%;width:42%;padding:0;}
+ul.check_claim_status li{margin-bottom:0;}
+.feedback_new .slt_1{width:96%;}
+ul.check_claim_status li textarea{margin-bottom:10px;width:96%;}
+.feedback_new .fdf_1{margin-left:0% !important;}
+.accident_repair p{padding:10px 2%;font-size:16px;line-height:18px;}
+.seamless_services{margin:10px 0 20px;}
+.towing_heading{font-size:24px;}
+.towing_car{padding-top:10px;}
+.customer_care .title{font-size:24px;}
+.customer_care p{padding:0 1%;}
+.customer_care_image{margin:0;}
+.policy_issuance_img{min-height:100px;}
+.easy_transfer img{width:90%;}
+/*Quality Repairs Animation*/
+.quality_repair .quality_wheel.animated{ opacity:0; }
+.quality_repair .quality_gate.animated { opacity:0; } 
+}
+@media only screen and (max-width:360px){.emailId .or{left:45%;}
+.download_claim_form .text{padding-top:5px;}
+.easy_transfer_icon{float:left;margin:0 2%;min-height:123px;position:relative;width:50%;}
+.hand_box .mob_hand img{width:80%}
+.policy_issuance_img img{width:80%;}
+.selector_contnt label{margin:2px 0 0;padding:0 0 0 10px;width:98%;}
+ul.renew_policy_form_list li span{width:100%;margin-bottom:10px;}
+.conditional::before{margin-left:30px;}
+.customer_details tr th{padding:12px 0px 12px 15px}
+.customer_details tr td{padding:12px 5px 12px 15px;word-break:break-all}
+.continue{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 92% center;font-size:15px;margin:20px 0 0;padding:13px 25px 13px 15px;}
+.policy_renew_box{padding:20px 0}
+ul.policy_detail_form li label{padding:0;width:91%;}
+ul.policy_detail_form li input{padding:8px 10px 8px 10px;width:97%;}
+ul.policy_detail_form li select{padding:8px 7px;width:97%;}
+ul.policy_detail_form{padding-left:14px;}
+.edited{background:#005ba9 url("https://nexa1.azureedge.net/insurance/images/white_arrow.png") no-repeat scroll 88% center !important;width:97% !important;}
+ul.policy_detail_form li p textarea{width:97%;min-height:100px;}
+ul.prev_insurance_detls li label{width:90%;padding-bottom:5px;}
+ul.prev_insurance_detls li input{width:95%;}
+ul.prev_insurance_detls li input[type="submit"]{margin-top:-20px;float:left;}
+.paymnt_form .list label{width:92%;}
+.paymnt_form .list input{width:98%;}
+.paymnt_form .list select.date{width:21%;}
+.paymnt_form .list select.month{width:30%;}
+.paymnt_form .list select.year{width:42%;}
+.paymnt_form .list select.year1{width:74%;}
+.paymnt_form .list textarea{width:97%;}
+.paymnt_form .list input.city{width:32%;}
+.paymnt_form .list label.state{width:16%;}
+.paymnt_form .list select.states{margin:0 1% 0 0;width:47%;}
+.paymnt_form .list ul.check{width:97%;}
+.renew_policy_form .click_connect label{width:90%}
+.renew_policy_form .click_connect input{width:98%;}
+.renew_policy_form .click_connect .reason{width:98%}
+.recv_clm_no a{padding:10px 40px 10px 15px;}
+.claim_status_report table tr th{padding:8px 5px 8px 9px;font-size:14px;}
+.claim_status_report table tr td{padding:8px 5px 8px 9px;font-size:14px;}
+ul.auto_claim_status_form{width:94%;margin:15px 2%;}
+ul.auto_claim_status_form li label{width:90%;padding:8px 0 5px 0;}
+ul.auto_claim_status_form li input{width:100%;}
+ul.urgent_help{margin-bottom:0px}
+ul.urgent_help li{background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;border-bottom:1px solid #dcdcdc !important;margin:0 0 10px;padding:10px 0 10px;width:100%;}
+ul.urgent_help li:last-child{border:none !important;}
+ul.urgent_help li:first-child{padding-top:0 !important}
+.toll_free{font-size:20px;}
+@keyframes issuance_btn{0%{left:0px;opacity:.5;-webkit-opacity:.5;}
+100%{left:40px;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes issuance_btn{0%{left:0px;opacity:.5;-webkit-opacity:.5;}
+100%{left:40px;opacity:1;-webkit-opacity:1;}
+}
+.policy_issuance_img{padding-bottom:20px;}
+@keyframes policy_issuance_print{0%{right:0;opacity:.5;-webkit-opacity:.5;}
+100%{right:40px;opacity:1;-webkit-opacity:1;}
+}
+@-webkit-keyframes policy_issuance_print{0%{right:0px;opacity:.5;-webkit-opacity:.5;}
+100%{right:40px;opacity:1;-webkit-opacity:1;}
+}
+.renew_policy_form .click_connect1 .reason{width:100%}
+.renew_policy_form .click_connect1 label{width:100%;padding-top:0;}
+.renew_policy_form .click_connect1 input{width:100%;}
+ul.get_quote li label{width:100%;padding-top:0;}
+ul.get_quote li input{margin:0;width:100%;}
+ul.get_quote li .fuel{width:100%}
+ul.get_quote li .registr{width:100%}
+input.faded[type="submit"]{opacity:0.5;margin:-13px 0 0 !important;}
+.contact_details{margin-bottom:0;}
+.renew_policy_form .click_connect1 input[type="submit"]{margin-top:10px;}
+ul.get_quote li input[type="submit"]{margin:-15px 0 0 0;}
+.policy_issuance_btn.animated{left:60px;}
+.policy_issuance_print.animated{right:60px;}
+ul.partner_list li{min-height:60px;}
+ul.partner_list{border-bottom:solid 1px #e1e1e1;padding:0 0 10px 0;margin-bottom:10px}
+.partners .partner_title{font-size:18px;padding:10px;text-align:left;width:auto;margin-left:20px;border-radius:5px;}
+.about_partner_title{font-size:18px;text-align:left;padding:8px 10px;line-height:none;border-radius:5px;}
+.towing_car img{width:92%;margin-left:2%}
+.customer_care_image img{width:96%}
+/*Quality Repairs Animation*/
+.quality_wall { width:90%;}
+.quality_repair .quality_check { left: 0;top:15%;width: 30%;}
+.quality_repair .quality_stamp { left: 0;top:15%;width: 30%;}
+}
